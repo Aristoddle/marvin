@@ -120,8 +120,18 @@ class WebSearchAgent:
         Returns:
             str: The extracted search results, getting website URLs from DDG, and using ScrapeGhost to pull their data.
         """
-        # This is a placeholder and should be replaced with actual scraping logic, leveraging scrapeghost as defined above
-        extracted_results = search_results
+        # Use the AIApplication instance to dynamically determine the structure of the data
+        schema = self.ai_application.run(search_results)
+
+        # Create an instance of the SchemaScraper class with the schema
+        scraper = SchemaScraper(schema)
+
+        # Scrape the raw search results
+        scraped_data = scraper.scrape(search_results)
+
+        # Convert the scraped data into an instance of an AI model
+        extracted_results = AIModelFactory(scraped_data)
+
         return extracted_results
 
     def parse_results(self, results):
