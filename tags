@@ -842,7 +842,6 @@
 A	src/marvin/functions/__init__.py	/^A = TypeVar("A")$/;"	v
 A	src/marvin/openai/Function/__init__.py	/^A = TypeVar("A")$/;"	v
 A couple considerations	docs/src/guides/slackbot.md	/^#### A couple considerations$/;"	t	subsection:Build a Slack bot with Marvin""Building the bot""Implement the AI response
-AI Classifier Spec	current_project.md	/^### AI Classifier Spec$/;"	S	section:Current Project: Enhancing WebSearchAgent""API Spec Snippets
 AI Components	docs/src/docs/index.md	/^### AI Components$/;"	S	section:The Marvin Docs""Organization
 AI Functions	docs/guide/ai_components/ai_functions.md	/^# AI Functions$/;"	c
 AI Functions Examples	docs/examples/ai_functions.md	/^# AI Functions Examples$/;"	c
@@ -857,7 +856,6 @@ AIEnumMeta	src/marvin/components/ai_classifier.py	/^class AIEnumMeta(EnumMeta):$
 AIFunction	.aider.chat.history.md	/^## AIFunction$/;"	s	chapter:Marvin Platform - Action Based Specifications
 AIFunction	action_based_spec.md	/^## AIFunction$/;"	s	chapter:Marvin Platform - Action Based Specifications
 AIFunction	src/marvin/components/ai_function.py	/^class AIFunction:$/;"	c
-AIFunction Spec	current_project.md	/^### AIFunction Spec$/;"	S	section:Current Project: Enhancing WebSearchAgent""API Spec Snippets
 AIModel	.aider.chat.history.md	/^## AIModel$/;"	s	chapter:Marvin Platform - Action Based Specifications
 AIModel	action_based_spec.md	/^## AIModel$/;"	s	chapter:Marvin Platform - Action Based Specifications
 AIModel	src/marvin/components/ai_model.py	/^class AIModel(LoggerMixin, BaseModel):$/;"	c
@@ -1217,6 +1215,7 @@ Progress Tracking	.aider.chat.history.md	/^## Progress Tracking$/;"	s	chapter:Cu
 Progress Tracking	.aider.chat.history.md	/^## Progress Tracking$/;"	s	chapter:aider chat started at 2023-07-30 22:08:43
 Progress Tracking	current_project.md	/^## Progress Tracking$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 Progress Tracking	new_current_project_md_creation.md	/^### Progress Tracking$/;"	S	section:Instructions for Creating a `current_project.md` File""Structure of `current_project.md`
+Project Context and Goals	current_project.md	/^## Project Context and Goals$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 Project Title	new_current_project_md_creation.md	/^### Project Title$/;"	S	section:Instructions for Creating a `current_project.md` File""Structure of `current_project.md`
 Prompt	src/marvin/prompts/base.py	/^class Prompt(BaseModel, abc.ABC):$/;"	c
 PromptList	src/marvin/prompts/base.py	/^class PromptList(list[Union["Prompt", Message]]):$/;"	c
@@ -1261,7 +1260,6 @@ Scalable APIs, data pipelines, and agents	.aider.chat.history.md	/^#### Scalable
 Scalable APIs, data pipelines, and agents	README.md	/^#### Scalable APIs, data pipelines, and agents$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Schema normalization for data warehousing	docs/examples/ai_models.md	/^## Schema normalization for data warehousing$/;"	s	chapter:AI Models Examples
 ScrapeGhost	action_based_spec.md	/^## ScrapeGhost$/;"	s	chapter:Marvin Platform - Action Based Specifications
-ScrapeGhost Spec	current_project.md	/^### ScrapeGhost Spec$/;"	S	section:Current Project: Enhancing WebSearchAgent""API Spec Snippets
 Scrapy stuff:	.aider.chat.history.md	/^# Scrapy stuff:$/;"	c
 SearchGitHubIssues	src/marvin/tools/github.py	/^class SearchGitHubIssues(Tool):$/;"	c
 See [the CLI docs](cli.md) for more details.	.aider.chat.history.md	/^#### See [the CLI docs](cli.md) for more details.  $/;"	t	chapter:<<<<<<< ORIGINAL
