@@ -1,8 +1,4 @@
 # Current Project: Enhancing WebSearchAgent
-
-## Task Description
-The goal of this project is to enhance the existing `WebSearchAgent` in the Marvin platform to classify a user query, search the web, scrape results, synthesize those results, compare them with the user query, and loop until an answer is found or the user stops the process.  We should make aggressive use of the Marvin Ai capabilities defined in action_based_spec to bring this to fruition.
-
 ## Task List
 1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
     - Created a new class `CustomWebSearchAgent` that extends `WebSearchAgent`.
@@ -39,6 +35,61 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
     - TODO: Implement this method to respond to the user with the final answer in a user-friendly format.
 
+## Progress Tracking
+- [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
+- [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements. (Incomplete, subtasks pending)
+- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete, subtasks pending)
+- [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
+- [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
+- [ ] Task 6: Add a new method in the custom agent for comparing the synthesized answer with the user query.
+- [ ] Task 7: Modify the `respond_or_search_again` method in the custom agent to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
+- [ ] Task 8: Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
+
+## API Spec Snippets
+
+### AI Classifier Spec
+`ai_classifier` is implemented as a Python decorator that adds additional attributes and methods to an Enum class.
+
+```python
+from src.marvin.components.ai_classifier import ai_classifier
+
+@ai_classifier
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+
+# Classify text
+color = Color("I like the color of the sky.")
+print(color)  # Color.BLUE
+```
+
+### AIFunction Spec
+`AIFunction` is a class that represents a Python function with a signature and docstring as a prompt for an AI to predict the function's output.
+
+```python
+from src.marvin.components.ai_function import ai_fn
+
+@ai_fn
+def add(a: int, b: int) -> int:
+    """Adds two integers."""
+
+# Predict function output
+result = add(1, 2)
+print(result)  # 3
+```
+
+### ScrapeGhost Spec
+ScrapeGhost is a tool for extracting structured data from web pages using GPT-3. It takes a schema that describes the shape of the data you wish to extract, and returns a dictionary of that shape.
+
+```python
+from scrapeghost import SchemaScraper, CSS
+
+schema = {"name": "str", "committees": [], "bio": "str"}
+scraper = SchemaScraper(schema)
+result = scraper.scrape("https://norton.house.gov/about/full-biography")
+print(result.data)
+```
 ## Cross-File Dependencies
 - `cookbook/apps/web_search_agent.py`: This file contains the `WebSearchAgent` class that will be extended to create the custom agent. The `search_web` method in this class uses a context dictionary to maintain the state of the conversation or task. This dictionary could include the chat log/history, the specific question/problem identified by the classifier, or any other relevant information.
 - `cookbook/apps/agent.py`: This file contains the `Agent` class that the `WebSearchAgent` class inherits from. It may need to be referenced for understanding the base functionality. The `AIApplication` component in this class could be used to maintain the state of the conversation or task, which could then be passed to the `search_web` method as the context.
