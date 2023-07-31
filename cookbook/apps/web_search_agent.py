@@ -10,17 +10,12 @@ class QueryType(Enum):
     LATEST_NEWS = 2
     # Add more query types as needed
 
-class WebSearchAgent(AIApplication):
-    description: str = "A helpful AI assistant for web search"
+class CustomWebSearchAgent(WebSearchAgent):
+    description: str = "A custom web search agent"
 
     def __init__(self, **kwargs):
-        super().__init__(
-            state_enabled=False,
-            plan_enabled=False,
-            **kwargs,
-        )
-        self.search_tool = DuckDuckGoSearch()
-        self.query_classifier = QueryType
+        super().__init__(**kwargs)
+        # We can add any additional initialization here
 
     def classify_query(self, query):
         # Classify the query using the QueryType classifier
