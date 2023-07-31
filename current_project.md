@@ -1,6 +1,8 @@
 # Current Project: Enhancing WebSearchAgent
+The goal of this project is to enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a more robust and intelligent web search agent. The enhanced `WebSearchAgent` will be capable of classifying user queries, determining search requirements, modifying search requirements, searching the web, extracting and parsing search results, synthesizing parsed results into a coherent answer, comparing the synthesized answer with the user query, and responding to the user or continuing the search based on the evaluated results. The `WebSearchAgent` will leverage various AI tools and components from the Marvin platform to achieve these tasks.
+
 ## Task List
-1. Enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py`.
+1. Implement the `classify_query` method in the `WebSearchAgent` class. This method should classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
     - Implement the following methods in the `WebSearchAgent` class:
         - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
         - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
