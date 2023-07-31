@@ -1360,7 +1360,7 @@ TestPlanJSONPatch	tests/test_components/test_ai_app.py	/^class TestPlanJSONPatch
 TestStateJSONPatch	tests/test_components/test_ai_app.py	/^class TestStateJSONPatch:$/;"	c
 TestUpdatePlan	tests/test_components/test_ai_app.py	/^class TestUpdatePlan:$/;"	c
 TestUpdateState	tests/test_components/test_ai_app.py	/^class TestUpdateState:$/;"	c
-TestWebSearchAgent	test_web_search_agent.py	/^class TestWebSearchAgent(asynctest.TestCase):$/;"	c
+TestWebSearchAgent	test_web_search_agent.py	/^class TestWebSearchAgent(unittest.TestCase):$/;"	c
 TestWriterState	cookbook/test_writing_application.py	/^class TestWriterState(BaseModel):$/;"	c
 Testing	docs/src/development_guide.md	/^## Testing$/;"	s	chapter:Development Guide
 Text to ORM	docs/examples/ai_models.md	/^## Text to ORM$/;"	s	chapter:AI Models Examples
@@ -1601,6 +1601,7 @@ check_insert_model	src/marvin/tools/filesystem.py	/^    def check_insert_model(c
 chokidar	docs/package-lock.json	/^        "chokidar": "^3.5.3",$/;"	s	object:packages.node_modules/tailwindcss.dependencies
 chroma_server_host	src/marvin/settings.py	/^    chroma_server_host: str = Field(None)$/;"	v	class:Settings	typeref:typename:str
 chroma_server_http_port	src/marvin/settings.py	/^    chroma_server_http_port: int = Field(None)$/;"	v	class:Settings	typeref:typename:int
+class TestWebSearchAgent(asynctest.TestCase):	.aider.chat.history.md	/^class TestWebSearchAgent(asynctest.TestCase):$/;"	c
 classify anything	docs/src/getting_started/hello_marvin.md	/^### classify anything$/;"	S	chapter:Hello Marvin 👋
 classify_query	cookbook/apps/web_search_agent.py	/^    def classify_query(self, query):$/;"	m	class:WebSearchAgent
 clean_content	src/marvin/utilities/messages.py	/^    def clean_content(cls, v):$/;"	m	class:Message
