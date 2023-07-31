@@ -195,6 +195,25 @@ class WebSearchAgent:
         return evaluated_results
 
     def respond_or_search_again(self, evaluated_results, query, live_context):
+        """
+        Respond to the user's query or continue the search based on the evaluated results using the AIApplication tool.
+
+        This method takes the evaluated results, the user's query, and the live context, and decides whether to respond 
+        to the user's query or continue the search. The decision is made using the AIApplication tool from Marvin, which 
+        maintains the state of the conversation or task.
+
+        If the decision is to respond, the method formats the response and returns it. If the decision is to continue 
+        the search, the method conducts a new web search using the user's query and the live context, and returns the 
+        search results.
+
+        Args:
+            evaluated_results (list): The evaluated search results.
+            query (str): The user's query.
+            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
+
+        Returns:
+            str: The response to the user's query or the new search results.
+        """
         # Create an AIApplication that maintains the state of the conversation or task
         app = AIApplication(name="WebSearchAgent", description="A web search agent")
         
