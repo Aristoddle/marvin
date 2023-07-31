@@ -17,18 +17,10 @@ class CustomWebSearchAgent(WebSearchAgent):
         super().__init__(**kwargs)
         # We can add any additional initialization here
 
-    def classify_query(self, query):
-        # Classify the query using the QueryType classifier
-        query_type = self.query_classifier(query)
-        
-        # Add additional classification logic here
-        if "github" in query:
-            query_type = QueryType.GITHUB_PROJECT
-        elif "api" in query:
-            query_type = QueryType.API_DOCUMENTATION
-        elif "error" in query or "debug" in query:
-            query_type = QueryType.DEBUGGING_HELP
-
+def classify_query(self, query):
+    # Classify the query using the QueryType classifier
+    query_type = QueryType(query)
+    return query_type
         return query_type
 
     def search_web(self, query):
