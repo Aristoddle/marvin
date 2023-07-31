@@ -85,6 +85,7 @@ class WebSearchAgent:
         self.search_tool = DuckDuckGoSearch()
         self.ai_application = AIApplication(name="WebSearchAgent", description=self.description)
 
+    @ai_function
     def _format_response(self, results: list) -> str:
         """
         Formats the search results into a human-readable string.
@@ -97,6 +98,7 @@ class WebSearchAgent:
         """
         return "\n".join(results)
 
+    @ai_function
     def _evaluate_relevance(self, results: list, query: str) -> list:
         """
         Evaluates the relevance of the search results in reference to the user query.
@@ -108,6 +110,14 @@ class WebSearchAgent:
         Returns:
             list: The evaluated search results.
         """
+        # Score the relevance of each result to the query
+        scored_results = [(result, score_relevance(result, query)) for result in results]
+        
+        # Sort the results by their scores
+        scored_results.sort(key=lambda x: x[1], reverse=True)
+        
+        # Return the sorted results
+        return [result for result, score in scored_results]
         # Score the relevance of each result to the query
         scored_results = [(result, score_relevance(result, query)) for result in results]
         
