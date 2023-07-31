@@ -191,11 +191,6 @@ class CustomWebSearchAgent(WebSearchAgent):
         query_type = QueryType(query)
         # Return the name of the classified query type
         return query_type.name
-        # Return the name of the classified query type
-        return query_type.name
-
-        # TODO: Implement the logic to classify the query using the QueryType classifier
-        return query_type
 
     def determine_search_requirements(self, live_context):
         """
