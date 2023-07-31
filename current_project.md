@@ -115,3 +115,47 @@ When proposing code changes, ensure that the "below the line" section of an edit
 
 ## Context
 This `current_project.md` file was created to track the progress of the project and maintain context across multiple sessions with the GPT4-32k agent. The agent sometimes crashes and loses context, so this file will be used to reference and update the project status as work continues.
+
+As a reminder, top level goals of this project are:
+The WebSearchAgent class has several methods that need to be implemented:
+
+ 1 classify_query(self, query): This method should classify the user's query
+   into predefined categories using the QueryType classifier. We can use the
+   ai_classifier tool from Marvin to implement this.
+ 2 determine_search_requirements(self, live_context = {}): This method should
+   determine the search requirements based on the live context. We can use the
+   AIApplication tool from Marvin to maintain the state of the conversation or
+   task, which can then be used to determine the search requirements.
+ 3 modify_search_requirements(self, query, search_requirements): This method
+   should modify the query and parameters based on the search requirements. We
+   can use the AIFunction tool from Marvin to predict the function's output
+   based on its signature and docstring.
+ 4 search_web(self, query, live_context = {}): This method should search the
+   web based on the user's query and the live context using the
+   DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it
+   is.
+ 5 extract_results(self, search_results): This method should extract the search
+   results from the raw search results using ScrapeGhost and the
+   DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured
+   data from the search results.
+ 6 parse_results(self, results): This method should parse the search results.
+   We can use the AIModel tool from Marvin to parse the search results into
+   structured data.
+ 7 evaluate_results(self, parsed_results, query): This method should evaluate
+   the relevance of the parsed results in reference to the user query. We can
+   use the AIFunction tool from Marvin to predict the function's output based
+   on its signature and docstring.
+ 8 respond_or_search_again(self, evaluated_results): This method should respond
+   to the user's query or continue the search based on the evaluated results.
+   We can use the AIApplication tool from Marvin to maintain the state of the
+   conversation or task, which can then be used to decide whether to respond or
+   search again.
+
+
+We should check the current_project.md file before and after each session to track 
+progress and context.
+
+After completing a task, we should review that task (without proposing edit blocks; 
+just review) to ensure it meets requirements and quality standards.  If it does, we
+can then mark that task as complete in the progress tracking section above.  If it 
+does not meet requirements, we should revisit that task and propose improvements.
