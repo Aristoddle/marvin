@@ -187,8 +187,9 @@ class CustomWebSearchAgent(WebSearchAgent):
         # We can add any additional initialization here
 
     def classify_query(self, query):
-        # TODO: Implement the logic to classify the query using the QueryType classifier
-        pass
+        # Use the QueryType classifier to classify the user's query
+        query_type = QueryType(query)
+        return query_type
 
         # TODO: Implement the logic to classify the query using the QueryType classifier
         return query_type
