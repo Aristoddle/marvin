@@ -1360,7 +1360,7 @@ TestPlanJSONPatch	tests/test_components/test_ai_app.py	/^class TestPlanJSONPatch
 TestStateJSONPatch	tests/test_components/test_ai_app.py	/^class TestStateJSONPatch:$/;"	c
 TestUpdatePlan	tests/test_components/test_ai_app.py	/^class TestUpdatePlan:$/;"	c
 TestUpdateState	tests/test_components/test_ai_app.py	/^class TestUpdateState:$/;"	c
-TestWebSearchAgent	test_web_search_agent.py	/^class TestWebSearchAgent(unittest.TestCase):$/;"	c
+TestWebSearchAgent	test_web_search_agent.py	/^class TestWebSearchAgent(asynctest.TestCase):$/;"	c
 TestWriterState	cookbook/test_writing_application.py	/^class TestWriterState(BaseModel):$/;"	c
 Testing	docs/src/development_guide.md	/^## Testing$/;"	s	chapter:Development Guide
 Text to ORM	docs/examples/ai_models.md	/^## Text to ORM$/;"	s	chapter:AI Models Examples
@@ -2684,7 +2684,7 @@ resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.or
 resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/yaml\/-\/yaml-2.3.1.tgz",$/;"	s	object:packages.node_modules/yaml
 resp = scrape_legislators("https://www.ilga.gov/house/rep.asp?MemberID=3071")	.aider.chat.history.md	/^#### resp = scrape_legislators("https:\/\/www.ilga.gov\/house\/rep.asp?MemberID=3071")  $/;"	t	chapter:<<<<<<< ORIGINAL
 resp.data	.aider.chat.history.md	/^#### resp.data  $/;"	t	chapter:<<<<<<< ORIGINAL
-respond_or_search_again	cookbook/apps/web_search_agent.py	/^    def respond_or_search_again(self, evaluated_results, query, live_context):$/;"	m	class:WebSearchAgent
+respond_or_search_again	cookbook/apps/web_search_agent.py	/^    async def respond_or_search_again(self, evaluated_results, query, live_context):$/;"	m	class:WebSearchAgent
 return_annotation	src/marvin/functions/__init__.py	/^    def return_annotation(self):$/;"	m	class:Function
 reusify	docs/package-lock.json	/^        "reusify": "^1.0.4"$/;"	s	object:packages.node_modules/fastq.dependencies
 rgb	docs/static/css/tailwind.css	/^.bg-\\[rgb\\(255\\2c 0\\2c 0\\)\\] {$/;"	s
@@ -2740,7 +2740,7 @@ schema	src/marvin/functions/__init__.py	/^    def schema(self, *args, name: str 
 schema={	.aider.chat.history.md	/^####   schema={  $/;"	t	chapter:<<<<<<< ORIGINAL
 scrape_legislators = SchemaScraper(	.aider.chat.history.md	/^#### scrape_legislators = SchemaScraper(  $/;"	t	chapter:<<<<<<< ORIGINAL
 search_ddg	src/marvin/tools/web.py	/^async def search_ddg(query: str, n: int = 5) -> str:$/;"	f	typeref:typename:str
-search_web	cookbook/apps/web_search_agent.py	/^    def search_web(self, query, live_context):$/;"	m	class:WebSearchAgent
+search_web	cookbook/apps/web_search_agent.py	/^    async def search_web(self, query, live_context):$/;"	m	class:WebSearchAgent
 select	docs/static/css/tailwind.css	/^select {$/;"	s
 select	docs/static/css/tailwind.css	/^select,$/;"	s
 serve	src/marvin/deployment/__init__.py	/^    def serve(self):$/;"	m	class:Deployment
@@ -2842,7 +2842,7 @@ test_name	tests/test_models/test_functions.py	/^    def test_name(self):$/;"	m	c
 test_name_custom	tests/test_models/test_functions.py	/^    def test_name_custom(self):$/;"	m	class:TestFunctions
 test_parse_results	test_web_search_agent.py	/^    async def test_parse_results(self):$/;"	m	class:TestWebSearchAgent
 test_recover_complex_values	tests/test_components/test_ai_classifier.py	/^    def test_recover_complex_values(self):$/;"	m	class:TestAIClassifiers
-test_respond_or_search_again	test_web_search_agent.py	/^    def test_respond_or_search_again(self):$/;"	m	class:TestWebSearchAgent
+test_respond_or_search_again	test_web_search_agent.py	/^    async def test_respond_or_search_again(self):$/;"	m	class:TestWebSearchAgent
 test_resume	tests/test_components/test_ai_model.py	/^    def test_resume(self):$/;"	m	class:TestAIModels
 test_return_annotation_native	tests/test_models/test_functions.py	/^    def test_return_annotation_native(self):$/;"	m	class:TestFunctions
 test_return_annotation_pydantic	tests/test_models/test_functions.py	/^    def test_return_annotation_pydantic(self):$/;"	m	class:TestFunctions
