@@ -1,9 +1,15 @@
 
 from marvin.tools.web import DuckDuckGoSearch
 from src.marvin.components.ai_classifier import ai_classifier
-from src.marvin.components.ai_model import AIModel, GitHubRepo, APIDoc
+from src.marvin.components.ai_application import AIApplication
+from src.marvin.components.ai_function import AIFunction
+from src.marvin.components.ai_model import AIModel
+
 from enum import Enum
 
+import openai
+
+openai.api_key = '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'
 
 @ai_classifier
 class QueryType(Enum):
@@ -13,7 +19,8 @@ class QueryType(Enum):
     API_DOCUMENTATION = 4
     DEBUGGING_HELP = 5
 
-class WebSearchAgent(WebSearchAgent):
+
+class WebSearchAgent:
 
     description: str = "A custom web search agent"
 
@@ -31,7 +38,7 @@ class WebSearchAgent(WebSearchAgent):
         # Return the name of the classified query type
         return query_type.name
 
-    def determine_search_requirements(self, live_context = {}):
+    def determine_search_requirements(self, live_context={}):
         """
         Determine the search requirements based on the live context.
 
@@ -67,22 +74,7 @@ class WebSearchAgent(WebSearchAgent):
         modified_query, parameters = ai_function(query, search_requirements)
 
         return modified_query, parameters
-    def modify_search_requirements(self, query, search_requirements):
-        """
-        Modify the query and parameters based on the search requirements.
-
-        Args:
-            query (str): The user's query.
-            search_requirements (dict): The search requirements.
-
-        Returns:
-            tuple: The modified query and parameters.
-        """
-        # TODO: Implement the logic to modify the query and parameters based on the search_requirements
-        modified_query = query
-        parameters = {}
-        return modified_query, parameters
-
+    
     def search_web(self, query, live_context):
         """
         Search the web based on the user's query and the live context.
@@ -105,9 +97,9 @@ class WebSearchAgent(WebSearchAgent):
         
         # Modify the query and parameters based on the search requirements
         modified_query, parameters = self.modify_search_requirements(query, search_requirements)
-        
+
         # Search the web using the DuckDuckGoSearch tool with the modified query and parameters
-        search_results = self.search_tool.run(modified_query, parameters)
+        #TODO
         
         return search_results
 

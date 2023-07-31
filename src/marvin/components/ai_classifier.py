@@ -95,18 +95,6 @@ class AIEnumMeta(EnumMeta):
             return enum
 
 
-class QueryType(Enum):
-    """
-    QueryType is an Enum class for different types of queries.
-    """
-    FACTUAL_INFORMATION = 1
-    LATEST_NEWS = 2
-    GITHUB_PROJECT = 3
-    API_DOCUMENTATION = 4
-    DEBUGGING_HELP = 5
-
-QueryType = ai_classifier(QueryType)
-
 class AIEnum(Enum, metaclass=AIEnumMeta):
     """
     AIEnum is a class that extends Python's built-in Enum class.

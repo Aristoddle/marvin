@@ -872,7 +872,6 @@ API Reference	action_based_spec.md	/^### API Reference$/;"	S	section:Marvin Plat
 API Spec Snippets	current_project.md	/^## API Spec Snippets$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 APIDoc	src/marvin/components/ai_model.py	/^class APIDoc(AIModel):$/;"	c
 API_DOCUMENTATION	cookbook/apps/web_search_agent.py	/^    API_DOCUMENTATION = 4$/;"	v	class:QueryType
-API_DOCUMENTATION	src/marvin/components/ai_classifier.py	/^    API_DOCUMENTATION = 4$/;"	v	class:QueryType
 ASSISTANT	src/marvin/utilities/messages.py	/^    ASSISTANT = "ASSISTANT"$/;"	v	class:Role
 Access, implement, test, and customize common LLM patterns.	docs/src/docs/promptss.md	/^###  Access, implement, test, and customize common LLM patterns. $/;"	S	chapter:Prompts as Code
 According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.	.aider.chat.history.md	/^#   According to pypa\/pipenv#598, it is recommended to include Pipfile.lock in version control.$/;"	c
@@ -997,7 +996,6 @@ Customizing the LLM	docs/guide/ai_components/ai_functions.md	/^### Customizing t
 Cython debug symbols	.aider.chat.history.md	/^# Cython debug symbols$/;"	c
 DAILY_DIGEST_TEMPLATE	cookbook/flows/github_digest.py	/^DAILY_DIGEST_TEMPLATE = jinja_env.from_string(inspect.cleandoc("""$/;"	v
 DEBUGGING_HELP	cookbook/apps/web_search_agent.py	/^    DEBUGGING_HELP = 5$/;"	v	class:QueryType
-DEBUGGING_HELP	src/marvin/components/ai_classifier.py	/^    DEBUGGING_HELP = 5$/;"	v	class:QueryType
 DEFAULT_INSTRUCTIONS	cookbook/apps/chatbot.py	/^DEFAULT_INSTRUCTIONS = "Engage the user in conversation."$/;"	v
 DEFAULT_INSTRUCTIONS	cookbook/slackbot/chatbot.py	/^DEFAULT_INSTRUCTIONS = "Engage the user in conversation."$/;"	v
 DEFAULT_NAME	cookbook/apps/chatbot.py	/^DEFAULT_NAME = "Marvin"$/;"	v
@@ -1048,7 +1046,6 @@ Extract financial information from messy CSV data	docs/examples/ai_models.md	/^#
 Extract structured data from text	.aider.chat.history.md	/^# Extract structured data from text$/;"	c
 FACTUAL_INFORMATION	cookbook/apps/agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FACTUAL_INFORMATION	cookbook/apps/web_search_agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
-FACTUAL_INFORMATION	src/marvin/components/ai_classifier.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FAILED	src/marvin/components/ai_application.py	/^    FAILED = "FAILED"$/;"	v	class:TaskState
 FUNCTIONS_INSTRUCTIONS	src/marvin/engine/language_models/anthropic.py	/^FUNCTIONS_INSTRUCTIONS = """$/;"	v
 FUNCTION_CALL_ARGS	src/marvin/engine/language_models/anthropic.py	/^FUNCTION_CALL_ARGS = re.compile(r'"arguments":\\s*(".*")', re.DOTALL)$/;"	v
@@ -1072,7 +1069,6 @@ Function	src/marvin/functions/__init__.py	/^class Function:$/;"	c
 FunctionDecoratorFactory	src/marvin/functions/__init__.py	/^def FunctionDecoratorFactory($/;"	f	typeref:typename:Callable[[A],T]
 FunctionRegistry	src/marvin/functions/__init__.py	/^class FunctionRegistry(APIRouter):$/;"	c
 GITHUB_PROJECT	cookbook/apps/web_search_agent.py	/^    GITHUB_PROJECT = 3$/;"	v	class:QueryType
-GITHUB_PROJECT	src/marvin/components/ai_classifier.py	/^    GITHUB_PROJECT = 3$/;"	v	class:QueryType
 Generate RRULEs	docs/examples/ai_functions.md	/^## Generate RRULEs$/;"	s	chapter:AI Functions Examples
 Generate a list of fruits	docs/examples/ai_functions.md	/^## Generate a list of fruits$/;"	s	chapter:AI Functions Examples
 Generate fake data according to a schema	docs/examples/ai_functions.md	/^## Generate fake data according to a schema$/;"	s	chapter:AI Functions Examples
@@ -1136,7 +1132,6 @@ Jupyter Notebook	.aider.chat.history.md	/^# Jupyter Notebook$/;"	c
 KNOWN_COMMANDS	src/marvin/cli/chat/__init__.py	/^KNOWN_COMMANDS = {$/;"	v
 LATEST_NEWS	cookbook/apps/agent.py	/^    LATEST_NEWS = 2$/;"	v	class:QueryType
 LATEST_NEWS	cookbook/apps/web_search_agent.py	/^    LATEST_NEWS = 2$/;"	v	class:QueryType
-LATEST_NEWS	src/marvin/components/ai_classifier.py	/^    LATEST_NEWS = 2$/;"	v	class:QueryType
 LLM Configuration	docs/src/docs/configuration/settings.md	/^## LLM Configuration$/;"	s	chapter:Settings
 LLM Providers	docs/src/docs/configuration/settings.md	/^## LLM Providers$/;"	s	chapter:Settings
 LLMConference	tests/test_components/test_ai_model.py	/^        class LLMConference(BaseModel):$/;"	c	member:TestAIModels.test_literal	file:
@@ -1240,8 +1235,6 @@ QueryChroma	src/marvin/tools/chroma.py	/^class QueryChroma(Tool):$/;"	c
 QueryResultType	src/marvin/tools/chroma.py	/^QueryResultType = Literal["documents", "distances", "metadatas"]$/;"	v
 QueryType	cookbook/apps/agent.py	/^class QueryType(Enum):$/;"	c
 QueryType	cookbook/apps/web_search_agent.py	/^class QueryType(Enum):$/;"	c
-QueryType	src/marvin/components/ai_classifier.py	/^QueryType = ai_classifier(QueryType)$/;"	v
-QueryType	src/marvin/components/ai_classifier.py	/^class QueryType(Enum):$/;"	c
 Quick Install	.aider.chat.history.md	/^## Quick Install$/;"	s	chapter:Marvin
 Quick Install	README.md	/^## Quick Install$/;"	s	chapter:Marvin
 R	src/marvin/cli/typer.py	/^R = TypeVar("R")$/;"	v
@@ -1402,7 +1395,7 @@ Utilities	docs/src/docs/index.md	/^### Utilities$/;"	S	section:The Marvin Docs""
 VS Code	.aider.chat.history.md	/^# VS Code$/;"	c
 VisitUrl	src/marvin/tools/web.py	/^class VisitUrl(Tool):$/;"	c
 Web scraping with Marvin	docs/src/guides/webscraping.md	/^# Web scraping with Marvin$/;"	c
-WebSearchAgent	cookbook/apps/web_search_agent.py	/^class WebSearchAgent(WebSearchAgent):$/;"	c
+WebSearchAgent	cookbook/apps/web_search_agent.py	/^class WebSearchAgent:$/;"	c
 Well, in this case, we're looking for things like up-to-date github projects (which might be enabled in `src/marvin/tools/github.py` `GitHubRepo` `cookbook/flows/github_digest.py` `cookbook/apps/documentation_agent.py` `cookbook/apps/chatbot.py`), checking API documentation before writing unique API calls (e.g. `APIDoc`), and helping debug errors found when running something like pytest by searching StackOverflow and similar sites.  Some of this content may have already been implemented in previous runs, in which case, you should prioritize updating the `current_project.md` file with rich and robust references to the tooling and utilities already made available in the system for future use, extension, and/or reference.	.aider.chat.history.md	/^#### Well, in this case, we're looking for things like up-to-date github projects (which might b/;"	t	section:Current Project: Enhancing WebSearchAgent""Progress Tracking
 What Makes Marvin Different?	docs/src/getting_started/what_is_marvin.md	/^## What Makes Marvin Different?$/;"	s	chapter:Hello, Marvin!
 When to use AI Models	docs/guide/ai_components/ai_models.md	/^## When to use AI Models$/;"	s	chapter:AI Models
@@ -1728,7 +1721,7 @@ description	src/marvin/tools/python.py	/^    description: str = """$/;"	v	class:
 description	src/marvin/tools/shell.py	/^    description: str = """$/;"	v	class:Shell	typeref:typename:str
 description	src/marvin/tools/web.py	/^    description: str = "Search the web with DuckDuckGo."$/;"	v	class:DuckDuckGoSearch	typeref:typename:str
 description	src/marvin/tools/web.py	/^    description: str = "Visit a valid URL and return its contents."$/;"	v	class:VisitUrl	typeref:typename:str
-determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context = {}):$/;"	m	class:WebSearchAgent
+determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context={}):$/;"	m	class:WebSearchAgent
 detokenize	src/marvin/utilities/strings.py	/^def detokenize(tokens: list[int]) -> str:$/;"	f	typeref:typename:str
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.castarray
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.isplainobject
