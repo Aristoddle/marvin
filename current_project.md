@@ -38,12 +38,12 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 - `action_based_spec.md`: This file contains the specifications for various AI tools that should be leveraged to power much of the logic in the `WebSearchAgent`. These tools include the `AIEnum` component for classifying the user's query and the `AIModel` component for parsing the search results.
 
 ## Note
-When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform.
+When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform. Always check the `action_based_spec.md` for Marvin commands to ensure we're leveraging them as well as possible.
 
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
 - [x] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements.
-- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements.
+- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete)
 - [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
 - [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
 - [ ] Task 6: Add a new method in the custom agent for comparing the synthesized answer with the user query.
