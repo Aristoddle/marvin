@@ -1,7 +1,7 @@
 # Current Project: Enhancing WebSearchAgent
 
 ## Task Description
-The goal of this project is to enhance the existing `WebSearchAgent` in the Marvin platform to classify a user query, search the web, scrape results, synthesize those results, compare them with the user query, and loop until an answer is found or the user stops the process.
+The goal of this project is to enhance the existing `WebSearchAgent` in the Marvin platform to classify a user query, search the web, scrape results, synthesize those results, compare them with the user query, and loop until an answer is found or the user stops the process.  We should make aggressive use of the Marvin Ai capabilities defined in action_based_spec to bring this to fruition.
 
 ## Task List
 1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
