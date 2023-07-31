@@ -1,5 +1,6 @@
 from cookbook.apps.web_search_agent import QueryType, WebSearchAgent
 import unittest
+
 from marvin.components.ai_model import AIModel
 
 class TestWebSearchAgent(unittest.TestCase):
