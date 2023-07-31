@@ -7,6 +7,10 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
 2. Modify the `classify_query` method in the custom agent to suit specific classification requirements.
 3. Modify the `search_web` method in the custom agent to suit specific web search requirements.
+    - Modify the `search_web` method to accept additional parameters that represent the live context.
+    - Use the live context to determine the search requirements.
+    - Modify the search query and parameters based on the determined search requirements.
+    - Return the search results from the `DuckDuckGoSearch` tool.
 4. Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
 5. Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
 6. Add a new method in the custom agent for comparing the synthesized answer with the user query.
