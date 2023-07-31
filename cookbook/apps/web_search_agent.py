@@ -172,7 +172,7 @@ class WebSearchAgent:
         # Return the classified query type
         return query_type
 
-    def determine_search_requirements(self, live_context=None):
+    async def determine_search_requirements(self, live_context=None):
         """
         Determine the search requirements based on the live context. The live context, which
         contains the chat log/history and the specific question/problem identified by the classifier,
@@ -188,9 +188,7 @@ class WebSearchAgent:
         if live_context is None:
             live_context = {}
 
-        # Use the shared AIApplication instance to determine the search requirements based on the live context
-        search_requirements = self.ai_application.run(live_context)
-
+        search_requirements = await self.ai_application.run(live_context)
         return search_requirements
 
     def modify_search_requirements(self, query, search_requirements):
@@ -247,7 +245,7 @@ class WebSearchAgent:
 
         return search_results
 
-    def extract_results(self, search_results):
+    async def extract_results(self, search_results):
         """
         Extract the search results from the raw search results using the ScrapeGhost API. The search
         results are extracted from the raw search results using the ScrapeGhost API. The extracted
@@ -260,8 +258,10 @@ class WebSearchAgent:
         Returns:
             str: The extracted search results, getting website URLs from DDG, and using ScrapeGhost to pull their data.
         """
+
+    
         # Use the AIApplication instance to dynamically determine the structure of the data
-        schema = self.ai_application.run(search_results)
+        schema = await self.ai_application.run(search_results)
 
         # Create an instance of the SchemaScraper class with the schema
         scraper = SchemaScraper(schema)
@@ -271,6 +271,7 @@ class WebSearchAgent:
 
         # Convert the scraped data into an instance of an AI model
         extracted_results = AIModelFactory(scraped_data)
+
 
         return extracted_results
 
