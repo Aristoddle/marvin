@@ -19,15 +19,10 @@ class Agent(AIApplication):
             plan_enabled=False,
             **kwargs,
         )
-        self.search_tool = DuckDuckGoSearch()
         # Initialize other tools and models as needed
 
     def classify_query(self, query):
         # Classify the query using the QueryType classifier
-        pass
-
-    def search_web(self, query):
-        # Search the web using the DuckDuckGoSearch tool
         pass
 
     def parse_results(self, results):
