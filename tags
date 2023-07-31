@@ -2664,7 +2664,7 @@ resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.or
 resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/yaml\/-\/yaml-2.3.1.tgz",$/;"	s	object:packages.node_modules/yaml
 resp = scrape_legislators("https://www.ilga.gov/house/rep.asp?MemberID=3071")	.aider.chat.history.md	/^#### resp = scrape_legislators("https:\/\/www.ilga.gov\/house\/rep.asp?MemberID=3071")  $/;"	t	chapter:<<<<<<< ORIGINAL
 resp.data	.aider.chat.history.md	/^#### resp.data  $/;"	t	chapter:<<<<<<< ORIGINAL
-respond_or_search_again	cookbook/apps/web_search_agent.py	/^    def respond_or_search_again(self, evaluated_results):$/;"	m	class:WebSearchAgent
+respond_or_search_again	cookbook/apps/web_search_agent.py	/^    def respond_or_search_again(self, evaluated_results, query, live_context):$/;"	m	class:WebSearchAgent
 return_annotation	src/marvin/functions/__init__.py	/^    def return_annotation(self):$/;"	m	class:Function
 reusify	docs/package-lock.json	/^        "reusify": "^1.0.4"$/;"	s	object:packages.node_modules/fastq.dependencies
 rgb	docs/static/css/tailwind.css	/^.bg-\\[rgb\\(255\\2c 0\\2c 0\\)\\] {$/;"	s
