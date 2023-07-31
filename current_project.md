@@ -11,7 +11,6 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
     - Partially updated the `classify_query` method to use the `QueryType` classifier.
     - The classifier is expected to categorize queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
     - TODO: Implement the logic to classify the query using the `QueryType` classifier.
-- [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements. (Incomplete, subtasks pending)
 3. Modify the `search_web` method in the custom agent to suit specific web search requirements.
     - Modify the `search_web` method to accept additional parameters that represent the live context.
     - Use the live context to determine the search requirements.
@@ -45,7 +44,7 @@ When possible, the logic in the `WebSearchAgent` should be powered by the AI too
 
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
-- [x] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements.
+- [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements. (Incomplete, subtasks pending)
 - [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete, subtasks pending)
 - [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
 - [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
