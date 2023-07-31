@@ -26,10 +26,10 @@ def classify_query(self, query):
     FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
 
     Args:
-        query (str): The user's query.
+        query (str): The user's query. This should be a string containing the user's question or request.
 
     Returns:
-        QueryType: The type of the query as determined by the QueryType classifier.
+        QueryType: The type of the query as determined by the QueryType classifier. This is an enum value that represents the category of the query.
     """
     # Classify the query using the QueryType classifier
     query_type = QueryType(query)

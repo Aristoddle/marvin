@@ -5,7 +5,11 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 
 ## Task List
 1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
+    - Created a new class `CustomWebSearchAgent` that extends `WebSearchAgent`.
+    - Initialized the new class with the same parameters as `WebSearchAgent`.
 2. Modify the `classify_query` method in the custom agent to suit specific classification requirements.
+    - Updated the `classify_query` method to use the `QueryType` classifier.
+    - The classifier categorizes queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
 3. Modify the `search_web` method in the custom agent to suit specific web search requirements.
     - Modify the `search_web` method to accept additional parameters that represent the live context.
     - Use the live context to determine the search requirements.
