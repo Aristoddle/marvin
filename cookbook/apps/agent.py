@@ -11,30 +11,18 @@ class QueryType(Enum):
     # Add more query types as needed
 
 class Agent(AIApplication):
-    description: str = "A helpful AI assistant"
+    description: str = "A generic AI agent"
 
     def __init__(self, **kwargs):
-        super().__init__(
-            state_enabled=False,
-            plan_enabled=False,
-            **kwargs,
-        )
+        super().__init__(**kwargs)
         # Initialize other tools and models as needed
 
-    def classify_query(self, query):
-        # Classify the query using the QueryType classifier
+    def process_input(self, input_data):
+        # Process the input data
         pass
 
-    def parse_results(self, results):
-        # Parse the search results using an AIModel
-        pass
-
-    def evaluate_results(self, parsed_results):
-        # Evaluate the relevance of the parsed results using a classifier
-        pass
-
-    def respond_or_search_again(self, evaluated_results):
-        # Respond to the user's query or continue the search based on the evaluated results
+    def generate_output(self):
+        # Generate the output
         pass
 
 
