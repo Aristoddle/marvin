@@ -151,21 +151,20 @@ class WebSearchAgent:
 
 
     def parse_results(self, results):
-        # Transform or extract data from the results if necessary
-        # This is a placeholder and should be replaced with actual implementation
-        transformed_results = self._transform_results(results)
-        return transformed_results
+        # Use AIModel to parse the search results into structured data
+        parsed_results = AIModel.extract(results)
+        return parsed_results
 
     def evaluate_results(self, parsed_results, query):
         # Define an AIFunction that evaluates the relevance of a result
         evaluate_relevance = AIFunction(fn=self._evaluate_relevance)
         
         # Use the AIFunction to evaluate the relevance of each result
-        evaluated_results = [evaluate_relevance(result, query) for result in parsed_results]
+        evaluated_results = [evaluate_relevance.run(result, query) for result in parsed_results]
 
         return evaluated_results
 
-    def respond_or_search_again(self, evaluated_results):
+    def respond_or_search_again(self, evaluated_results, query, live_context):
         # Create an AIApplication that maintains the state of the conversation or task
         app = AIApplication(name="WebSearchAgent", description="A web search agent")
         
@@ -177,7 +176,7 @@ class WebSearchAgent:
             response = self._format_response(evaluated_results)
         else:
             # Otherwise, continue the search
-            response = self.search_web(self.query, self.live_context)
+            response = self.search_web(query, live_context)
         
         return response
 
