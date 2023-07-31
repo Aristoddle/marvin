@@ -37,6 +37,22 @@ def classify_query(self, query):
         return query_type
 
     def search_web(self, query, live_context):
+        """
+        Search the web based on the user's query and the live context.
+
+        The live context is a dictionary that contains information about the current state of the conversation or task. 
+        This could include the chat log/history, the specific question/problem identified by the classifier, or any other relevant information.
+
+        This method uses the live context to determine the search requirements, modifies the query and parameters based on these requirements, 
+        and then uses the DuckDuckGoSearch tool to search the web with the modified query and parameters.
+
+        Args:
+            query (str): The user's query.
+            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
+
+        Returns:
+            str: The search results.
+        """
         # Determine the search requirements based on the live context
         search_requirements = self.determine_search_requirements(live_context)
         

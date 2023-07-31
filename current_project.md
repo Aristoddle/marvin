@@ -18,13 +18,13 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
 
 ## Cross-File Dependencies
-- `cookbook/apps/web_search_agent.py`: This file contains the `WebSearchAgent` class that will be extended to create the custom agent.
-- `cookbook/apps/agent.py`: This file contains the `Agent` class that the `WebSearchAgent` class inherits from. It may need to be referenced for understanding the base functionality.
-- `src/marvin/tools/github.py`: This file contains the `GitHubRepo` tool that can be used to search for up-to-date GitHub projects.
-- `src/marvin/components/ai_model.py`: This file contains the `APIDoc` model that can be used to check API documentation before writing unique API calls.
-- `cookbook/apps/documentation_agent.py`: This file contains the `DocumentationAgent` class that can be used to update documentation.
-- `cookbook/apps/chatbot.py`: This file contains the `Chatbot` class that can be used to interact with the user.
-- `action_based_spec.md`: This file contains the specifications for various AI tools that should be leveraged to power much of the logic in the `WebSearchAgent`.
+- `cookbook/apps/web_search_agent.py`: This file contains the `WebSearchAgent` class that will be extended to create the custom agent. The `search_web` method in this class uses a context dictionary to maintain the state of the conversation or task. This dictionary could include the chat log/history, the specific question/problem identified by the classifier, or any other relevant information.
+- `cookbook/apps/agent.py`: This file contains the `Agent` class that the `WebSearchAgent` class inherits from. It may need to be referenced for understanding the base functionality. The `AIApplication` component in this class could be used to maintain the state of the conversation or task, which could then be passed to the `search_web` method as the context.
+- `src/marvin/tools/github.py`: This file contains the `GitHubRepo` tool that can be used to search for up-to-date GitHub projects. This tool could be used in the `search_web` method to search for GitHub projects related to the user's query.
+- `src/marvin/components/ai_model.py`: This file contains the `APIDoc` model that can be used to check API documentation before writing unique API calls. The `AIModel` component in this class could be used to parse the search results into structured data.
+- `cookbook/apps/documentation_agent.py`: This file contains the `DocumentationAgent` class that can be used to update documentation. This class could be used to update the documentation of the `WebSearchAgent` class as changes are made.
+- `cookbook/apps/chatbot.py`: This file contains the `Chatbot` class that can be used to interact with the user. This class could be used to communicate the search results to the user in a user-friendly format.
+- `action_based_spec.md`: This file contains the specifications for various AI tools that should be leveraged to power much of the logic in the `WebSearchAgent`. These tools include the `AIEnum` component for classifying the user's query and the `AIModel` component for parsing the search results.
 
 ## Note
 When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform.
