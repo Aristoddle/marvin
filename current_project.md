@@ -17,6 +17,7 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
     - Use the `DuckDuckGoSearch` tool to search the web with the modified query and parameters.
     - Return the search results.
     - TODO: Implement the `determine_search_requirements` and `modify_search_requirements` methods to process the `live_context` and generate a relevant web query.
+    - TODO: Check and leverage the `action_based_spec.md` for Marvin commands.
 4. Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
     - TODO: Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
 5. Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
@@ -43,7 +44,7 @@ When possible, the logic in the `WebSearchAgent` should be powered by the AI too
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
 - [x] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements.
-- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete)
+- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete, subtasks pending)
 - [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
 - [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
 - [ ] Task 6: Add a new method in the custom agent for comparing the synthesized answer with the user query.
