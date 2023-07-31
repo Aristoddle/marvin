@@ -862,6 +862,7 @@ AIModel	.aider.chat.history.md	/^## AIModel$/;"	s	chapter:Marvin Platform - Acti
 AIModel	action_based_spec.md	/^## AIModel$/;"	s	chapter:Marvin Platform - Action Based Specifications
 AIModel	src/marvin/components/ai_model.py	/^class AIModel(LoggerMixin, BaseModel):$/;"	c
 AIModelFactory	src/marvin/components/ai_model_factory.py	/^AIModelFactory = ai_model(DataSchema)$/;"	v
+API Reference	action_based_spec.md	/^### API Reference$/;"	S	section:Marvin Platform - Action Based Specifications""ScrapeGhost
 API Spec Snippets	current_project.md	/^## API Spec Snippets$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 APIDoc	src/marvin/components/ai_model.py	/^class APIDoc(AIModel):$/;"	c
 API_DOCUMENTATION	cookbook/apps/web_search_agent.py	/^    API_DOCUMENTATION = 4$/;"	v	class:QueryType
@@ -875,6 +876,8 @@ Advanced usage	docs/guide/ai_components/ai_functions.md	/^## Advanced usage$/;"	
 Advanced usage	docs/guide/ai_components/ai_models.md	/^## Advanced usage$/;"	s	chapter:AI Models
 Agent	cookbook/apps/agent.py	/^class Agent(AIApplication):$/;"	c
 All node modules in any directory	.aider.chat.history.md	/^# All node modules in any directory$/;"	c
+Altering the API / Model	action_based_spec.md	/^##### Altering the API \/ Model$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage""Customization
+Altering the Instructions to GPT	action_based_spec.md	/^##### Altering the Instructions to GPT$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage""Customization
 Ambient AI	.aider.chat.history.md	/^### Ambient AI$/;"	S	chapter:Marvin
 Ambient AI	README.md	/^### Ambient AI$/;"	S	chapter:Marvin
 Ambient AI	docs/src/getting_started/what_is_marvin.md	/^## Ambient AI$/;"	s	chapter:Hello, Marvin!
@@ -890,6 +893,7 @@ Assistant	src/marvin/prompts/library.py	/^class Assistant(MessagePrompt):$/;"	c
 Async functions	docs/guide/ai_components/ai_functions.md	/^### Async functions$/;"	S	section:AI Functions""Advanced usage
 AsyncTyper	src/marvin/cli/typer.py	/^class AsyncTyper(Typer):$/;"	c
 Attach our handler to a deployable `Chatbot`	docs/src/guides/slackbot.md	/^### Attach our handler to a deployable `Chatbot`$/;"	S	section:Build a Slack bot with Marvin""Building the bot
+Auto-splitting	action_based_spec.md	/^#### Auto-splitting$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Azure OpenAI Service	docs/src/docs/configuration/azure_openai.md	/^# Azure OpenAI Service$/;"	c
 AzureOpenAI	src/marvin/settings.py	/^class AzureOpenAI(MarvinBaseSettings):$/;"	c
 AzureOpenAIChatLLM	src/marvin/engine/language_models/azure_openai.py	/^class AzureOpenAIChatLLM(OpenAIChatLLM):$/;"	c
@@ -973,6 +977,7 @@ Could you write a file `action_based_spec.md` that runs through each of these, t
 Could you write to a new markdown file a top-level (but granular, step-by-step) task-list of the edits and cross-file dependencies that would be required/leveraged to achieve this task, alongside a top level task description, with an empty section for tracking progress, under a file current_project.md?  I would love to use this, and iterate with you (with this as a tracking file) as we work to enable/allow this functionality.  Sometimes you crash and lose context, so I'd love to instantiate a current_project.md file that we might reference and update as we work.  Even the context of this message (why does the current_project.md file exist, etc), might be relevant to include.  Once that is written, I'd love for you to role-play the scenario in which you are me, the end-user collaborating with you to implement this functionality, and you are a fresh instance of you, a GPT4-32k agent that will need to be warmed up to understand the task at hand, and then which will need to collaborate with the synthetic version of me to update/write out these files, and maintain context across multiple sessions using this markdown tracking file.	.aider.chat.history.md	/^#### Could you write to a new markdown file a top-level (but granular, step-by-step) task-list o/;"	t	chapter:aider chat started at 2023-07-30 20:41:38
 Country	tests/test_components/test_ai_model.py	/^        class Country(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 Create an instance of the agent	.aider.chat.history.md	/^# Create an instance of the agent$/;"	c
+Create an instance of the app	.aider.chat.history.md	/^# Create an instance of the app$/;"	c
 Create custom prompts that can be shared, tested, and versioned.	docs/src/docs/promptss.md	/^### Create custom prompts that can be shared, tested, and versioned.$/;"	S	chapter:Prompts as Code
 Cross-File Dependencies	.aider.chat.history.md	/^## Cross-File Dependencies$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 Cross-File Dependencies	.aider.chat.history.md	/^## Cross-File Dependencies$/;"	s	chapter:def classify_query(self, query):
@@ -981,6 +986,7 @@ Cross-File Dependencies	new_current_project_md_creation.md	/^### Cross-File Depe
 Current Project: Enhancing WebSearchAgent	.aider.chat.history.md	/^# Current Project: Enhancing WebSearchAgent$/;"	c
 Current Project: Enhancing WebSearchAgent	current_project.md	/^# Current Project: Enhancing WebSearchAgent$/;"	c
 CustomWebSearchAgent	cookbook/apps/web_search_agent.py	/^class CustomWebSearchAgent(WebSearchAgent):$/;"	c
+Customization	action_based_spec.md	/^#### Customization$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Customizing the LLM	docs/guide/ai_components/ai_functions.md	/^### Customizing the LLM$/;"	S	section:AI Functions""Advanced usage
 Cython debug symbols	.aider.chat.history.md	/^# Cython debug symbols$/;"	c
 DAILY_DIGEST_TEMPLATE	cookbook/flows/github_digest.py	/^DAILY_DIGEST_TEMPLATE = jinja_env.from_string(inspect.cleandoc("""$/;"	v
@@ -993,6 +999,7 @@ DEFAULT_NAME	cookbook/slackbot/chatbot.py	/^DEFAULT_NAME = "Marvin"$/;"	v
 DEFAULT_PERSONALITY	cookbook/apps/chatbot.py	/^DEFAULT_PERSONALITY = "A friendly AI assistant"$/;"	v
 DEFAULT_PERSONALITY	cookbook/slackbot/chatbot.py	/^DEFAULT_PERSONALITY = "A friendly AI assistant"$/;"	v
 DOCS_DIR	cookbook/docs_writer.py	/^DOCS_DIR = ROOT_DIR \/ "docs"$/;"	v
+Data Flow	action_based_spec.md	/^#### Data Flow$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Data generation	docs/guide/ai_components/ai_models.md	/^### Data generation$/;"	S	section:AI Models""Advanced usage
 DataSchema	src/marvin/components/ai_model_factory.py	/^class DataSchema(BaseModel):$/;"	c
 DefaultSettings	src/marvin/_framework/_defaults/__init__.py	/^class DefaultSettings(BaseModel):$/;"	c
@@ -1024,11 +1031,13 @@ Election	tests/test_components/test_ai_model.py	/^        class Election(BaseMod
 Entity extraction	docs/guide/ai_components/ai_models.md	/^### Entity extraction$/;"	S	section:AI Models""Advanced usage
 Environment Variables	docs/src/docs/configuration/settings.md	/^## Environment Variables$/;"	s	chapter:Settings
 Environments	.aider.chat.history.md	/^# Environments$/;"	c
+Exceptions	action_based_spec.md	/^#### Exceptions$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference
 Executing Prompts	docs/src/docs/prompts_executes.md	/^# Executing Prompts$/;"	c
 Executor	src/marvin/engine/executors/base.py	/^class Executor(LoggerMixin, MarvinBaseModel):$/;"	c
 Experience	tests/test_components/test_ai_model.py	/^        class Experience(BaseModel):$/;"	c	member:TestAIModels.test_resume	file:
 Extract action items from meeting transcripts	docs/examples/ai_models.md	/^## Extract action items from meeting transcripts$/;"	s	chapter:AI Models Examples
 Extract financial information from messy CSV data	docs/examples/ai_models.md	/^## Extract financial information from messy CSV data$/;"	s	chapter:AI Models Examples
+Extract structured data from text	.aider.chat.history.md	/^# Extract structured data from text$/;"	c
 FACTUAL_INFORMATION	cookbook/apps/agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FACTUAL_INFORMATION	cookbook/apps/web_search_agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FACTUAL_INFORMATION	src/marvin/components/ai_classifier.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
@@ -1060,6 +1069,7 @@ Generate RRULEs	docs/examples/ai_functions.md	/^## Generate RRULEs$/;"	s	chapter
 Generate a list of fruits	docs/examples/ai_functions.md	/^## Generate a list of fruits$/;"	s	chapter:AI Functions Examples
 Generate fake data according to a schema	docs/examples/ai_functions.md	/^## Generate fake data according to a schema$/;"	s	chapter:AI Functions Examples
 Generate rhymes	docs/examples/ai_functions.md	/^## Generate rhymes$/;"	s	chapter:AI Functions Examples
+Generate structured data from text	.aider.chat.history.md	/^# Generate structured data from text$/;"	c
 Get a datetime from a natural language description	docs/examples/ai_functions.md	/^## Get a datetime from a natural language description$/;"	s	chapter:AI Functions Examples
 Getting an API key	docs/src/docs/configuration/anthropic.md	/^## Getting an API key$/;"	s	chapter:Anthropic
 Getting an API key	docs/src/docs/configuration/openai.md	/^## Getting an API key$/;"	s	chapter:OpenAI
@@ -1074,6 +1084,7 @@ Given the `action_based_spec.md` written, can you delve a bit deeper into the we
 Given these components, (e.g. ai_model, ai_classifier, etc), could you help write explicit i/o examples, providing a robust specification of exactly how each of these components/tools actually works (and how I could maximally leverage them)?	.aider.chat.history.md	/^#### Given these components, (e.g. ai_model, ai_classifier, etc), could you help write explicit /;"	t	chapter:aider chat started at 2023-07-30 19:53:59
 Great.  The expectation here (and for all classes) should likely be defined in a proper python docstring so that it can be easily undersood by both end-users and Large Lange Model controller agents.	.aider.chat.history.md	/^#### Great.  The expectation here (and for all classes) should likely be defined in a proper pyt/;"	t	section:8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.""Task List
 Guidance instructions	docs/guide/ai_components/ai_models.md	/^### Guidance instructions$/;"	S	section:AI Models""Advanced usage
+HTTP Requests	action_based_spec.md	/^##### HTTP Requests$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage""Customization
 Hello Marvin 👋	docs/src/getting_started/hello_marvin.md	/^# Hello Marvin 👋$/;"	c
 Hello, Marvin!	docs/src/getting_started/what_is_marvin.md	/^# Hello, Marvin!$/;"	c
 Hey aider, could you help me continue the work I was last doing in this project, which was defined in `current_project.md`	.aider.chat.history.md	/^#### Hey aider, could you help me continue the work I was last doing in this project, which was /;"	t	chapter:aider chat started at 2023-07-30 22:08:43
@@ -1107,6 +1118,7 @@ Installer logs	.aider.chat.history.md	/^# Installer logs$/;"	c
 Installing for Development	docs/src/getting_started/installation.md	/^## Installing for Development$/;"	s	chapter:Installation
 Instead of doing the if 'str' in query checks, can you leverage the `src/marvin/components/ai_classifier.py` and other ai_components to drive this logic?	.aider.chat.history.md	/^#### Instead of doing the if 'str' in query checks, can you leverage the `src\/marvin\/component/;"	t	section:Current Project: Enhancing WebSearchAgent""Context
 Instructions for Creating a `current_project.md` File	new_current_project_md_creation.md	/^# Instructions for Creating a `current_project.md` File$/;"	c
+Interact with the app	.aider.chat.history.md	/^# Interact with the app$/;"	c
 Introduction	new_current_project_md_creation.md	/^## Introduction$/;"	s	chapter:Instructions for Creating a `current_project.md` File
 JSONPatchModel	src/marvin/components/ai_application.py	/^class JSONPatchModel(BaseModel):$/;"	c
 JetBrains specific template is maintainted in a separate JetBrains.gitignore that can	.aider.chat.history.md	/^#  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can$/;"	c
@@ -1187,6 +1199,7 @@ POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "P
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "option - 1"$/;"	v	class:TestAIClassifiers.test_keys_are_passed_to_llm.Sentiment
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = {"value": "Positive"}$/;"	v	class:TestAIClassifiers.test_recover_complex_values.Sentiment
 PREFECT_KNOWLEDGEBASE_DESC	cookbook/slackbot/chatbot.py	/^PREFECT_KNOWLEDGEBASE_DESC = """$/;"	v
+Pagination	action_based_spec.md	/^#### Pagination$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Pleaes do so.  Also, Please feel free to apply recommended improvements 1 and 2 from your response in your last message.	.aider.chat.history.md	/^#### Pleaes do so.  Also, Please feel free to apply recommended improvements 1 and 2 from your r/;"	t	section:def classify_query(self, query):""Cross-File Dependencies
 Please check the docstrings and your previous recommendations.  I believe you had done a great job of defining live-context in the past.	.aider.chat.history.md	/^#### Please check the docstrings and your previous recommendations.  I believe you had done a gr/;"	t	chapter:def search_web(self, query):
 Please continue	.aider.chat.history.md	/^#### Please continue  $/;"	t	section:Current Project: Enhancing WebSearchAgent""Progress Tracking
@@ -1196,7 +1209,9 @@ Please review all files we're working on right now in `current_project.md`, and 
 Please run me through web.py in explicit detail	.aider.chat.history.md	/^#### Please run me through web.py in explicit detail  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 Please verify that the `current_project.md` file is properly up-to-date.  If so, please continue on to build out theis `WebSearchAgent` as defined in the `current_project.md` file.  Also, review whether we need the `CustomWebSearchAgent`, or if we can integrate our logic into the core `WebSearchAgent`, folding that back in to the core class functionality.	.aider.chat.history.md	/^####  Please verify that the `current_project.md` file is properly up-to-date.  If so, please co/;"	t	section:Current Project: Enhancing WebSearchAgent""Note
 Plugins	docs/guide/ai_components/ai_functions.md	/^### Plugins$/;"	S	section:AI Functions""Advanced usage
+Postprocessors	action_based_spec.md	/^#### Postprocessors$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Predict function output	.aider.chat.history.md	/^# Predict function output$/;"	c
+Preprocessors	action_based_spec.md	/^##### Preprocessors$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage""Customization
 Prerequisites	docs/src/development_guide.md	/^## Prerequisites$/;"	s	chapter:Development Guide
 Progress Tracking	.aider.chat.history.md	/^## Progress Tracking$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 Progress Tracking	.aider.chat.history.md	/^## Progress Tracking$/;"	s	chapter:aider chat started at 2023-07-30 22:08:43
@@ -1245,6 +1260,7 @@ SageMath parsed files	.aider.chat.history.md	/^# SageMath parsed files$/;"	c
 Scalable APIs, data pipelines, and agents	.aider.chat.history.md	/^#### Scalable APIs, data pipelines, and agents$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Scalable APIs, data pipelines, and agents	README.md	/^#### Scalable APIs, data pipelines, and agents$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Schema normalization for data warehousing	docs/examples/ai_models.md	/^## Schema normalization for data warehousing$/;"	s	chapter:AI Models Examples
+ScrapeGhost	action_based_spec.md	/^## ScrapeGhost$/;"	s	chapter:Marvin Platform - Action Based Specifications
 ScrapeGhost Spec	current_project.md	/^### ScrapeGhost Spec$/;"	S	section:Current Project: Enhancing WebSearchAgent""API Spec Snippets
 Scrapy stuff:	.aider.chat.history.md	/^# Scrapy stuff:$/;"	c
 SearchGitHubIssues	src/marvin/tools/github.py	/^class SearchGitHubIssues(Tool):$/;"	c
@@ -1362,8 +1378,10 @@ Unit testing LLMs	docs/examples/ai_functions.md	/^## Unit testing LLMs$/;"	s	cha
 UpdatePlan	src/marvin/components/ai_application.py	/^class UpdatePlan(Tool):$/;"	c
 UpdateState	src/marvin/components/ai_application.py	/^class UpdateState(Tool):$/;"	c
 Updating `current_project.md`	new_current_project_md_creation.md	/^## Updating `current_project.md`$/;"	s	chapter:Instructions for Creating a `current_project.md` File
+Usage	action_based_spec.md	/^### Usage$/;"	S	section:Marvin Platform - Action Based Specifications""ScrapeGhost
 Use the agent to search the web	.aider.chat.history.md	/^# Use the agent to search the web$/;"	c
 User	src/marvin/prompts/library.py	/^class User(MessagePrompt):$/;"	c
+Using `pydantic` Models	action_based_spec.md	/^##### Using `pydantic` Models$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage""Postprocessors
 Using a model	docs/src/docs/configuration/anthropic.md	/^## Using a model$/;"	s	chapter:Anthropic
 Using a model	docs/src/docs/configuration/azure_openai.md	/^## Using a model$/;"	s	chapter:Azure OpenAI Service
 Using a model	docs/src/docs/configuration/openai.md	/^## Using a model$/;"	s	chapter:OpenAI
@@ -1454,11 +1472,18 @@ _post_message	cookbook/slackbot/chatbot.py	/^async def _post_message($/;"	f	type
 _reset_history	src/marvin/cli/chat/__init__.py	/^def _reset_history():$/;"	f
 _should_stop	src/marvin/engine/executors/base.py	/^    _should_stop: bool = PrivateAttr(False)$/;"	v	class:Executor	typeref:typename:bool
 _wait	docs/static/js/termynal.js	/^    _wait(time) {$/;"	m	class:Termynal
+`BadStop`	action_based_spec.md	/^##### `BadStop`$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference""Exceptions
+`InvalidJSON`	action_based_spec.md	/^##### `InvalidJSON`$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference""Exceptions
+`MaxCostExceeded`	action_based_spec.md	/^##### `MaxCostExceeded`$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference""Exceptions
+`PreprocessorError`	action_based_spec.md	/^##### `PreprocessorError`$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference""Exceptions
+`SchemaScraper`	action_based_spec.md	/^#### `SchemaScraper`$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference
+`TooManyTokens`	action_based_spec.md	/^##### `TooManyTokens`$/;"	T	subsubsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference""Exceptions
 ```	.aider.chat.history.md	/^#### ```  $/;"	t	chapter:<<<<<<< ORIGINAL
 ```bash	.aider.chat.history.md	/^#### ```bash  $/;"	t	chapter:<<<<<<< ORIGINAL
 ```json	.aider.chat.history.md	/^#### ```json  $/;"	t	chapter:<<<<<<< ORIGINAL
 ```python	.aider.chat.history.md	/^#### ```python  $/;"	t	chapter:<<<<<<< ORIGINAL
 `ai_fn`	docs/src/docs/components/ai_model_factory.md	/^## `ai_fn`$/;"	s	chapter:Model Factories
+`scrape`	action_based_spec.md	/^#### `scrape`$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference
 `scrapeghost` is an experimental library for scraping websites using OpenAI's GPT.	.aider.chat.history.md	/^#### `scrapeghost` is an experimental library for scraping websites using OpenAI's GPT.  $/;"	t	chapter:<<<<<<< ORIGINAL
 a	docs/static/css/tailwind.css	/^a {$/;"	s
 a.autorefs-external::after	docs/static/css/mkdocstrings.css	/^a.autorefs-external::after {$/;"	c
@@ -2691,6 +2716,7 @@ run_python	src/marvin/tools/python.py	/^def run_python(code: str, globals: dict 
 run_sync	src/marvin/utilities/async_utils.py	/^def run_sync(coroutine: Awaitable[T]) -> T:$/;"	f	typeref:typename:T
 safe_get	src/marvin/tools/web.py	/^async def safe_get(client, url):$/;"	f
 safe_issubclass	src/marvin/utilities/types.py	/^def safe_issubclass(type_, classes):$/;"	f
+same as writing	.aider.chat.history.md	/^# same as writing$/;"	c
 samp	docs/static/css/tailwind.css	/^samp,$/;"	s
 schema	src/marvin/functions/__init__.py	/^    def schema(self):$/;"	m	class:FunctionRegistry
 schema	src/marvin/functions/__init__.py	/^    def schema(self, *args, name: str = None, description: str = None, **kwargs):$/;"	m	class:Function
