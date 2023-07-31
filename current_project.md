@@ -3,15 +3,15 @@ The goal of this project is to enhance the `WebSearchAgent` class in `cookbook/a
 
 ## Task List
 1. Implement the `classify_query` method in the `WebSearchAgent` class. This method should classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
-    - Implement the following methods in the `WebSearchAgent` class:
-        - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
-        - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
-        - `modify_search_requirements(self, query, search_requirements)`: Modify the query and parameters based on the search requirements. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
-        - `search_web(self, query, live_context = {})`: Search the web based on the user's query and the live context using the DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it is.
-        - `extract_results(self, search_results)`: Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured data from the search results.
-        - `parse_results(self, results)`: Parse the search results. We can use the AIModel tool from Marvin to parse the search results into structured data.
-        - `evaluate_results(self, parsed_results, query)`: Evaluate the relevance of the parsed results in reference to the user query. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
-        - `respond_or_search_again(self, evaluated_results)`: Respond to the user's query or continue the search based on the evaluated results. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to decide whether to respond or search again.
+2. Implement the following methods in the `WebSearchAgent` class:
+    - `classify_query(self, query)`: This method should classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
+    - `determine_search_requirements(self, live_context = {})`: This method should determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+    - `modify_search_requirements(self, query, search_requirements)`: This method should modify the query and parameters based on the search requirements. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+    - `search_web(self, query, live_context = {})`: This method should search the web based on the user's query and the live context using the DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it is.
+    - `extract_results(self, search_results)`: This method should extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured data from the search results.
+    - `parse_results(self, results)`: This method should parse the search results. We can use the AIModel tool from Marvin to parse the search results into structured data.
+    - `evaluate_results(self, parsed_results, query)`: This method should evaluate the relevance of the parsed results in reference to the user query. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+    - `respond_or_search_again(self, evaluated_results)`: This method should respond to the user's query or continue the search based on the evaluated results. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to decide whether to respond or search again.
 2. Modify the `classify_query` method in the `WebSearchAgent` to suit specific classification requirements.
     - Partially updated the `classify_query` method to use the `QueryType` classifier.
     - The classifier is expected to categorize queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
