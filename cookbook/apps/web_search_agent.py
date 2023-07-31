@@ -31,40 +31,6 @@ class WebSearchAgent(WebSearchAgent):
         # Return the name of the classified query type
         return query_type.name
 
-    def classify_query(self, query):
-        """
-        Classify the user's query into predefined categories using the QueryType classifier.
-
-        This method takes a user's query as input and uses the QueryType classifier to determine
-        the type of the query. The QueryType classifier categorizes queries into types such as
-        FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
-
-        [Note: QueryType Classifier Spec Defined Below]
-            AI Classifier Notes:
-            # `ai_classifier` is implemented as a Python decorator that adds additional attributes and methods to an Enum class.
-
-            ### Top-Level Use
-
-            ```python
-            from src.marvin.components.ai_classifier import ai_classifier
-
-            @ai_classifier
-            class Color(Enum):
-                RED = 1
-                GREEN = 2
-                BLUE = 3
-
-            # Classify text
-            color = Color("I like the color of the sky.")
-            print(color)  # Color.BLUE
-            ```
-        [Note AI Classifier Spec Ends Here]
-        """
-        # Use the QueryType classifier to classify the user's query
-        query_type = QueryType(query)
-
-        return query_type
-
     def determine_search_requirements(self, live_context = {}):
         """
         Determine the search requirements based on the live context.
@@ -74,35 +40,6 @@ class WebSearchAgent(WebSearchAgent):
 
         Returns:
             dict: The search requirements.
-
-        [Note: Marvin AIFunction Spec Defined Below]
-
-            # AIFunction Definition and example
-
-            `AIFunction` is a class that represents a Python function with a signature and docstring as a prompt for an AI to predict the function's output.
-
-            ### Implementation
-
-            `AIFunction` is implemented as a Pydantic `BaseModel` with additional methods for predicting function output.
-
-            ### Top-Level Use
-
-            ```python
-            from src.marvin.components.ai_function import ai_fn
-
-            @ai_fn
-            def add(a: int, b: int) -> int:
-                """Adds two integers."""
-
-            # Predict function output
-            result = add(1, 2)
-            print(result)  # 3
-            ```
-
-            ### Developer Utility
-
-            `AIFunction` provides a way to leverage AI to predict the output of a Python function based on its signature and docstring.
-        [Note AIFunction Spec Ends Here]
         """
         # TODO: Implement the logic to determine the search requirements based on the live_context, if present, using Marvin's AIFunction tool.
         search_requirements = {}
@@ -118,8 +55,6 @@ class WebSearchAgent(WebSearchAgent):
 
         Returns:
             tuple: The modified query and parameters.
-
-        [Note ]
         """
 
         # TODO: Implement the logic to modify the query and parameters based on the search_requirements using Marvin's AiFunction tool.
