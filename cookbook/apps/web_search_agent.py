@@ -169,6 +169,23 @@ class WebSearchAgent:
         return parsed_results
 
     def evaluate_results(self, parsed_results, query):
+        """
+        Evaluate the relevance of the parsed results in reference to the user query using the AIFunction tool.
+
+        This method takes the parsed results and the user's query, and evaluates the relevance of each result 
+        in reference to the query. The evaluation is done using the AIFunction tool from Marvin, which predicts 
+        the function's output based on its signature and docstring.
+
+        The goal is to determine how relevant each result is to the user's query, which can then be used to 
+        decide whether to respond to the user's query or continue the search.
+
+        Args:
+            parsed_results (list): The parsed search results.
+            query (str): The user's query.
+
+        Returns:
+            list: The evaluated results, each with a relevance score.
+        """
         # Define an AIFunction that evaluates the relevance of a result
         evaluate_relevance = AIFunction(fn=self._evaluate_relevance)
         
