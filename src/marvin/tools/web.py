@@ -98,14 +98,5 @@ class DuckDuckGoSearch(Tool):
 
     description: str = "Search the web with DuckDuckGo."
 
-    async def run(self, query):
-        # Search the web using DuckDuckGo
-        # This is a placeholder and should be replaced with actual search logic
-        search_results = None
-        return search_results
-
-    async def run_with_modifications(self, query, modifications: list[str]):
-        # Modify the query or use a different search tool based on the provided modifications
-        # This is a placeholder and should be replaced with actual modification logic
-        modified_search_results = None
-        return modified_search_results
+    async def run(self, query: str) -> str:
+        return await search_ddg(query)
