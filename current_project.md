@@ -20,7 +20,8 @@
     - Modify the search query and parameters based on the determined search requirements.
     - Use the `DuckDuckGoSearch` tool to search the web with the modified query and parameters.
     - Return the search results.
-    - TODO: Implement the `determine_search_requirements` and `modify_search_requirements` methods to process the `live_context` and generate a relevant web query.
+    - DONE: Review the `determine_search_requirements` method. The method currently does not contain any logic to determine the search requirements based on the live context. The `AIApplication` tool from Marvin can be used to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+    - TODO: Implement the `modify_search_requirements` method to process the `live_context` and generate a relevant web query.
     - TODO: Check and leverage the `action_based_spec.md` for Marvin commands.
 4. Modify the `parse_results` method in the `WebSearchAgent` to scrape and parse the search results as per specific needs.
     - TODO: Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
