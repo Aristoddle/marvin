@@ -100,3 +100,7 @@ class DuckDuckGoSearch(Tool):
 
     async def run(self, query: str) -> str:
         return await search_ddg(query)
+
+    async def run_with_modifications(self, query: str, modifications: list[str]) -> str:
+        # Modify the query or use a different search tool based on the provided modifications
+        pass
