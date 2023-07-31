@@ -20,6 +20,8 @@ class QueryType(Enum):
     DEBUGGING_HELP = 5
 
 
+from src.marvin.components.ai_application import AIApplication
+
 class WebSearchAgent:
 
     description: str = "A custom web search agent"
@@ -27,6 +29,7 @@ class WebSearchAgent:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.search_tool = DuckDuckGoSearch()
+        self.ai_application = AIApplication(name="WebSearchAgent", description=self.description)
 
     def classify_query(self, query):
         """
