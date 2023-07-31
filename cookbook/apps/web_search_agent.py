@@ -20,27 +20,35 @@ class WebSearchAgent(AIApplication):
             **kwargs,
         )
         self.search_tool = DuckDuckGoSearch()
-        # Initialize other tools and models as needed
+        self.query_classifier = QueryType
 
     def classify_query(self, query):
         # Classify the query using the QueryType classifier
-        pass
+        query_type = self.query_classifier(query)
+        return query_type
 
     def search_web(self, query):
         # Search the web using the DuckDuckGoSearch tool
-        pass
+        search_results = self.search_tool.run(query)
+        return search_results
 
     def parse_results(self, results):
         # Parse the search results using the GitHubRepo and APIDoc models
-        pass
+        # This is a placeholder and should be replaced with actual parsing logic
+        parsed_results = results
+        return parsed_results
 
     def evaluate_results(self, parsed_results):
         # Evaluate the relevance of the parsed results using a classifier
-        pass
+        # This is a placeholder and should be replaced with actual evaluation logic
+        evaluated_results = parsed_results
+        return evaluated_results
 
     def respond_or_search_again(self, evaluated_results):
         # Respond to the user's query or continue the search based on the evaluated results
-        pass
+        # This is a placeholder and should be replaced with actual response logic
+        response = evaluated_results
+        return response
 
 
 __all__ = ["WebSearchAgent"]
