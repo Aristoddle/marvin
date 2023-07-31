@@ -106,6 +106,7 @@ class WebSearchAgent:
         self.search_tool = DuckDuckGoSearch()
         self.ai_application = AIApplication(name="WebSearchAgent", 
                                             description=self.description)
+        self.ai_function = AIFunction()
 
     def _format_response(self, results: list) -> str:
         """
