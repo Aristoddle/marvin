@@ -1,38 +1,38 @@
 # Current Project: Enhancing WebSearchAgent
 ## Task List
 1. Enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py`.
-    - TODO: Implement the following methods in the `WebSearchAgent` class:
-        - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier.
-        - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context.
-        - `modify_search_requirements(self, query, search_requirements)`: Modify the query and parameters based on the search requirements.
-        - `search_web(self, query, live_context = {})`: Search the web based on the user's query and the live context using the DuckDuckGoSearch tool.
-        - `extract_results(self, search_results)`: Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool.
-        - `parse_results(self, results)`: Parse the search results.
-        - `evaluate_results(self, parsed_results, query)`: Evaluate the relevance of the parsed results in reference to the user query.
-        - `respond_or_search_again(self, evaluated_results)`: Respond to the user's query or continue the search based on the evaluated results.
+    - Implement the following methods in the `WebSearchAgent` class:
+        - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier. We can use the ai_classifier tool from Marvin to implement this.
+        - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+        - `modify_search_requirements(self, query, search_requirements)`: Modify the query and parameters based on the search requirements. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+        - `search_web(self, query, live_context = {})`: Search the web based on the user's query and the live context using the DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it is.
+        - `extract_results(self, search_results)`: Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured data from the search results.
+        - `parse_results(self, results)`: Parse the search results. We can use the AIModel tool from Marvin to parse the search results into structured data.
+        - `evaluate_results(self, parsed_results, query)`: Evaluate the relevance of the parsed results in reference to the user query. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+        - `respond_or_search_again(self, evaluated_results)`: Respond to the user's query or continue the search based on the evaluated results. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to decide whether to respond or search again.
 2. Modify the `classify_query` method in the `WebSearchAgent` to suit specific classification requirements.
     - Partially updated the `classify_query` method to use the `QueryType` classifier.
     - The classifier is expected to categorize queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
-    - TODO: Implement the logic to classify the query using the `QueryType` classifier.
+    - Implement the logic to classify the query using the `QueryType` classifier.
 3. Modify the `search_web` method in the `WebSearchAgent` to suit specific web search requirements.
     - Modify the `search_web` method to accept additional parameters that represent the live context.
     - Use the live context to determine the search requirements.
     - Modify the search query and parameters based on the determined search requirements.
     - Use the `DuckDuckGoSearch` tool to search the web with the modified query and parameters.
     - Return the search results.
-    - DONE: Review the `determine_search_requirements` method. The method currently does not contain any logic to determine the search requirements based on the live context. The `AIApplication` tool from Marvin can be used to maintain the state of the conversation or task, which can then be used to determine the search requirements.
-    - TODO: Implement the `modify_search_requirements` method to process the `live_context` and generate a relevant web query.
-    - TODO: Check and leverage the `action_based_spec.md` for Marvin commands.
+    - Review the `determine_search_requirements` method. The method currently does not contain any logic to determine the search requirements based on the live context. The `AIApplication` tool from Marvin can be used to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+    - Implement the `modify_search_requirements` method to process the `live_context` and generate a relevant web query.
+    - Check and leverage the `action_based_spec.md` for Marvin commands.
 4. Modify the `parse_results` method in the `WebSearchAgent` to scrape and parse the search results as per specific needs.
-    - TODO: Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
+    - Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
 5. Add a new method in the `WebSearchAgent` for synthesizing the parsed results into a coherent answer.
-    - TODO: Implement this method to synthesize the parsed results into a coherent answer.
+    - Implement this method to synthesize the parsed results into a coherent answer.
 6. Add a new method in the `WebSearchAgent` for comparing the synthesized answer with the user query.
-    - TODO: Implement this method to compare the synthesized answer with the user query.
+    - Implement this method to compare the synthesized answer with the user query.
 7. Modify the `respond_or_search_again` method in the `WebSearchAgent` to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
-    - TODO: Implement this method to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
+    - Implement this method to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
 8. Modify the `respond_or_search_again` method in the `WebSearchAgent` to respond to the user with the final answer in a user-friendly format.
-    - TODO: Implement this method to respond to the user with the final answer in a user-friendly format.
+    - Implement this method to respond to the user with the final answer in a user-friendly format.
 
 ## Progress Tracking
 - [ ] Task 1: Enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py`.
