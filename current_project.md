@@ -20,6 +20,10 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 - `src/marvin/components/ai_model.py`: This file contains the `APIDoc` model that can be used to check API documentation before writing unique API calls.
 - `cookbook/apps/documentation_agent.py`: This file contains the `DocumentationAgent` class that can be used to update documentation.
 - `cookbook/apps/chatbot.py`: This file contains the `Chatbot` class that can be used to interact with the user.
+- `action_based_spec.md`: This file contains the specifications for various AI tools that should be leveraged to power much of the logic in the `WebSearchAgent`.
+
+## Note
+When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform.
 
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
