@@ -86,6 +86,7 @@ from scrapeghost import SchemaScraper
 from enum import Enum
 
 import openai
+import asyncio
 
 openai.api_key = "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"
 
@@ -211,7 +212,7 @@ class WebSearchAgent:
         # Use the AIFunction instance to predict the function's output based on the query and search requirements
         modified_query, parameters = ai_function(query, search_requirements)
 
-        return modified_query, parameters
+        return modified_query
 
     def search_web(self, query, live_context):
         """
