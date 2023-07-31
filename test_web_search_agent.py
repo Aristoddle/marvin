@@ -31,7 +31,13 @@ def test_modify_search_requirements(mock_ai_function):
     agent = WebSearchAgent()
     search_requirements = {"requirement": "weather"}
     mock_ai_function.run.return_value = ("modified_query", "parameters")
-    modified_query, parameters = agent.modify_search_requirements(QUERY, search_requirements)
+    
+    # Breaking down the line into multiple lines
+    modified_query, parameters = agent.modify_search_requirements(
+        QUERY, 
+        search_requirements
+    )    
+
     assert modified_query == "modified_query"
     assert parameters == "parameters"
 

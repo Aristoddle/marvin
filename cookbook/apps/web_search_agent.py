@@ -14,23 +14,43 @@ import openai
 openai.api_key = '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'
 
 """
-The `WebSearchAgent` class is designed to enhance the capabilities of a chatbot by leveraging web search. It has several methods that need to be implemented:
+The `WebSearchAgent` class is designed to enhance the capabilities of a chatbot 
+by leveraging web search. It has several methods that need to be implemented:
 
-1. `classify_query(self, query)`: This method should classify the user's query into predefined categories using the QueryType classifier. We can use the AIClassifier tool from Marvin to implement this.
+1. `classify_query(self, query)`: This method should classify the user's query 
+into predefined categories using the QueryType classifier. We can use the 
+AIClassifier tool from Marvin to implement this.
 
-2. `determine_search_requirements(self, live_context = {})`: This method should determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+2. `determine_search_requirements(self, live_context = {})`: This method should 
+determine the search requirements based on the live context. We can use the 
+AIApplication tool from Marvin to maintain the state of the conversation or task, 
+which can then be used to determine the search requirements.
 
-3. `modify_search_requirements(self, query, search_requirements)`: This method should modify the query and parameters based on the search requirements. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+3. `modify_search_requirements(self, query, search_requirements)`: This method 
+should modify the query and parameters based on the search requirements. We can 
+use the AIFunction tool from Marvin to predict the function's output based on 
+its signature and docstring.
 
-4. `search_web(self, query, live_context = {})`: This method should search the web based on the user's query and the live context using the DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it is.
+4. `search_web(self, query, live_context = {})`: This method should search the 
+web based on the user's query and the live context using the DuckDuckGoSearch tool. 
+We can use the DuckDuckGoSearch tool directly as it is.
 
-5. `extract_results(self, search_results)`: This method should extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured data from the search results.
+5. `extract_results(self, search_results)`: This method should extract the search 
+results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. 
+We can use the ScrapeGhost tool to extract structured data from the search results.
 
-6. `parse_results(self, results)`: This method should parse the search results. We can use the AIModel tool from Marvin to parse the search results into structured data.
+6. `parse_results(self, results)`: This method should parse the search results. 
+We can use the AIModel tool from Marvin to parse the search results into structured data.
 
-7. `evaluate_results(self, parsed_results, query)`: This method should evaluate the relevance of the parsed results in reference to the user query. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+7. `evaluate_results(self, parsed_results, query)`: This method should evaluate 
+the relevance of the parsed results in reference to the user query. We can use 
+the AIFunction tool from Marvin to predict the function's output based on its 
+signature and docstring.
 
-8. `respond_or_search_again(self, evaluated_results)`: This method should respond to the user's query or continue the search based on the evaluated results. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to decide whether to respond or search again.
+8. `respond_or_search_again(self, evaluated_results)`: This method should respond 
+to the user's query or continue the search based on the evaluated results. We can 
+use the AIApplication tool from Marvin to maintain the state of the conversation 
+or task, which can then be used to decide whether to respond or search again.
 
 Here's an example of how to use the `WebSearchAgent` class:
 
@@ -45,11 +65,13 @@ query = "What's the weather like today?"
 query_type = web_search_agent.classify_query(query)
 
 # Determine the search requirements based on the live context
-live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], "question": "What's the weather like today?"}
+live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], 
+                "question": "What's the weather like today?"}
 search_requirements = web_search_agent.determine_search_requirements(live_context)
 
 # Modify the query and parameters based on the search requirements
-modified_query, parameters = web_search_agent.modify_search_requirements(query, search_requirements)
+modified_query, parameters = web_search_agent.modify_search_requirements(query, 
+                                                                    search_requirements)
 
 # Search the web based on the user's query and the live context
 search_results = web_search_agent.search_web(modified_query, live_context)
@@ -75,7 +97,6 @@ class QueryType(Enum):
     GITHUB_PROJECT = 3
     API_DOCUMENTATION = 4
     DEBUGGING_HELP = 5
-
 class WebSearchAgent:
 
     description: str = "A custom web search agent"
@@ -83,9 +104,9 @@ class WebSearchAgent:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.search_tool = DuckDuckGoSearch()
-        self.ai_application = AIApplication(name="WebSearchAgent", description=self.description)
+        self.ai_application = AIApplication(name="WebSearchAgent", 
+                                            description=self.description)
 
-    @ai_function
     def _format_response(self, results: list) -> str:
         """
         Formats the search results into a human-readable string.
@@ -96,9 +117,10 @@ class WebSearchAgent:
         Returns:
             str: The formatted search results.
         """
-        return "\n".join(results)
+        formatted_results = "\n".join([f"Result: {result[0]}, Relevance Score: {result[1]}" 
+                                       for result in results])
+        return formatted_results
 
-    @ai_function
     def _evaluate_relevance(self, results: list, query: str) -> list:
         """
         Evaluates the relevance of the search results in reference to the user query.
@@ -110,24 +132,26 @@ class WebSearchAgent:
         Returns:
             list: The evaluated search results.
         """
-        # Score the relevance of each result to the query
-        scored_results = [(result, score_relevance(result, query)) for result in results]
+        evaluated_results = []
+        for result in results:
+            # Construct a prompt for GPT-4
+            prompt = f"Given the query '{query}' and the search result '{result}', rate the relevance on a scale of 1 to 10."
+            
+            # Use GPT-4 or GPT-4-32k based on the length of the prompt
+            engine_name = "gpt-4" if len(prompt.split()) <= 5000 else "gpt-4-32k"
+            
+            # Use the selected engine to generate a relevance score
+            response = openai.Completion.create(engine=engine_name, prompt=prompt, max_tokens=3)
+            score = float(response.choices[0].text.strip())
+            
+            # Append the result and its score to the evaluated results
+            evaluated_results.append((result, score))
+
+        # Sort the results by their scores in descending order
+        evaluated_results.sort(key=lambda x: x[1], reverse=True)
         
-        # Sort the results by their scores
-        scored_results.sort(key=lambda x: x[1], reverse=True)
-        
-        # Return the sorted results
-        return [result for result, score in scored_results]
-    @ai_function
-    def _evaluate_relevance(self, results: list, query: str, model: ChatLLM) -> list:
-        # Score the relevance of each result to the query using the GPT model
-        scored_results = [(result, model.run(f"{query}\n{result}").score) for result in results]
-        
-        # Sort the results by their scores
-        scored_results.sort(key=lambda x: x[1], reverse=True)
-        
-        # Return the sorted results
-        return [result for result, score in scored_results]
+        return evaluated_results
+
     def classify_query(self, query):
         """
         Classify the user's query into predefined categories using the QueryType classifier.
