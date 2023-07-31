@@ -19,13 +19,17 @@ class CustomWebSearchAgent(WebSearchAgent):
 
 def classify_query(self, query):
     """
-    Classify the user's query using the QueryType classifier.
+    Classify the user's query into predefined categories using the QueryType classifier.
+
+    This method takes a user's query as input and uses the QueryType classifier to determine 
+    the type of the query. The QueryType classifier categorizes queries into types such as 
+    FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
 
     Args:
         query (str): The user's query.
 
     Returns:
-        QueryType: The type of the query.
+        QueryType: The type of the query as determined by the QueryType classifier.
     """
     # Classify the query using the QueryType classifier
     query_type = QueryType(query)
