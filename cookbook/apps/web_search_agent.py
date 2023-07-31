@@ -142,7 +142,7 @@ class WebSearchAgent(WebSearchAgent):
 __all__ = ["WebSearchAgent"]
 
 
-class CustomWebSearchAgent(WebSearchAgent):
+class WebSearchAgent(WebSearchAgent):
     description: str = "A custom web search agent"
 
     def __init__(self, **kwargs):
@@ -150,12 +150,16 @@ class CustomWebSearchAgent(WebSearchAgent):
         # We can add any additional initialization here
 
     def classify_query(self, query):
+        """
+        Classify the user's query into predefined categories using the QueryType classifier.
+        """
         # Use the QueryType classifier to classify the user's query
         query_type = QueryType(query)
+
         # Return the name of the classified query type
         return query_type.name
 
-    def determine_search_requirements(self, live_context):
+    def determine_search_requirements(self, live_context = {}):
         """
         Determine the search requirements based on the live context.
 
@@ -165,10 +169,28 @@ class CustomWebSearchAgent(WebSearchAgent):
         Returns:
             dict: The search requirements.
         """
-        # TODO: Implement the logic to determine the search requirements based on the live_context
+        # TODO: Implement the logic to determine the search requirements based on the live_context, if present, using Marvin's AIFunction tool.
         search_requirements = {}
         return search_requirements
 
+    def modify_search_requirements(self, query, search_requirements):
+        """
+        Modify the query and parameters based on the search requirements.
+
+        Args:
+            query (str): The user's query.
+            search_requirements (dict): The search requirements.
+
+        Returns:
+            tuple: The modified query and parameters.
+        """
+        # Create an instance of AIFunction with the function being this method itself
+        ai_function = AIFunction(fn=self.modify_search_requirements)
+
+        # Use the AIFunction instance to predict the function's output based on the query and search requirements
+        modified_query, parameters = ai_function(query, search_requirements)
+
+        return modified_query, parameters
     def modify_search_requirements(self, query, search_requirements):
         """
         Modify the query and parameters based on the search requirements.
