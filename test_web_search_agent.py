@@ -57,6 +57,7 @@ class TestWebSearchAgent(unittest.TestCase):
         print(f"Type of result: {type(result)}, Value: {result}")
         self.assertIsNotNone(result)
         self.assertIsInstance(result, list)
+        
     def test_evaluate_results(self):
         print("\nRunning test: test_evaluate_results")
         parsed_results = []
