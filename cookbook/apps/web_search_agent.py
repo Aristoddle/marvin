@@ -31,10 +31,7 @@ class WebSearchAgent:
         self.search_tool = DuckDuckGoSearch()
         self.ai_application = AIApplication(name="WebSearchAgent", description=self.description)
 
-    def classify_query(self, query):
-        """
-        Classify the user's query into predefined categories using the QueryType classifier.
-        """
+
     def classify_query(self, query):
         """
         Classify the user's query into predefined categories using the QueryType classifier.
@@ -46,22 +43,20 @@ class WebSearchAgent:
 
         # Return the classified query type
         return query_type
-    def determine_search_requirements(self, live_context=None):
-        """
-        Determine the search requirements based on the live context.
 
-        Args:
-            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
 
-        Returns:
-            dict: The search requirements.
-        """
     def determine_search_requirements(self, live_context=None):
         """
         Determine the search requirements based on the live context. The live context, which 
         contains the chat log/history and the specific question/problem identified by the classifier, 
         is used to determine the search requirements. The search requirements are determined using 
         the AIApplication tool, which maintains the state of the conversation or task.
+
+        Args:
+            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
+
+        Returns:
+            dict: The search requirements.
         """
         if live_context is None:
             live_context = {}
@@ -73,9 +68,14 @@ class WebSearchAgent:
         search_requirements = app.run(live_context)
 
         return search_requirements
+
+
     def modify_search_requirements(self, query, search_requirements):
         """
-        Modify the query and parameters based on the search requirements.
+        Modify the query and parameters based on the search requirements. The query and search 
+        requirements are modified based on the search requirements determined in the previous step. 
+        The modification is done using the AIFunction tool, which predicts the function's output 
+        based on its signature and docstring.
 
         Args:
             query (str): The user's query.
@@ -83,13 +83,6 @@ class WebSearchAgent:
 
         Returns:
             tuple: The modified query and parameters.
-        """
-    def modify_search_requirements(self, query, search_requirements):
-        """
-        Modify the query and parameters based on the search requirements. The query and search 
-        requirements are modified based on the search requirements determined in the previous step. 
-        The modification is done using the AIFunction tool, which predicts the function's output 
-        based on its signature and docstring.
         """
         # Create an instance of AIFunction with the function being this method itself
         ai_function = AIFunction(fn=self.modify_search_requirements)
@@ -101,7 +94,9 @@ class WebSearchAgent:
     
     def search_web(self, query, live_context):
         """
-        Search the web based on the user's query and the live context.
+        Search the web based on the user's query and the live context. The web search is conducted 
+        based on the user's query and the live context. The web search is done using the DuckDuckGoSearch 
+        tool, and the search results are then extracted and parsed for relevance to the user's query.
 
         The live context is a dictionary that contains information about the current state of the conversation or task. 
         This could include the chat log/history, the specific question/problem identified by the classifier, or any other relevant information.
@@ -116,12 +111,6 @@ class WebSearchAgent:
         Returns:
             str: The search results.
         """
-    def search_web(self, query, live_context):
-        """
-        Search the web based on the user's query and the live context. The web search is conducted 
-        based on the user's query and the live context. The web search is done using the DuckDuckGoSearch 
-        tool, and the search results are then extracted and parsed for relevance to the user's query.
-        """
         # Determine the search requirements based on the live context
         search_requirements = self.determine_search_requirements(live_context)
         
@@ -135,20 +124,16 @@ class WebSearchAgent:
 
     def extract_results(self, search_results):
         """
-        Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool.
+        Extract the search results from the raw search results using the ScrapeGhost API. The search 
+        results are extracted from the raw search results using the ScrapeGhost API. The extracted 
+        results are then parsed and evaluated for relevance to the user's query, and the agent responds 
+        to the user's query or continues the search based on the evaluated results.
 
         Args:
             search_results (str): The search results.
 
         Returns:
             str: The extracted search results, getting website URLs from DDG, and using ScrapeGhost to pull their data.
-        """
-    def extract_results(self, search_results):
-        """
-        Extract the search results from the raw search results using the ScrapeGhost API. The search 
-        results are extracted from the raw search results using the ScrapeGhost API. The extracted 
-        results are then parsed and evaluated for relevance to the user's query, and the agent responds 
-        to the user's query or continues the search based on the evaluated results.
         """
         # Use the AIApplication instance to dynamically determine the structure of the data
         schema = self.ai_application.run(search_results)
@@ -163,6 +148,8 @@ class WebSearchAgent:
         extracted_results = AIModelFactory(scraped_data)
 
         return extracted_results
+
+
     def parse_results(self, results):
         # Parse the search results using a Margin AIFunction to
         # This is a placeholder and should be replaced with actual parsing logic
@@ -170,11 +157,14 @@ class WebSearchAgent:
         parsed_results = results
         return parsed_results
 
+
     def evaluate_results(self, parsed_results, query):
         # Evaluate the relevance of the parsed results in reference to the user query, using the Marvin AIFunction to assign a score to the utility of the sum of the extracted results.
         # This is a placeholder and should be replaced with actual evaluation logic
         evaluated_results = parsed_results
         return evaluated_results
+        
+        
 
     def respond_or_search_again(self, evaluated_results):
         # Respond to the user's query or continue the search based on the evaluated results.
@@ -184,6 +174,7 @@ class WebSearchAgent:
         # This is a placeholder and should be replaced with actual response logic
         response = evaluated_results
         return response
+
 
 
 __all__ = ["WebSearchAgent"]
