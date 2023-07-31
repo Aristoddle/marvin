@@ -95,7 +95,7 @@ class WebSearchAgent:
         Returns:
             str: The formatted search results.
         """
-        return results
+        return "\n".join(results)
 
     def _evaluate_relevance(self, results: list, query: str) -> list:
         """
@@ -108,8 +108,14 @@ class WebSearchAgent:
         Returns:
             list: The evaluated search results.
         """
-        # Implementation goes here
-        return results
+        # Score the relevance of each result to the query
+        scored_results = [(result, score_relevance(result, query)) for result in results]
+        
+        # Sort the results by their scores
+        scored_results.sort(key=lambda x: x[1], reverse=True)
+        
+        # Return the sorted results
+        return [result for result, score in scored_results]
 
     def classify_query(self, query):
         """
