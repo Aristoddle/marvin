@@ -41,6 +41,24 @@ class WebSearchAgent(WebSearchAgent):
         Returns:
             dict: The search requirements.
         """
+        # Create an instance of the AIApplication tool
+        app = AIApplication(name="WebSearchAgent", description="A web search agent")
+
+        # Use the AIApplication instance to determine the search requirements based on the live context
+        search_requirements = app.run(live_context)
+
+        return search_requirements
+
+    def determine_search_requirements(self, live_context = {}):
+        """
+        Determine the search requirements based on the live context.
+
+        Args:
+            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
+
+        Returns:
+            dict: The search requirements.
+        """
         # TODO: Implement the logic to determine the search requirements based on the live_context, if present, using Marvin's AIFunction tool.
         search_requirements = {}
         return search_requirements
