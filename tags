@@ -1721,7 +1721,7 @@ description	src/marvin/tools/python.py	/^    description: str = """$/;"	v	class:
 description	src/marvin/tools/shell.py	/^    description: str = """$/;"	v	class:Shell	typeref:typename:str
 description	src/marvin/tools/web.py	/^    description: str = "Search the web with DuckDuckGo."$/;"	v	class:DuckDuckGoSearch	typeref:typename:str
 description	src/marvin/tools/web.py	/^    description: str = "Visit a valid URL and return its contents."$/;"	v	class:VisitUrl	typeref:typename:str
-determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context={}):$/;"	m	class:WebSearchAgent
+determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context=None):$/;"	m	class:WebSearchAgent
 detokenize	src/marvin/utilities/strings.py	/^def detokenize(tokens: list[int]) -> str:$/;"	f	typeref:typename:str
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.castarray
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.isplainobject
