@@ -7,6 +7,15 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
     - Created a new class `CustomWebSearchAgent` that extends `WebSearchAgent`.
     - Initialized the new class with the same parameters as `WebSearchAgent`.
+    - TODO: Implement the following methods in the `WebSearchAgent` class:
+        - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier.
+        - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context.
+        - `modify_search_requirements(self, query, search_requirements)`: Modify the query and parameters based on the search requirements.
+        - `search_web(self, query, live_context = {})`: Search the web based on the user's query and the live context using the DuckDuckGoSearch tool.
+        - `extract_results(self, search_results)`: Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool.
+        - `parse_results(self, results)`: Parse the search results.
+        - `evaluate_results(self, parsed_results, query)`: Evaluate the relevance of the parsed results in reference to the user query.
+        - `respond_or_search_again(self, evaluated_results)`: Respond to the user's query or continue the search based on the evaluated results.
 2. Modify the `classify_query` method in the custom agent to suit specific classification requirements.
     - Partially updated the `classify_query` method to use the `QueryType` classifier.
     - The classifier is expected to categorize queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
