@@ -321,3 +321,20 @@ def ai_model(
     )
 
     return ai_model_class
+@ai_model
+class GitHubRepo(AIModel):
+    repo_name: str
+    owner: str
+    description: str
+    language: str
+    stars: int
+    forks: int
+    last_updated: datetime.datetime
+@ai_model
+class APIDoc(AIModel):
+    api_name: str
+    base_url: str
+    endpoints: List[str]
+    methods: List[str]
+    parameters: Dict[str, Any]
+    responses: Dict[str, Any]
