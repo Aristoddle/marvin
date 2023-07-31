@@ -17,23 +17,7 @@ class CustomWebSearchAgent(WebSearchAgent):
         super().__init__(**kwargs)
         # We can add any additional initialization here
 
-def classify_query(self, query):
-    """
-    Classify the user's query into predefined categories using the QueryType classifier.
-
-    This method takes a user's query as input and uses the QueryType classifier to determine 
-    the type of the query. The QueryType classifier categorizes queries into types such as 
-    FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
-
-    Args:
-        query (str): The user's query. This should be a string containing the user's question or request.
-
-    Returns:
-        QueryType: The type of the query as determined by the QueryType classifier. This is an enum value that represents the category of the query.
-    """
-    # Classify the query using the QueryType classifier
-    query_type = QueryType(query)
-    return query_type
+    # No changes
         return query_type
 
     def determine_search_requirements(self, live_context):
