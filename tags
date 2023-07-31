@@ -943,6 +943,7 @@ City	tests/test_components/test_ai_model.py	/^        class City(BaseModel):$/;"
 City	tests/test_components/test_ai_model.py	/^        class City(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 ClassifierSystem	src/marvin/components/ai_classifier.py	/^class ClassifierSystem(System):$/;"	c
 ClassifierUser	src/marvin/components/ai_classifier.py	/^class ClassifierUser(User):$/;"	c
+Classify a user's query	.aider.chat.history.md	/^# Classify a user's query$/;"	c
 Classify text	.aider.chat.history.md	/^# Classify text$/;"	c
 Cleaning data	docs/examples/ai_functions.md	/^## Cleaning data$/;"	s	chapter:AI Functions Examples
 Coming soon...	.aider.chat.history.md	/^#### Coming soon...$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
@@ -982,6 +983,7 @@ Could you walk through the core implementation (don't leave any `...` strings or
 Could you write a file `action_based_spec.md` that runs through each of these, their implementation, top-level use, and developer utility?	.aider.chat.history.md	/^#### Could you write a file `action_based_spec.md` that runs through each of these, their implem/;"	t	chapter:aider chat started at 2023-07-30 19:53:59
 Could you write to a new markdown file a top-level (but granular, step-by-step) task-list of the edits and cross-file dependencies that would be required/leveraged to achieve this task, alongside a top level task description, with an empty section for tracking progress, under a file current_project.md?  I would love to use this, and iterate with you (with this as a tracking file) as we work to enable/allow this functionality.  Sometimes you crash and lose context, so I'd love to instantiate a current_project.md file that we might reference and update as we work.  Even the context of this message (why does the current_project.md file exist, etc), might be relevant to include.  Once that is written, I'd love for you to role-play the scenario in which you are me, the end-user collaborating with you to implement this functionality, and you are a fresh instance of you, a GPT4-32k agent that will need to be warmed up to understand the task at hand, and then which will need to collaborate with the synthetic version of me to update/write out these files, and maintain context across multiple sessions using this markdown tracking file.	.aider.chat.history.md	/^#### Could you write to a new markdown file a top-level (but granular, step-by-step) task-list o/;"	t	chapter:aider chat started at 2023-07-30 20:41:38
 Country	tests/test_components/test_ai_model.py	/^        class Country(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
+Create an instance of the WebSearchAgent class	.aider.chat.history.md	/^# Create an instance of the WebSearchAgent class$/;"	c
 Create an instance of the agent	.aider.chat.history.md	/^# Create an instance of the agent$/;"	c
 Create an instance of the app	.aider.chat.history.md	/^# Create an instance of the app$/;"	c
 Create custom prompts that can be shared, tested, and versioned.	docs/src/docs/promptss.md	/^### Create custom prompts that can be shared, tested, and versioned.$/;"	S	chapter:Prompts as Code
@@ -1010,6 +1012,7 @@ DefaultSettings	src/marvin/_framework/_defaults/__init__.py	/^class DefaultSetti
 Define a message handler	docs/src/guides/slackbot.md	/^### Define a message handler$/;"	S	section:Build a Slack bot with Marvin""Building the bot
 Deployment	docs/src/docs/index.md	/^### Deployment$/;"	S	section:The Marvin Docs""Organization
 Deployment	src/marvin/deployment/__init__.py	/^class Deployment(BaseModel):$/;"	c
+Determine the search requirements based on the live context	.aider.chat.history.md	/^# Determine the search requirements based on the live context$/;"	c
 Deterministic AI functions	docs/guide/ai_components/ai_functions.md	/^#### Deterministic AI functions$/;"	t	subsection:AI Functions""Advanced usage""Customizing the LLM
 Developer Experience	.aider.chat.history.md	/^### Developer Experience$/;"	S	chapter:Marvin
 Developer Experience	README.md	/^### Developer Experience$/;"	S	chapter:Marvin
@@ -1037,6 +1040,7 @@ Election	tests/test_components/test_ai_model.py	/^        class Election(BaseMod
 Entity extraction	docs/guide/ai_components/ai_models.md	/^### Entity extraction$/;"	S	section:AI Models""Advanced usage
 Environment Variables	docs/src/docs/configuration/settings.md	/^## Environment Variables$/;"	s	chapter:Settings
 Environments	.aider.chat.history.md	/^# Environments$/;"	c
+Evaluate the relevance of the parsed results in reference to the user query	.aider.chat.history.md	/^# Evaluate the relevance of the parsed results in reference to the user query$/;"	c
 Exceptions	action_based_spec.md	/^#### Exceptions$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""API Reference
 Executing Prompts	docs/src/docs/prompts_executes.md	/^# Executing Prompts$/;"	c
 Executor	src/marvin/engine/executors/base.py	/^class Executor(LoggerMixin, MarvinBaseModel):$/;"	c
@@ -1044,6 +1048,7 @@ Experience	tests/test_components/test_ai_model.py	/^        class Experience(Bas
 Extract action items from meeting transcripts	docs/examples/ai_models.md	/^## Extract action items from meeting transcripts$/;"	s	chapter:AI Models Examples
 Extract financial information from messy CSV data	docs/examples/ai_models.md	/^## Extract financial information from messy CSV data$/;"	s	chapter:AI Models Examples
 Extract structured data from text	.aider.chat.history.md	/^# Extract structured data from text$/;"	c
+Extract the search results from the raw search results	.aider.chat.history.md	/^# Extract the search results from the raw search results$/;"	c
 FACTUAL_INFORMATION	cookbook/apps/agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FACTUAL_INFORMATION	cookbook/apps/web_search_agent.py	/^    FACTUAL_INFORMATION = 1$/;"	v	class:QueryType
 FAILED	src/marvin/components/ai_application.py	/^    FAILED = "FAILED"$/;"	v	class:TaskState
@@ -1155,6 +1160,7 @@ MessageWrapper	src/marvin/prompts/base.py	/^class MessageWrapper(Prompt):$/;"	c
 Model	src/marvin/utilities/types.py	/^        class Model(pydantic.BaseModel):$/;"	c	function:type_to_schema	file:
 Model Factories	docs/src/docs/components/ai_model_factory.md	/^# Model Factories$/;"	c
 Model customization	docs/guide/ai_components/ai_models.md	/^### Model customization$/;"	S	section:AI Models""Advanced usage
+Modify the query and parameters based on the search requirements	.aider.chat.history.md	/^# Modify the query and parameters based on the search requirements$/;"	c
 MultiQueryChroma	src/marvin/tools/chroma.py	/^class MultiQueryChroma(Tool):$/;"	c
 My main question is just whether anything else might be valuable to add to the `current_project.md` or docstrings. If not, I'd love for you to return to the task-list there, check wher we are w.r.t. current tasks and subtasks, ensure that all previous tasks have been well implemented, and, if so, continue on to the next task, planning to maintain this level of rich documentation for all new recommended software.	.aider.chat.history.md	/^#### My main question is just whether anything else might be valuable to add to the `current_pro/;"	t	section:def classify_query(self, query):""Cross-File Dependencies
 NEGATIVE	tests/test_components/test_ai_classifier.py	/^            NEGATIVE = "Negative"$/;"	v	class:TestAIClassifiers.test_docstring_is_passed_to_llm.Sentiment
@@ -1204,6 +1210,7 @@ POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "o
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = {"value": "Positive"}$/;"	v	class:TestAIClassifiers.test_recover_complex_values.Sentiment
 PREFECT_KNOWLEDGEBASE_DESC	cookbook/slackbot/chatbot.py	/^PREFECT_KNOWLEDGEBASE_DESC = """$/;"	v
 Pagination	action_based_spec.md	/^#### Pagination$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
+Parse the search results	.aider.chat.history.md	/^# Parse the search results$/;"	c
 Pleaes do so.  Also, Please feel free to apply recommended improvements 1 and 2 from your response in your last message.	.aider.chat.history.md	/^#### Pleaes do so.  Also, Please feel free to apply recommended improvements 1 and 2 from your r/;"	t	section:def classify_query(self, query):""Cross-File Dependencies
 Please check the docstrings and your previous recommendations.  I believe you had done a great job of defining live-context in the past.	.aider.chat.history.md	/^#### Please check the docstrings and your previous recommendations.  I believe you had done a gr/;"	t	chapter:def search_web(self, query):
 Please continue	.aider.chat.history.md	/^#### Please continue  $/;"	t	section:Current Project: Enhancing WebSearchAgent""Progress Tracking
@@ -1226,6 +1233,7 @@ Project Title	new_current_project_md_creation.md	/^### Project Title$/;"	S	secti
 Prompt	src/marvin/prompts/base.py	/^class Prompt(BaseModel, abc.ABC):$/;"	c
 PromptList	src/marvin/prompts/base.py	/^class PromptList(list[Union["Prompt", Message]]):$/;"	c
 Prompts as Code	docs/src/docs/promptss.md	/^# Prompts as Code$/;"	c
+Proposed Changes	current_project.md	/^## Proposed Changes$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
 PyBuilder	.aider.chat.history.md	/^# PyBuilder$/;"	c
 PyCharm	.aider.chat.history.md	/^# PyCharm$/;"	c
 PyInstaller	.aider.chat.history.md	/^# PyInstaller$/;"	c
@@ -1246,6 +1254,7 @@ ReadFiles	src/marvin/tools/filesystem.py	/^class ReadFiles(FileSystemTool):$/;"	
 Regions	action_based_spec.md	/^## Regions$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 Rendering Prompts	docs/src/docs/promptss.md	/^## Rendering Prompts$/;"	s	chapter:Prompts as Code
 RentalHistory	tests/test_components/test_ai_model.py	/^        class RentalHistory(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
+Respond to the user's query or continue the search based on the evaluated results	.aider.chat.history.md	/^# Respond to the user's query or continue the search based on the evaluated results$/;"	c
 ResultType	src/marvin/tools/mathematics.py	/^ResultType = Literal["DecimalApproximation"]$/;"	v
 Resume	tests/test_components/test_ai_model.py	/^        class Resume(BaseModel):$/;"	c	member:TestAIModels.test_resume	file:
 Role	src/marvin/utilities/messages.py	/^class Role(Enum):$/;"	c
@@ -1266,6 +1275,7 @@ Scalable APIs, data pipelines, and agents	README.md	/^#### Scalable APIs, data p
 Schema normalization for data warehousing	docs/examples/ai_models.md	/^## Schema normalization for data warehousing$/;"	s	chapter:AI Models Examples
 ScrapeGhost	action_based_spec.md	/^## ScrapeGhost$/;"	s	chapter:Marvin Platform - Action Based Specifications
 Scrapy stuff:	.aider.chat.history.md	/^# Scrapy stuff:$/;"	c
+Search the web based on the user's query and the live context	.aider.chat.history.md	/^# Search the web based on the user's query and the live context$/;"	c
 SearchGitHubIssues	src/marvin/tools/github.py	/^class SearchGitHubIssues(Tool):$/;"	c
 See [the CLI docs](cli.md) for more details.	.aider.chat.history.md	/^#### See [the CLI docs](cli.md) for more details.  $/;"	t	chapter:<<<<<<< ORIGINAL
 Sentiment	tests/test_components/test_ai_classifier.py	/^        class Sentiment(Enum):$/;"	c	member:TestAIClassifiers.test_docstring_is_passed_to_llm	file:
