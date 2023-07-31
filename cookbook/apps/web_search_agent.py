@@ -1,4 +1,18 @@
 
+from marvin.tools.web import DuckDuckGoSearch
+from marvin.components.ai_classifier import ai_classifier
+from marvin.components.ai_application import AIApplication
+from marvin.components.ai_function import AIFunction
+from marvin.components.ai_model import AIModel
+from marvin.components.ai_model_factory import AIModelFactory
+
+from scrapeghost import SchemaScraper 
+from enum import Enum
+
+import openai
+
+openai.api_key = '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'
+
 """
 The `WebSearchAgent` class is designed to enhance the capabilities of a chatbot by leveraging web search. It has several methods that need to be implemented:
 
@@ -53,17 +67,6 @@ evaluated_results = web_search_agent.evaluate_results(parsed_results, query)
 response = web_search_agent.respond_or_search_again(evaluated_results, query, live_context)
 ```
 """
-from marvin.tools.web import DuckDuckGoSearch
-from marvin.components.ai_classifier import ai_classifier
-from marvin.components.ai_application import AIApplication
-from marvin.components.ai_function import AIFunction
-from marvin.components.ai_model import AIModel
-
-from enum import Enum
-
-import openai
-
-openai.api_key = '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'
 
 @ai_classifier
 class QueryType(Enum):
@@ -72,9 +75,6 @@ class QueryType(Enum):
     GITHUB_PROJECT = 3
     API_DOCUMENTATION = 4
     DEBUGGING_HELP = 5
-
-
-from src.marvin.components.ai_application import AIApplication
 
 class WebSearchAgent:
 
@@ -85,6 +85,31 @@ class WebSearchAgent:
         self.search_tool = DuckDuckGoSearch()
         self.ai_application = AIApplication(name="WebSearchAgent", description=self.description)
 
+    def _format_response(self, results: list) -> str:
+        """
+        Formats the search results into a human-readable string.
+
+        Args:
+            results (list): The search results to format.
+
+        Returns:
+            str: The formatted search results.
+        """
+        return results
+
+    def _evaluate_relevance(self, results: list, query: str) -> list:
+        """
+        Evaluates the relevance of the search results in reference to the user query.
+
+        Args:
+            results (list): The search results to evaluate.
+            query (str): The user's query.
+
+        Returns:
+            list: The evaluated search results.
+        """
+        # Implementation goes here
+        return results
 
     def classify_query(self, query):
         """
@@ -97,7 +122,6 @@ class WebSearchAgent:
 
         # Return the classified query type
         return query_type
-
 
     def determine_search_requirements(self, live_context=None):
         """
@@ -119,7 +143,6 @@ class WebSearchAgent:
         search_requirements = self.ai_application.run(live_context)
 
         return search_requirements
-
 
     def modify_search_requirements(self, query, search_requirements):
         """
@@ -200,7 +223,6 @@ class WebSearchAgent:
 
         return extracted_results
 
-
     def parse_results(self, results):
         """
         Further refine and personalize the search results using the AIModel tool from Marvin.
@@ -276,13 +298,12 @@ class WebSearchAgent:
         
         if decision == "respond":
             # If the decision is to respond, format the response
-            response = self._format_response(evaluated_results)
+            response = AIFunction(self._format_response(evaluated_results))
         else:
             # Otherwise, continue the search
             response = self.search_web(query, live_context)
         
         return response
-
 
 
 __all__ = ["WebSearchAgent"]

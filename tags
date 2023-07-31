@@ -1239,6 +1239,7 @@ PyCharm	.aider.chat.history.md	/^# PyCharm$/;"	c
 PyInstaller	.aider.chat.history.md	/^# PyInstaller$/;"	c
 Pyre type checker	.aider.chat.history.md	/^# Pyre type checker$/;"	c
 Python	src/marvin/tools/python.py	/^class Python(Tool):$/;"	c
+QUERY	test_web_search_agent.py	/^QUERY = "What's the weather like today?"$/;"	v
 QueryChroma	src/marvin/tools/chroma.py	/^class QueryChroma(Tool):$/;"	c
 QueryResultType	src/marvin/tools/chroma.py	/^QueryResultType = Literal["documents", "distances", "metadatas"]$/;"	v
 QueryType	cookbook/apps/agent.py	/^class QueryType(Enum):$/;"	c
@@ -1340,6 +1341,10 @@ Test	tests/test_components/test_ai_model.py	/^        class Test(BaseModel):$/;"
 Test	tests/test_components/test_ai_model.py	/^        class Test(BaseModel):$/;"	c	member:TestInstructions.test_follow_instance_instructions	file:
 Test	tests/test_components/test_ai_model.py	/^        class Test(BaseModel):$/;"	c	member:TestInstructions.test_instructions	file:
 Test	tests/test_components/test_ai_model.py	/^        class Test(BaseModel):$/;"	c	member:TestInstructions.test_instructions_error	file:
+Test the classify_query method	.aider.chat.history.md	/^# Test the classify_query method$/;"	c
+Test the determine_search_requirements method	.aider.chat.history.md	/^# Test the determine_search_requirements method$/;"	c
+Test the modify_search_requirements method	.aider.chat.history.md	/^# Test the modify_search_requirements method$/;"	c
+Test the search_web method	.aider.chat.history.md	/^# Test the search_web method$/;"	c
 TestAIClassifiers	tests/test_components/test_ai_classifier.py	/^class TestAIClassifiers:$/;"	c
 TestAIClassifiersInitialization	tests/test_components/test_ai_classifier.py	/^class TestAIClassifiersInitialization:$/;"	c
 TestAIFunctions	tests/test_components/test_ai_functions.py	/^class TestAIFunctions:$/;"	c
@@ -1472,7 +1477,9 @@ _attributes	docs/static/js/termynal.js	/^    _attributes(line) {$/;"	m	class:Ter
 _cached_type	src/marvin/tools/format_response.py	/^    _cached_type: Union[type, GenericAlias] = PrivateAttr(SENTINEL)$/;"	v	class:FormatResponse	typeref:typename:Union[type, GenericAlias]
 _call	src/marvin/components/ai_function.py	/^    async def _call(self, *args, **kwargs):$/;"	m	class:AIFunction
 _clean	cookbook/slackbot/chatbot.py	/^def _clean(text: str) -> str:$/;"	f	typeref:typename:str
+_evaluate_relevance	cookbook/apps/web_search_agent.py	/^    def _evaluate_relevance(self, results: list, query: str) -> list:$/;"	m	class:WebSearchAgent	typeref:typename:list
 _extract_async	src/marvin/components/ai_model.py	/^    async def _extract_async($/;"	m	class:AIModel
+_format_response	cookbook/apps/web_search_agent.py	/^    def _format_response(self, results: list) -> str:$/;"	m	class:WebSearchAgent	typeref:typename:str
 _get_arguments	src/marvin/components/ai_model.py	/^    async def _get_arguments($/;"	m	class:AIModel	typeref:typename:Message
 _get_openai_settings	src/marvin/engine/language_models/azure_openai.py	/^    def _get_openai_settings(self) -> dict:$/;"	m	class:AzureOpenAIChatLLM	typeref:typename:dict
 _get_openai_settings	src/marvin/engine/language_models/openai.py	/^    def _get_openai_settings(self) -> dict:$/;"	m	class:OpenAIChatLLM	typeref:typename:dict
@@ -2558,6 +2565,7 @@ prompts	src/marvin/components/ai_function.py	/^prompts = [$/;"	v
 properties	src/marvin/components/ai_model_factory.py	/^    properties: Optional[dict] = {}$/;"	v	class:DataSchema	typeref:typename:Optional[dict]
 publish	src/marvin/components/library/ai_models.py	/^    async def publish($/;"	m	class:DiscoursePost	typeref:typename:str
 pyenv	.aider.chat.history.md	/^# pyenv$/;"	c
+pytest cache directory	.pytest_cache/README.md	/^# pytest cache directory #$/;"	c
 pytest_mark_class	tests/utils/mark.py	/^def pytest_mark_class(marker):$/;"	f
 pytype static type analyzer	.aider.chat.history.md	/^# pytype static type analyzer$/;"	c
 query	src/marvin/engine/language_models/base.py	/^    async def query(self, q: str, model: "ChatLLM" = None):$/;"	m	class:OpenAIFunction
@@ -2788,9 +2796,11 @@ test_arguments	tests/test_models/test_functions.py	/^    def test_arguments(self
 test_arithmetic	tests/test_components/test_ai_model.py	/^    def test_arithmetic(self):$/;"	m	class:TestAIModelMapping
 test_arithmetic	tests/test_components/test_ai_model.py	/^    def test_arithmetic(self):$/;"	m	class:TestAIModels
 test_arithmetic_message	tests/test_components/test_ai_model.py	/^    def test_arithmetic_message(self):$/;"	m	class:TestAIModelsMessage
+test_classify_query	test_web_search_agent.py	/^def test_classify_query():$/;"	f
 test_depth	tests/test_components/test_ai_model.py	/^    def test_depth(self):$/;"	m	class:TestAIModels
 test_description	tests/test_models/test_functions.py	/^    def test_description(self):$/;"	m	class:TestFunctions
 test_description_custom	tests/test_models/test_functions.py	/^    def test_description_custom(self):$/;"	m	class:TestFunctions
+test_determine_search_requirements	test_web_search_agent.py	/^def test_determine_search_requirements(mock_ai_application):$/;"	f
 test_docstring_is_passed_to_llm	tests/test_components/test_ai_classifier.py	/^    def test_docstring_is_passed_to_llm(self):$/;"	m	class:TestAIClassifiers
 test_follow_docstring_and_global_and_instance_instructions	tests/test_components/test_ai_model.py	/^    def test_follow_docstring_and_global_and_instance_instructions(self):$/;"	m	class:TestInstructions
 test_follow_global_and_instance_instructions	tests/test_components/test_ai_model.py	/^    def test_follow_global_and_instance_instructions(self):$/;"	m	class:TestInstructions
@@ -2821,6 +2831,7 @@ test_mapping	tests/test_components/test_ai_classifier.py	/^    def test_mapping(
 test_mapping_with_instructions	tests/test_components/test_ai_classifier.py	/^    def test_mapping_with_instructions(self):$/;"	m	class:TestMapping
 test_mode	src/marvin/settings.py	/^    test_mode: bool = False$/;"	v	class:Settings	typeref:typename:bool
 test_model	tests/test_components/test_ai_classifier.py	/^    def test_model(self):$/;"	m	class:TestAIClassifiersInitialization
+test_modify_search_requirements	test_web_search_agent.py	/^def test_modify_search_requirements(mock_ai_function):$/;"	f
 test_name	tests/test_models/test_functions.py	/^    def test_name(self):$/;"	m	class:TestFunctions
 test_name_custom	tests/test_models/test_functions.py	/^    def test_name_custom(self):$/;"	m	class:TestFunctions
 test_recover_complex_values	tests/test_components/test_ai_classifier.py	/^    def test_recover_complex_values(self):$/;"	m	class:TestAIClassifiers
@@ -2828,6 +2839,7 @@ test_resume	tests/test_components/test_ai_model.py	/^    def test_resume(self):$
 test_return_annotation_native	tests/test_models/test_functions.py	/^    def test_return_annotation_native(self):$/;"	m	class:TestFunctions
 test_return_annotation_pydantic	tests/test_models/test_functions.py	/^    def test_return_annotation_pydantic(self):$/;"	m	class:TestFunctions
 test_schema	tests/test_models/test_functions.py	/^    def test_schema(self):$/;"	m	class:TestFunctions
+test_search_web	test_web_search_agent.py	/^def test_search_web(mock_search_tool):$/;"	f
 test_sentiment	tests/test_components/test_ai_classifier.py	/^    def test_sentiment(self):$/;"	m	class:TestAIClassifiers
 test_signature	tests/test_models/__init__.py	/^    def test_signature(self):$/;"	m	class:TestFunctions
 test_signature	tests/test_models/test_functions.py	/^    def test_signature(self):$/;"	m	class:TestFunctions
