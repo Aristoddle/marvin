@@ -1,4 +1,58 @@
 
+"""
+The `WebSearchAgent` class is designed to enhance the capabilities of a chatbot by leveraging web search. It has several methods that need to be implemented:
+
+1. `classify_query(self, query)`: This method should classify the user's query into predefined categories using the QueryType classifier. We can use the AIClassifier tool from Marvin to implement this.
+
+2. `determine_search_requirements(self, live_context = {})`: This method should determine the search requirements based on the live context. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to determine the search requirements.
+
+3. `modify_search_requirements(self, query, search_requirements)`: This method should modify the query and parameters based on the search requirements. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+
+4. `search_web(self, query, live_context = {})`: This method should search the web based on the user's query and the live context using the DuckDuckGoSearch tool. We can use the DuckDuckGoSearch tool directly as it is.
+
+5. `extract_results(self, search_results)`: This method should extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool. We can use the ScrapeGhost tool to extract structured data from the search results.
+
+6. `parse_results(self, results)`: This method should parse the search results. We can use the AIModel tool from Marvin to parse the search results into structured data.
+
+7. `evaluate_results(self, parsed_results, query)`: This method should evaluate the relevance of the parsed results in reference to the user query. We can use the AIFunction tool from Marvin to predict the function's output based on its signature and docstring.
+
+8. `respond_or_search_again(self, evaluated_results)`: This method should respond to the user's query or continue the search based on the evaluated results. We can use the AIApplication tool from Marvin to maintain the state of the conversation or task, which can then be used to decide whether to respond or search again.
+
+Here's an example of how to use the `WebSearchAgent` class:
+
+```python
+from cookbook.apps.web_search_agent import WebSearchAgent
+
+# Create an instance of the WebSearchAgent class
+web_search_agent = WebSearchAgent()
+
+# Classify a user's query
+query = "What's the weather like today?"
+query_type = web_search_agent.classify_query(query)
+
+# Determine the search requirements based on the live context
+live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], "question": "What's the weather like today?"}
+search_requirements = web_search_agent.determine_search_requirements(live_context)
+
+# Modify the query and parameters based on the search requirements
+modified_query, parameters = web_search_agent.modify_search_requirements(query, search_requirements)
+
+# Search the web based on the user's query and the live context
+search_results = web_search_agent.search_web(modified_query, live_context)
+
+# Extract the search results from the raw search results
+extracted_results = web_search_agent.extract_results(search_results)
+
+# Parse the search results
+parsed_results = web_search_agent.parse_results(extracted_results)
+
+# Evaluate the relevance of the parsed results in reference to the user query
+evaluated_results = web_search_agent.evaluate_results(parsed_results, query)
+
+# Respond to the user's query or continue the search based on the evaluated results
+response = web_search_agent.respond_or_search_again(evaluated_results, query, live_context)
+```
+"""
 from marvin.tools.web import DuckDuckGoSearch
 from src.marvin.components.ai_classifier import ai_classifier
 from src.marvin.components.ai_application import AIApplication
