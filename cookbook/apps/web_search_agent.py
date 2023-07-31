@@ -151,28 +151,32 @@ class WebSearchAgent:
 
 
     def parse_results(self, results):
-        # Parse the search results using a Margin AIFunction to
-        # This is a placeholder and should be replaced with actual parsing logic
-
-        parsed_results = results
-        return parsed_results
-
+        # If the results are not already a list of dictionaries, convert them to that format
+        if not isinstance(results, list) or not all(isinstance(result, dict) for result in results):
+            results = [result.__dict__ for result in results]
+        return results
 
     def evaluate_results(self, parsed_results, query):
-        # Evaluate the relevance of the parsed results in reference to the user query, using the Marvin AIFunction to assign a score to the utility of the sum of the extracted results.
-        # This is a placeholder and should be replaced with actual evaluation logic
-        evaluated_results = parsed_results
-        return evaluated_results
+        # Use an AIFunction to evaluate the relevance of each result
+        relevance_scores = AIFunction(fn=lambda result: self._evaluate_relevance(result, query))(parsed_results)
         
-        
+        # Add the relevance score to each result
+        for result, score in zip(parsed_results, relevance_scores):
+            result['relevance_score'] = score
+
+        return parsed_results
 
     def respond_or_search_again(self, evaluated_results):
-        # Respond to the user's query or continue the search based on the evaluated results.
-        # If the evaluated results are not satisfactory, the agent should continue the search by calling the search function again.
-        # If the evaluated results are satisfactory, the agent should respond to the user's query.
-        # The agent should also respond to the user's query if the evaluated results are satisfactory but the user has indicated that they would like to continue the search.
-        # This is a placeholder and should be replaced with actual response logic
-        response = evaluated_results
+        # Sort the results by relevance score
+        sorted_results = sorted(evaluated_results, key=lambda result: result['relevance_score'], reverse=True)
+        
+        # If the highest relevance score is above a certain threshold, respond to the user's query
+        if sorted_results[0]['relevance_score'] > RELEVANCE_THRESHOLD:
+            response = self._format_response(sorted_results[0])
+        else:
+            # Otherwise, continue the search
+            response = self.search_web(self.query, self.live_context)
+        
         return response
 
 
