@@ -61,11 +61,8 @@ class WebSearchAgent:
         if live_context is None:
             live_context = {}
 
-        # Create an instance of the AIApplication tool
-        app = AIApplication(name="WebSearchAgent", description="A web search agent")
-
-        # Use the AIApplication instance to determine the search requirements based on the live context
-        search_requirements = app.run(live_context)
+        # Use the shared AIApplication instance to determine the search requirements based on the live context
+        search_requirements = self.ai_application.run(live_context)
 
         return search_requirements
 
