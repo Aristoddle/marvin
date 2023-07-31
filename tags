@@ -119,6 +119,7 @@
 .5	docs/static/css/tailwind.css	/^.px-3\\.5 {$/;"	c
 .5	docs/static/css/tailwind.css	/^.py-2\\.5 {$/;"	c
 .absolute	docs/static/css/tailwind.css	/^.absolute {$/;"	c
+.aider*	.aider.chat.history.md	/^.aider*$/;"	c
 .align-baseline	docs/static/css/tailwind.css	/^.align-baseline {$/;"	c
 .align-bottom	docs/static/css/tailwind.css	/^.align-bottom {$/;"	c
 .align-middle	docs/static/css/tailwind.css	/^.align-middle {$/;"	c
@@ -642,6 +643,31 @@
 .whitespace-pre-line	docs/static/css/tailwind.css	/^.whitespace-pre-line {$/;"	c
 .whitespace-pre-wrap	docs/static/css/tailwind.css	/^.whitespace-pre-wrap {$/;"	c
 .xl	docs/static/css/tailwind.css	/^  .xl\\:left-\\[calc\\(50\\%-24rem\\)\\] {$/;"	c
+/So, can you run me through exactly what marvin does, and how I can implement its capabilities into my workflow?	.aider.chat.history.md	/^#### \/So, can you run me through exactly what marvin does, and how I can implement its capabili/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+/add .gitignore	.aider.chat.history.md	/^#### \/add .gitignore  $/;"	t	chapter:Additional ignores
+/add README.md	.aider.chat.history.md	/^#### \/add README.md  $/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+/cat README.md	.aider.chat.history.md	/^#### \/cat README.md  $/;"	t	chapter:Additional ignores
+/cd ../aider_public	.aider.chat.history.md	/^#### \/cd ..\/aider_public  $/;"	t	chapter:Additional ignores
+/clear	.aider.chat.history.md	/^#### \/clear  $/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+/drop *	.aider.chat.history.md	/^#### \/drop *  $/;"	t	chapter:Additional ignores
+/drop .gitignore	.aider.chat.history.md	/^#### \/drop .gitignore  $/;"	t	chapter:Additional ignores
+/drop docs/package-lock.json	.aider.chat.history.md	/^#### \/drop docs\/package-lock.json  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
+/drop src/marvin/components/ai_application.py src/marvin/engine/language_models/anthropic.py src/marvin/engine/language_models/azure_openai.py	.aider.chat.history.md	/^#### \/drop src\/marvin\/components\/ai_application.py src\/marvin\/engine\/language_models\/ant/;"	t	chapter:Additional ignores
+/run "echo */package_lock.json >> .gitignore"	.aider.chat.history.md	/^#### \/run "echo *\/package_lock.json >> .gitignore"  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
+/run cat README.md	.aider.chat.history.md	/^#### \/run cat README.md  $/;"	t	chapter:Additional ignores
+/run cd ..	.aider.chat.history.md	/^#### \/run cd ..  $/;"	t	chapter:Additional ignores
+/run cd ../aider_public	.aider.chat.history.md	/^#### \/run cd ..\/aider_public  $/;"	t	chapter:Additional ignores
+/run echo "*/package_lock.json >> .gitignore"	.aider.chat.history.md	/^#### \/run echo "*\/package_lock.json >> .gitignore"  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
+/run ls	.aider.chat.history.md	/^#### \/run ls  $/;"	t	chapter:Additional ignores
+/run ls -r	.aider.chat.history.md	/^#### \/run ls -r  $/;"	t	chapter:Additional ignores
+/run marvin	.aider.chat.history.md	/^#### \/run marvin  $/;"	t	chapter:Additional ignores
+/run pip install 'marvin[generator,dev,tests,framework,openai,lancedb]'	.aider.chat.history.md	/^#### \/run pip install 'marvin[generator,dev,tests,framework,openai,lancedb]'  $/;"	t	chapter:Additional ignores
+/run pip install marvin[ddg]	.aider.chat.history.md	/^#### \/run pip install marvin[ddg]  $/;"	t	chapter:Additional ignores
+/run pip install marvin[generator, dev, tests, framework, openai, lancedb]	.aider.chat.history.md	/^#### \/run pip install marvin[generator, dev, tests, framework, openai, lancedb]  $/;"	t	chapter:Additional ignores
+/run pwd -P	.aider.chat.history.md	/^#### \/run pwd -P  $/;"	t	chapter:Additional ignores
+/token	.aider.chat.history.md	/^#### \/token  $/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+/tokens	.aider.chat.history.md	/^#### \/tokens  $/;"	t	chapter:Additional ignores
+/tokens	.aider.chat.history.md	/^#### \/tokens  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 0	docs/package-lock.json	/^        "darwin"$/;"	s	array:packages.node_modules/fsevents.os
 0	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/chokidar.funding
 0	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/nanoid.funding
@@ -733,6 +759,7 @@
 :text-center:hover:focus	docs/static/css/tailwind.css	/^.focus\\:hover\\:text-center:hover:focus {$/;"	s
 :top-	docs/static/css/tailwind.css	/^  .lg\\:top-\\[calc\\(50\\%-30rem\\)\\] {$/;"	s
 :underline	docs/static/css/tailwind.css	/^  .sm\\:underline {$/;"	s
+<blank>	.aider.chat.history.md	/^#### <blank>  $/;"	t	chapter:Additional ignores
 @alloc/quick-lru	docs/package-lock.json	/^        "@alloc\/quick-lru": "^5.2.0",$/;"	s	object:packages.node_modules/tailwindcss.dependencies
 @jridgewell/gen-mapping	docs/package-lock.json	/^        "@jridgewell\/gen-mapping": "^0.3.2",$/;"	s	object:packages.node_modules/sucrase.dependencies
 @jridgewell/resolve-uri	docs/package-lock.json	/^        "@jridgewell\/resolve-uri": "3.1.0",$/;"	s	object:packages.node_modules/@jridgewell/trace-mapping.dependencies
@@ -763,10 +790,14 @@ AIModel	src/marvin/components/ai_model.py	/^class AIModel(LoggerMixin, BaseModel
 AIModelFactory	src/marvin/components/ai_model_factory.py	/^AIModelFactory = ai_model(DataSchema)$/;"	v
 ASSISTANT	src/marvin/utilities/messages.py	/^    ASSISTANT = "ASSISTANT"$/;"	v	class:Role
 Access, implement, test, and customize common LLM patterns.	docs/src/docs/promptss.md	/^###  Access, implement, test, and customize common LLM patterns. $/;"	S	chapter:Prompts as Code
+According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.	.aider.chat.history.md	/^#   According to pypa\/pipenv#598, it is recommended to include Pipfile.lock in version control.$/;"	c
 Adding Optional Dependencies	docs/src/getting_started/installation.md	/^## Adding Optional Dependencies$/;"	s	chapter:Installation
+Additional ignores	.aider.chat.history.md	/^# Additional ignores$/;"	c
 Advanced usage	docs/guide/ai_components/ai_functions.md	/^## Advanced usage$/;"	s	chapter:AI Functions
 Advanced usage	docs/guide/ai_components/ai_models.md	/^## Advanced usage$/;"	s	chapter:AI Models
 Agent	cookbook/apps/agent.py	/^class Agent(AIApplication):$/;"	c
+All node modules in any directory	.aider.chat.history.md	/^# All node modules in any directory$/;"	c
+Ambient AI	.aider.chat.history.md	/^### Ambient AI$/;"	S	chapter:Marvin
 Ambient AI	README.md	/^### Ambient AI$/;"	S	chapter:Marvin
 Ambient AI	docs/src/getting_started/what_is_marvin.md	/^## Ambient AI$/;"	s	chapter:Hello, Marvin!
 Anthropic	docs/src/docs/configuration/anthropic.md	/^# Anthropic$/;"	c
@@ -791,12 +822,18 @@ Basic usage	docs/guide/ai_components/ai_models.md	/^## Basic usage$/;"	s	chapter
 Build a Slack bot with Marvin	docs/src/guides/slackbot.md	/^# Build a Slack bot with Marvin$/;"	c
 Building an image	docs/src/guides/slackbot.md	/^## Building an image$/;"	s	chapter:Build a Slack bot with Marvin
 Building the bot	docs/src/guides/slackbot.md	/^## Building the bot$/;"	s	chapter:Build a Slack bot with Marvin
+Byte-compiled / optimized / DLL files	.aider.chat.history.md	/^# Byte-compiled \/ optimized \/ DLL files$/;"	c
+C extensions	.aider.chat.history.md	/^# C extensions$/;"	c
 CACHE	cookbook/slackbot/chatbot.py	/^CACHE = TTLCache(maxsize=1000, ttl=86400)$/;"	v
 COMPLETED	src/marvin/components/ai_application.py	/^    COMPLETED = "COMPLETED"$/;"	v	class:TaskState
 CONTEXT_SIZES	src/marvin/engine/language_models/anthropic.py	/^CONTEXT_SIZES = {$/;"	v
 CONTEXT_SIZES	src/marvin/engine/language_models/azure_openai.py	/^CONTEXT_SIZES = {$/;"	v
 CONTEXT_SIZES	src/marvin/engine/language_models/openai.py	/^CONTEXT_SIZES = {$/;"	v
+Can I add a second codebase (with its own .git files and ctags) to this chat for cross-platform reference/comparison?	.aider.chat.history.md	/^#### Can I add a second codebase (with its own .git files and ctags) to this chat for cross-plat/;"	t	chapter:Additional ignores
+Can you check if there are any other pip installs to check? i.e. if pip install marvin[ddg] does something unique, what else is available out there?	.aider.chat.history.md	/^#### Can you check if there are any other pip installs to check? i.e. if pip install marvin[ddg]/;"	t	chapter:Additional ignores
+Can you run me through the outputs of that pip install?	.aider.chat.history.md	/^#### Can you run me through the outputs of that pip install?  $/;"	t	chapter:Additional ignores
 Candidate	tests/test_components/test_ai_model.py	/^        class Candidate(BaseModel):$/;"	c	member:TestAIModels.test_history	file:
+Celery stuff	.aider.chat.history.md	/^# Celery stuff$/;"	c
 CertainPerson	tests/test_components/test_ai_model.py	/^        class CertainPerson(BaseModel):$/;"	c	member:TestAIModels.test_literal	file:
 ChainOfThought	src/marvin/prompts/library.py	/^class ChainOfThought(Prompt):$/;"	c
 ChatCompletion	src/marvin/openai/ChatCompletion/__init__.py	/^class ChatCompletion(openai.ChatCompletion):$/;"	c
@@ -804,13 +841,17 @@ ChatCompletionConfig	src/marvin/openai/ChatCompletion/__init__.py	/^class ChatCo
 ChatLLM	src/marvin/engine/language_models/base.py	/^class ChatLLM(MarvinBaseModel, abc.ABC):$/;"	c
 Chatbot	cookbook/apps/chatbot.py	/^class Chatbot(AIApplication):$/;"	c
 Chatbot	cookbook/slackbot/chatbot.py	/^class Chatbot(AIApplication):$/;"	c
+Chatbots with access to tools, data, and the web	.aider.chat.history.md	/^#### Chatbots with access to tools, data, and the web$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Chatbots with access to tools, data, and the web	README.md	/^#### Chatbots with access to tools, data, and the web$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+Chroma	.aider.chat.history.md	/^# Chroma$/;"	c
 City	tests/test_components/test_ai_model.py	/^        class City(BaseModel):$/;"	c	member:TestAIModelMapping.test_location	file:
 City	tests/test_components/test_ai_model.py	/^        class City(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 ClassifierSystem	src/marvin/components/ai_classifier.py	/^class ClassifierSystem(System):$/;"	c
 ClassifierUser	src/marvin/components/ai_classifier.py	/^class ClassifierUser(User):$/;"	c
 Cleaning data	docs/examples/ai_functions.md	/^## Cleaning data$/;"	s	chapter:AI Functions Examples
+Coming soon...	.aider.chat.history.md	/^#### Coming soon...$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Coming soon...	README.md	/^#### Coming soon...$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+Community	.aider.chat.history.md	/^## Community$/;"	s	chapter:Marvin
 Community	README.md	/^## Community$/;"	s	chapter:Marvin
 Complex annotations	docs/guide/ai_components/ai_functions.md	/^### Complex annotations$/;"	S	section:AI Functions""Advanced usage
 Conditional	src/marvin/prompts/library.py	/^class Conditional(Prompt):$/;"	c
@@ -828,11 +869,14 @@ Configuration	docs/src/docs/configuration/openai.md	/^## Configuration$/;"	s	cha
 Configuration	docs/src/docs/index.md	/^### Configuration$/;"	S	section:The Marvin Docs""Organization
 Connect on Discord or Twitter	docs/src/community.md	/^### Connect on Discord or Twitter$/;"	S	chapter:The Marvin Community
 Contributing to Marvin	docs/src/community.md	/^### Contributing to Marvin$/;"	S	chapter:The Marvin Community
+Core AI Components	.aider.chat.history.md	/^## Core AI Components$/;"	s	chapter:Marvin
 Core AI Components	README.md	/^## Core AI Components$/;"	s	chapter:Marvin
 Correct spelling and grammar	docs/examples/ai_functions.md	/^## Correct spelling and grammar$/;"	s	chapter:AI Functions Examples
+Could you actually just add that line, alongside any other files that you don't think would be valuable (given your core UX loop) to the gitignore?  Run me through your recommendations and then, once confirmed, I'd love ot see a recommended code-block edit.	.aider.chat.history.md	/^#### Could you actually just add that line, alongside any other files that you don't think would/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 Country	tests/test_components/test_ai_model.py	/^        class Country(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 Create custom prompts that can be shared, tested, and versioned.	docs/src/docs/promptss.md	/^### Create custom prompts that can be shared, tested, and versioned.$/;"	S	chapter:Prompts as Code
 Customizing the LLM	docs/guide/ai_components/ai_functions.md	/^### Customizing the LLM$/;"	S	section:AI Functions""Advanced usage
+Cython debug symbols	.aider.chat.history.md	/^# Cython debug symbols$/;"	c
 DAILY_DIGEST_TEMPLATE	cookbook/flows/github_digest.py	/^DAILY_DIGEST_TEMPLATE = jinja_env.from_string(inspect.cleandoc("""$/;"	v
 DEFAULT_INSTRUCTIONS	cookbook/apps/chatbot.py	/^DEFAULT_INSTRUCTIONS = "Engage the user in conversation."$/;"	v
 DEFAULT_INSTRUCTIONS	cookbook/slackbot/chatbot.py	/^DEFAULT_INSTRUCTIONS = "Engage the user in conversation."$/;"	v
@@ -848,15 +892,20 @@ Define a message handler	docs/src/guides/slackbot.md	/^### Define a message hand
 Deployment	docs/src/docs/index.md	/^### Deployment$/;"	S	section:The Marvin Docs""Organization
 Deployment	src/marvin/deployment/__init__.py	/^class Deployment(BaseModel):$/;"	c
 Deterministic AI functions	docs/guide/ai_components/ai_functions.md	/^#### Deterministic AI functions$/;"	t	subsection:AI Functions""Advanced usage""Customizing the LLM
+Developer Experience	.aider.chat.history.md	/^### Developer Experience$/;"	S	chapter:Marvin
 Developer Experience	README.md	/^### Developer Experience$/;"	S	chapter:Marvin
 Developer Experience	docs/src/getting_started/what_is_marvin.md	/^## Developer Experience$/;"	s	chapter:Hello, Marvin!
 Development Guide	docs/src/development_guide.md	/^# Development Guide$/;"	c
 DiscoursePost	src/marvin/components/library/ai_models.py	/^class DiscoursePost(BaseModel):$/;"	c
+Distribution / packaging	.aider.chat.history.md	/^# Distribution \/ packaging$/;"	c
+Django stuff:	.aider.chat.history.md	/^# Django stuff:$/;"	c
+Documentation	.aider.chat.history.md	/^## Documentation$/;"	s	chapter:Marvin
 Documentation	README.md	/^## Documentation$/;"	s	chapter:Marvin
 DuckDuckGoSearch	src/marvin/tools/web.py	/^class DuckDuckGoSearch(Tool):$/;"	c
 Election	tests/test_components/test_ai_model.py	/^        class Election(BaseModel):$/;"	c	member:TestAIModels.test_history	file:
 Entity extraction	docs/guide/ai_components/ai_models.md	/^### Entity extraction$/;"	S	section:AI Models""Advanced usage
 Environment Variables	docs/src/docs/configuration/settings.md	/^## Environment Variables$/;"	s	chapter:Settings
+Environments	.aider.chat.history.md	/^# Environments$/;"	c
 Executing Prompts	docs/src/docs/prompts_executes.md	/^# Executing Prompts$/;"	c
 Executor	src/marvin/engine/executors/base.py	/^class Executor(LoggerMixin, MarvinBaseModel):$/;"	c
 Experience	tests/test_components/test_ai_model.py	/^        class Experience(BaseModel):$/;"	c	member:TestAIModels.test_resume	file:
@@ -873,7 +922,9 @@ Feedback 💙	docs/src/feedback.md	/^# Feedback 💙$/;"	c
 FileSystemTool	src/marvin/tools/filesystem.py	/^class FileSystemTool(Tool):$/;"	c
 Find the whole example [here](https://github.com/PrefectHQ/marvin/tree/main/cookbook/slackbot).	docs/src/guides/slackbot.md	/^## Find the whole example [here](https:\/\/github.com\/PrefectHQ\/marvin\/tree\/main\/cookbook\//;"	s	chapter:Build a Slack bot with Marvin
 Find words meeting specific criteria	docs/examples/ai_functions.md	/^## Find words meeting specific criteria$/;"	s	chapter:AI Functions Examples
+Flask stuff:	.aider.chat.history.md	/^# Flask stuff:$/;"	c
 Foo	tests/test_models/test_functions.py	/^        class Foo(BaseModel):$/;"	c	member:TestFunctions.test_return_annotation_pydantic	file:
+For a library or package, you might want to ignore these files since the code is	.aider.chat.history.md	/^#   For a library or package, you might want to ignore these files since the code is$/;"	c
 Format electronic health records data declaratively	docs/examples/ai_models.md	/^## Format electronic health records data declaratively$/;"	s	chapter:AI Models Examples
 FormatResponse	src/marvin/tools/format_response.py	/^class FormatResponse(Tool):$/;"	c
 FreeformState	src/marvin/components/ai_application.py	/^class FreeformState(BaseModel):$/;"	c
@@ -897,14 +948,20 @@ Hello Marvin 👋	docs/src/getting_started/hello_marvin.md	/^# Hello Marvin 👋
 Hello, Marvin!	docs/src/getting_started/what_is_marvin.md	/^# Hello, Marvin!$/;"	c
 History	src/marvin/utilities/history.py	/^class History(BaseModel):$/;"	c
 HistoryFilter	src/marvin/utilities/history.py	/^class HistoryFilter(BaseModel):$/;"	c
+However, in case of collaboration, if having platform-specific dependencies or dependencies	.aider.chat.history.md	/^#   However, in case of collaboration, if having platform-specific dependencies or dependencies$/;"	c
+I'd love to understand if this model can query the internet for information.  Can it?  if so, how?	.aider.chat.history.md	/^#### I'd love to understand if this model can query the internet for information.  Can it?  if s/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 IN_PROGRESS	src/marvin/components/ai_application.py	/^    IN_PROGRESS = "IN_PROGRESS"$/;"	v	class:TaskState
+IPython	.aider.chat.history.md	/^# IPython$/;"	c
 Implement the AI response	docs/src/guides/slackbot.md	/^### Implement the AI response$/;"	S	section:Build a Slack bot with Marvin""Building the bot
 Implementation of `generate_ai_response` for the Prefect Community Slackbot	docs/src/guides/slackbot.md	/^#### Implementation of `generate_ai_response` for the Prefect Community Slackbot$/;"	t	subsection:Build a Slack bot with Marvin""Building the bot""Implement the AI response
 Installation	docs/src/development_guide.md	/^## Installation$/;"	s	chapter:Development Guide
 Installation	docs/src/getting_started/installation.md	/^# Installation$/;"	c
+Installer logs	.aider.chat.history.md	/^# Installer logs$/;"	c
 Installing for Development	docs/src/getting_started/installation.md	/^## Installing for Development$/;"	s	chapter:Installation
 JSONPatchModel	src/marvin/components/ai_application.py	/^class JSONPatchModel(BaseModel):$/;"	c
+JetBrains specific template is maintainted in a separate JetBrains.gitignore that can	.aider.chat.history.md	/^#  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can$/;"	c
 JinjaConditional	src/marvin/prompts/library.py	/^class JinjaConditional(Prompt):$/;"	c
+Jupyter Notebook	.aider.chat.history.md	/^# Jupyter Notebook$/;"	c
 KNOWN_COMMANDS	src/marvin/cli/chat/__init__.py	/^KNOWN_COMMANDS = {$/;"	v
 LLM Configuration	docs/src/docs/configuration/settings.md	/^## LLM Configuration$/;"	s	chapter:Settings
 LLM Providers	docs/src/docs/configuration/settings.md	/^## LLM Providers$/;"	s	chapter:Settings
@@ -915,6 +972,7 @@ Location	tests/test_components/test_ai_model.py	/^        class Location(BaseMod
 LoggerMixin	src/marvin/utilities/types.py	/^class LoggerMixin(BaseModel):$/;"	c
 MD_LINK_REGEX	src/marvin/utilities/strings.py	/^MD_LINK_REGEX = r"\\[(?P<text>[^\\]]+)]\\((?P<url>[^\\)]+)\\)"$/;"	v
 MKDOCS_FILE	cookbook/docs_writer.py	/^MKDOCS_FILE = ROOT_DIR \/ "mkdocs.yml"$/;"	v
+Marvin	.aider.chat.history.md	/^# Marvin$/;"	c
 Marvin	README.md	/^# Marvin$/;"	c
 MarvinBaseModel	src/marvin/utilities/types.py	/^class MarvinBaseModel(BaseModel):$/;"	c
 MarvinBaseSettings	src/marvin/settings.py	/^class MarvinBaseSettings(BaseSettings):$/;"	c
@@ -938,8 +996,10 @@ NEGATIVE	tests/test_components/test_ai_classifier.py	/^            NEGATIVE = {"
 NEWLINES_REGEX	src/marvin/utilities/strings.py	/^NEWLINES_REGEX = re.compile(r"(\\s*\\n\\s*)")$/;"	v
 Neighborhood	tests/test_components/test_ai_model.py	/^        class Neighborhood(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 Now	src/marvin/prompts/library.py	/^class Now(System):$/;"	c
+Now that I've installed the pip packages, how do I leverage DDG search, web scraping, and all of that with marvin?	.aider.chat.history.md	/^#### Now that I've installed the pip packages, how do I leverage DDG search, web scraping, and a/;"	t	chapter:Additional ignores
 OPITION_2	tests/test_components/test_ai_classifier.py	/^            OPITION_2 = "Negative"$/;"	v	class:TestAIClassifiers.test_values_are_passed_to_llm.Sentiment
 OPTION_1	tests/test_components/test_ai_classifier.py	/^            OPTION_1 = "Positive"$/;"	v	class:TestAIClassifiers.test_values_are_passed_to_llm.Sentiment
+Okay, can you run me through what this codebase does, @ the most basic level?	.aider.chat.history.md	/^#### Okay, can you run me through what this codebase does, @ the most basic level?  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 OpenAI	docs/src/docs/configuration/openai.md	/^# OpenAI$/;"	c
 OpenAIChatLLM	src/marvin/engine/language_models/openai.py	/^class OpenAIChatLLM(ChatLLM):$/;"	c
 OpenAIFunction	src/marvin/engine/language_models/base.py	/^class OpenAIFunction(MarvinBaseModel):$/;"	c
@@ -953,6 +1013,7 @@ Organization	docs/src/docs/index.md	/^## Organization$/;"	s	chapter:The Marvin D
 P	src/marvin/cli/typer.py	/^P = ParamSpec("P")$/;"	v
 P	src/marvin/components/ai_function.py	/^P = ParamSpec("P")$/;"	v
 PENDING	src/marvin/components/ai_application.py	/^    PENDING = "PENDING"$/;"	v	class:TaskState
+PEP 582; used by e.g. github.com/David-OConnor/pyflow	.aider.chat.history.md	/^# PEP 582; used by e.g. github.com\/David-OConnor\/pyflow$/;"	c
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "Positive"$/;"	v	class:TestAIClassifiers.test_docstring_is_passed_to_llm.Sentiment
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "Positive"$/;"	v	class:TestAIClassifiers.test_instructions_are_passed_to_llm.Sentiment
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "Positive"$/;"	v	class:TestAIClassifiers.test_sentiment.Sentiment
@@ -963,14 +1024,20 @@ POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "P
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = "option - 1"$/;"	v	class:TestAIClassifiers.test_keys_are_passed_to_llm.Sentiment
 POSITIVE	tests/test_components/test_ai_classifier.py	/^            POSITIVE = {"value": "Positive"}$/;"	v	class:TestAIClassifiers.test_recover_complex_values.Sentiment
 PREFECT_KNOWLEDGEBASE_DESC	cookbook/slackbot/chatbot.py	/^PREFECT_KNOWLEDGEBASE_DESC = """$/;"	v
+Please run me through web.py in explicit detail	.aider.chat.history.md	/^#### Please run me through web.py in explicit detail  $/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 Plugins	docs/guide/ai_components/ai_functions.md	/^### Plugins$/;"	S	section:AI Functions""Advanced usage
 Prerequisites	docs/src/development_guide.md	/^## Prerequisites$/;"	s	chapter:Development Guide
 Prompt	src/marvin/prompts/base.py	/^class Prompt(BaseModel, abc.ABC):$/;"	c
 PromptList	src/marvin/prompts/base.py	/^class PromptList(list[Union["Prompt", Message]]):$/;"	c
 Prompts as Code	docs/src/docs/promptss.md	/^# Prompts as Code$/;"	c
+PyBuilder	.aider.chat.history.md	/^# PyBuilder$/;"	c
+PyCharm	.aider.chat.history.md	/^# PyCharm$/;"	c
+PyInstaller	.aider.chat.history.md	/^# PyInstaller$/;"	c
+Pyre type checker	.aider.chat.history.md	/^# Pyre type checker$/;"	c
 Python	src/marvin/tools/python.py	/^class Python(Tool):$/;"	c
 QueryChroma	src/marvin/tools/chroma.py	/^class QueryChroma(Tool):$/;"	c
 QueryResultType	src/marvin/tools/chroma.py	/^QueryResultType = Literal["documents", "distances", "metadatas"]$/;"	v
+Quick Install	.aider.chat.history.md	/^## Quick Install$/;"	s	chapter:Marvin
 Quick Install	README.md	/^## Quick Install$/;"	s	chapter:Marvin
 R	src/marvin/cli/typer.py	/^R = TypeVar("R")$/;"	v
 ROOT_DIR	cookbook/docs_writer.py	/^ROOT_DIR = Path(marvin.__file__).parents[2]$/;"	v
@@ -982,6 +1049,8 @@ RentalHistory	tests/test_components/test_ai_model.py	/^        class RentalHisto
 ResultType	src/marvin/tools/mathematics.py	/^ResultType = Literal["DecimalApproximation"]$/;"	v
 Resume	tests/test_components/test_ai_model.py	/^        class Resume(BaseModel):$/;"	c	member:TestAIModels.test_resume	file:
 Role	src/marvin/utilities/messages.py	/^class Role(Enum):$/;"	c
+Rope project settings	.aider.chat.history.md	/^# Rope project settings$/;"	c
+Run me through web.py line for line please.  Also, please run me through anything I need to do (i.e. adding API keys, etc) to enable web search using Marvin.	.aider.chat.history.md	/^#### Run me through web.py line for line please.  Also, please run me through anything I need to/;"	t	chapter:Additional ignores
 Running a `chain`.	docs/src/docs/prompts_executes.md	/^## Running a `chain`.$/;"	s	chapter:Executing Prompts
 Running a `single-shot` prompt.	docs/src/docs/prompts_executes.md	/^## Running a `single-shot` prompt.$/;"	s	chapter:Executing Prompts
 Runtime Settings	docs/src/docs/configuration/settings.md	/^## Runtime Settings$/;"	s	chapter:Settings
@@ -990,8 +1059,11 @@ SKIPPED	src/marvin/components/ai_application.py	/^    SKIPPED = "SKIPPED"$/;"	v	
 SLACK_MENTION_REGEX	cookbook/slackbot/chatbot.py	/^SLACK_MENTION_REGEX = r"<@(\\w+)>"$/;"	v
 SYSTEM	src/marvin/utilities/messages.py	/^    SYSTEM = "SYSTEM"$/;"	v	class:Role
 SYSTEM_PROMPT	src/marvin/components/ai_application.py	/^SYSTEM_PROMPT = """$/;"	v
+SageMath parsed files	.aider.chat.history.md	/^# SageMath parsed files$/;"	c
+Scalable APIs, data pipelines, and agents	.aider.chat.history.md	/^#### Scalable APIs, data pipelines, and agents$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Scalable APIs, data pipelines, and agents	README.md	/^#### Scalable APIs, data pipelines, and agents$/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
 Schema normalization for data warehousing	docs/examples/ai_models.md	/^## Schema normalization for data warehousing$/;"	s	chapter:AI Models Examples
+Scrapy stuff:	.aider.chat.history.md	/^# Scrapy stuff:$/;"	c
 SearchGitHubIssues	src/marvin/tools/github.py	/^class SearchGitHubIssues(Tool):$/;"	c
 Sentiment	tests/test_components/test_ai_classifier.py	/^        class Sentiment(Enum):$/;"	c	member:TestAIClassifiers.test_docstring_is_passed_to_llm	file:
 Sentiment	tests/test_components/test_ai_classifier.py	/^        class Sentiment(Enum):$/;"	c	member:TestAIClassifiers.test_instructions_are_passed_to_llm	file:
@@ -1009,9 +1081,13 @@ Settings	docs/src/docs/configuration/settings.md	/^# Settings$/;"	c
 Settings	src/marvin/settings.py	/^class Settings(MarvinBaseSettings):$/;"	c
 Shell	src/marvin/tools/shell.py	/^class Shell(Tool):$/;"	c
 ShimModule	tests/__init__.py	/^    class ShimModule:$/;"	c
+Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.	.aider.chat.history.md	/^#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version contr/;"	c
 Slack setup	docs/src/guides/slackbot.md	/^## Slack setup$/;"	s	chapter:Build a Slack bot with Marvin
 SlackThreadToDiscoursePost	cookbook/slackbot/chatbot.py	/^class SlackThreadToDiscoursePost(Tool):$/;"	c
 Smart routing in application development	docs/examples/ai_models.md	/^## Smart routing in application development$/;"	s	chapter:AI Models Examples
+So, can you run me through exactly what marvin does, and how I can implement its capabilities into my workflow?	.aider.chat.history.md	/^#### So, can you run me through exactly what marvin does, and how I can implement its capabiliti/;"	t	section:Marvin""Things Marvin can build in 5 minutes (seriously)
+Sphinx documentation	.aider.chat.history.md	/^# Sphinx documentation$/;"	c
+Spyder project settings	.aider.chat.history.md	/^# Spyder project settings$/;"	c
 StreamHandler	src/marvin/engine/language_models/base.py	/^class StreamHandler(MarvinBaseModel, abc.ABC):$/;"	c
 Structure conversational user input	docs/examples/ai_models.md	/^## Structure conversational user input$/;"	s	chapter:AI Models Examples
 Structure data from scraping web pages	docs/examples/ai_models.md	/^## Structure data from scraping web pages$/;"	s	chapter:AI Models Examples
@@ -1053,17 +1129,22 @@ TestUpdateState	tests/test_components/test_ai_app.py	/^class TestUpdateState:$/;
 TestWriterState	cookbook/test_writing_application.py	/^class TestWriterState(BaseModel):$/;"	c
 Testing	docs/src/development_guide.md	/^## Testing$/;"	s	chapter:Development Guide
 Text to ORM	docs/examples/ai_models.md	/^## Text to ORM$/;"	s	chapter:AI Models Examples
+The AI engineering framework	.aider.chat.history.md	/^### The AI engineering framework$/;"	S	chapter:Marvin
 The AI engineering framework	README.md	/^### The AI engineering framework$/;"	S	chapter:Marvin
 The Marvin Community	docs/src/community.md	/^# The Marvin Community$/;"	c
 The Marvin Docs	docs/src/docs/index.md	/^# The Marvin Docs$/;"	c
+Things Marvin can build in 5 minutes (seriously)	.aider.chat.history.md	/^## Things Marvin can build in 5 minutes (seriously) $/;"	s	chapter:Marvin
 Things Marvin can build in 5 minutes (seriously)	README.md	/^## Things Marvin can build in 5 minutes (seriously) $/;"	s	chapter:Marvin
+This is especially recommended for binary packages to ensure reproducibility, and is more	.aider.chat.history.md	/^#   This is especially recommended for binary packages to ensure reproducibility, and is more$/;"	c
 ToDo	cookbook/apps/todo.py	/^class ToDo(BaseModel):$/;"	c
 ToDoApp	cookbook/apps/todo.py	/^class ToDoApp(AIApplication):$/;"	c
 ToDoState	cookbook/apps/todo.py	/^class ToDoState(BaseModel):$/;"	c
 Tool	src/marvin/tools/base.py	/^class Tool(LoggerMixin, BaseModel):$/;"	c
 Translate	tests/test_components/test_ai_model.py	/^        class Translate(BaseModel):$/;"	c	member:TestAIModelMapping.test_instructions	file:
 Translation	tests/test_components/test_ai_model.py	/^        class Translation(BaseModel):$/;"	c	member:TestInstructions.test_follow_multiple_instructions	file:
+Translations	.aider.chat.history.md	/^# Translations$/;"	c
 USER	src/marvin/utilities/messages.py	/^    USER = "USER"$/;"	v	class:Role
+Unit test / coverage reports	.aider.chat.history.md	/^# Unit test \/ coverage reports$/;"	c
 Unit testing LLMs	docs/examples/ai_functions.md	/^## Unit testing LLMs$/;"	s	chapter:AI Functions Examples
 UpdatePlan	src/marvin/components/ai_application.py	/^class UpdatePlan(Tool):$/;"	c
 UpdateState	src/marvin/components/ai_application.py	/^class UpdateState(Tool):$/;"	c
@@ -1071,12 +1152,16 @@ User	src/marvin/prompts/library.py	/^class User(MessagePrompt):$/;"	c
 Using a model	docs/src/docs/configuration/anthropic.md	/^## Using a model$/;"	s	chapter:Anthropic
 Using a model	docs/src/docs/configuration/azure_openai.md	/^## Using a model$/;"	s	chapter:Azure OpenAI Service
 Using a model	docs/src/docs/configuration/openai.md	/^## Using a model$/;"	s	chapter:OpenAI
+Usually these files are written by a python script from a template	.aider.chat.history.md	/^#  Usually these files are written by a python script from a template$/;"	c
 Utilities	docs/src/docs/index.md	/^### Utilities$/;"	S	section:The Marvin Docs""Organization
+VS Code	.aider.chat.history.md	/^# VS Code$/;"	c
 VisitUrl	src/marvin/tools/web.py	/^class VisitUrl(Tool):$/;"	c
 Web scraping with Marvin	docs/src/guides/webscraping.md	/^# Web scraping with Marvin$/;"	c
 What Makes Marvin Different?	docs/src/getting_started/what_is_marvin.md	/^## What Makes Marvin Different?$/;"	s	chapter:Hello, Marvin!
 When to use AI Models	docs/guide/ai_components/ai_models.md	/^## When to use AI Models$/;"	s	chapter:AI Models
 When to use AI functions	docs/guide/ai_components/ai_functions.md	/^## When to use AI functions$/;"	s	chapter:AI Functions
+Where are marvin's internal prompts located?  Also, do you have any recommendations for optimally interacting with marvin?  It seems there is a `marvin chat` and a `marvin admin [arg]` capability, but I don't know how they work.  There also apppear to be some examples in the cookbook directory, but I'm not positive how that works either.	.aider.chat.history.md	/^#### Where are marvin's internal prompts located?  Also, do you have any recommendations for opt/;"	t	chapter:Additional ignores
+Where is this tool class?  Perhaps it would provide context. I'm very interested i how it extracts information from websites.	.aider.chat.history.md	/^#### Where is this tool class?  Perhaps it would provide context. I'm very interested i how it e/;"	t	chapter:aider chat started at 2023-07-30 18:44:52
 WolframCalculator	src/marvin/tools/mathematics.py	/^class WolframCalculator(Tool):$/;"	c
 WriteContent	src/marvin/tools/filesystem.py	/^class WriteContent(BaseModel):$/;"	c
 WriteFile	src/marvin/tools/filesystem.py	/^class WriteFile(FileSystemTool):$/;"	c
@@ -1162,7 +1247,9 @@ ai_application_max_iterations	src/marvin/settings.py	/^    ai_application_max_it
 ai_classifier	src/marvin/components/ai_classifier.py	/^def ai_classifier($/;"	f
 ai_fn	src/marvin/components/ai_function.py	/^def ai_fn($/;"	f	typeref:typename:Callable[P,T]
 ai_model	src/marvin/components/ai_model.py	/^def ai_model($/;"	f	typeref:typename:Type[T]
+aider chat started at 2023-07-30 18:44:52	.aider.chat.history.md	/^# aider chat started at 2023-07-30 18:44:52$/;"	c
 allow_population_by_field_name	src/marvin/components/ai_application.py	/^        allow_population_by_field_name = True$/;"	v	class:JSONPatchModel.Config
+and can be added to the global gitignore or merged into this file.  For a more nuclear	.aider.chat.history.md	/^#  and can be added to the global gitignore or merged into this file.  For a more nuclear$/;"	c
 answer	src/marvin/components/library/ai_models.py	/^    answer: Optional[str] = Field($/;"	v	class:DiscoursePost	typeref:typename:Optional[str]
 anthropic	src/marvin/settings.py	/^    anthropic: AnthropicSettings = Field(default_factory=AnthropicSettings)$/;"	v	class:Settings	typeref:typename:AnthropicSettings
 anthropic_role_map	src/marvin/engine/language_models/anthropic.py	/^def anthropic_role_map(marvin_role: Role):$/;"	f
@@ -1194,6 +1281,8 @@ azure_openai	src/marvin/settings.py	/^    azure_openai: AzureOpenAI = Field(defa
 b	docs/static/css/tailwind.css	/^b,$/;"	s
 balanced-match	docs/package-lock.json	/^        "balanced-match": "^1.0.0",$/;"	s	object:packages.node_modules/brace-expansion.dependencies
 batched	src/marvin/utilities/collections.py	/^def batched($/;"	f	typeref:typename:Iterable[T]
+be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore	.aider.chat.history.md	/^#  be found at https:\/\/github.com\/github\/gitignore\/blob\/main\/Global\/JetBrains.gitignore$/;"	c
+before PyInstaller builds the exe, so as to inject date/other infos into it.	.aider.chat.history.md	/^#  before PyInstaller builds the exe, so as to inject date\/other infos into it.$/;"	c
 bin	docs/package-lock.json	/^      "bin": {$/;"	o	object:packages.node_modules/cssesc
 bin	docs/package-lock.json	/^      "bin": {$/;"	o	object:packages.node_modules/jiti
 bin	docs/package-lock.json	/^      "bin": {$/;"	o	object:packages.node_modules/nanoid
@@ -1228,6 +1317,7 @@ clear	src/marvin/utilities/history.py	/^    def clear(self):$/;"	m	class:History
 code	docs/static/css/tailwind.css	/^code,$/;"	s
 colors	tailwind.config.js	/^      colors: {$/;"	p	property:module.exports.theme.extend
 commander	docs/package-lock.json	/^        "commander": "^4.0.0",$/;"	s	object:packages.node_modules/sucrase.dependencies
+commonly ignored for libraries.	.aider.chat.history.md	/^#   commonly ignored for libraries.$/;"	c
 concat-map	docs/package-lock.json	/^        "concat-map": "0.0.1"$/;"	s	object:packages.node_modules/brace-expansion.dependencies
 condense_newlines	src/marvin/utilities/strings.py	/^def condense_newlines(text: str) -> str:$/;"	f	typeref:typename:str
 console	src/marvin/cli/chat/__init__.py	/^console = Console()$/;"	v
@@ -1640,6 +1730,7 @@ handle_streaming_response	src/marvin/engine/language_models/base.py	/^    def ha
 handle_streaming_response	src/marvin/engine/language_models/openai.py	/^    async def handle_streaming_response($/;"	m	class:OpenAIStreamHandler	typeref:typename:Message
 has	docs/package-lock.json	/^        "has": "^1.0.3"$/;"	s	object:packages.node_modules/is-core-module.dependencies
 hasInstallScript	docs/package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/fsevents
+having no cross-platform support, pipenv may install dependencies that don't work, or not	.aider.chat.history.md	/^#   having no cross-platform support, pipenv may install dependencies that don't work, or not$/;"	c
 hidden	docs/static/css/tailwind.css	/^[hidden] {$/;"	s
 history	src/marvin/components/ai_application.py	/^    history: History = Field(default_factory=History)$/;"	v	class:AIApplication	typeref:typename:History
 home	src/marvin/settings.py	/^    home: Path = Path("~\/.marvin").expanduser()$/;"	v	class:Settings	typeref:typename:Path
@@ -1648,6 +1739,7 @@ hr	docs/static/css/tailwind.css	/^hr,$/;"	s
 html	docs/static/css/tailwind.css	/^html {$/;"	s
 html_to_content	src/marvin/utilities/strings.py	/^def html_to_content(html: str) -> str:$/;"	f	typeref:typename:str
 html_url	src/marvin/tools/github.py	/^    html_url: str = Field(...)$/;"	v	class:GitHubIssue	typeref:typename:str
+https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control	.aider.chat.history.md	/^#   https:\/\/python-poetry.org\/docs\/basic-usage\/#commit-your-poetrylock-file-to-version-cont/;"	c
 if_	src/marvin/prompts/library.py	/^    if_: Callable = Field($/;"	v	class:Conditional	typeref:typename:Callable
 if_	src/marvin/prompts/library.py	/^    if_: str = Field($/;"	v	class:JinjaConditional	typeref:typename:str
 iframe	docs/static/css/tailwind.css	/^iframe,$/;"	s
@@ -1662,6 +1754,7 @@ input	docs/static/css/tailwind.css	/^input,$/;"	s
 input::-moz-placeholder	docs/static/css/tailwind.css	/^input::-moz-placeholder, textarea::-moz-placeholder {$/;"	s
 input::placeholder	docs/static/css/tailwind.css	/^input::placeholder,$/;"	s
 insert_at_row	src/marvin/tools/filesystem.py	/^    insert_at_row: int = None$/;"	v	class:WriteContent	typeref:typename:int
+install all needed dependencies.	.aider.chat.history.md	/^#   install all needed dependencies.$/;"	c
 instructions	cookbook/apps/chatbot.py	/^    instructions: str = DEFAULT_INSTRUCTIONS$/;"	v	class:Chatbot	typeref:typename:str
 instructions	cookbook/slackbot/chatbot.py	/^    instructions: str = DEFAULT_INSTRUCTIONS$/;"	v	class:Chatbot	typeref:typename:str
 instructions	src/marvin/components/ai_classifier.py	/^    instructions: str = None$/;"	v	class:ClassifierSystem	typeref:typename:str
@@ -1755,6 +1848,7 @@ integrity	docs/package-lock.json	/^      "integrity": "sha512-xiqMQR4xAeHTuB9uWm
 integrity	docs/package-lock.json	/^      "integrity": "sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGa/;"	s	object:packages.node_modules/@jridgewell/set-array
 integrity	docs/package-lock.json	/^      "integrity": "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfa/;"	s	object:packages.node_modules/function-bind
 integrity	docs/package-lock.json	/^      "integrity": "sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9\/6MHni9IWuF/;"	s	object:packages.node_modules/mz
+intended to run in multiple environments; otherwise, check them in:	.aider.chat.history.md	/^#   intended to run in multiple environments; otherwise, check them in:$/;"	c
 iojs	docs/package-lock.json	/^        "iojs": ">=1.0.0",$/;"	s	object:packages.node_modules/reusify.engines
 is-binary-path	docs/package-lock.json	/^        "is-binary-path": "~2.1.0",$/;"	s	object:packages.node_modules/chokidar.dependencies
 is-core-module	docs/package-lock.json	/^        "is-core-module": "^2.11.0",$/;"	s	object:packages.node_modules/resolve.dependencies
@@ -1814,6 +1908,7 @@ messages	src/marvin/utilities/history.py	/^    messages: list[Message] = Field(d
 micromatch	docs/package-lock.json	/^        "micromatch": "^4.0.4"$/;"	s	object:packages.node_modules/fast-glob.dependencies
 micromatch	docs/package-lock.json	/^        "micromatch": "^4.0.5",$/;"	s	object:packages.node_modules/tailwindcss.dependencies
 minimatch	docs/package-lock.json	/^        "minimatch": "^3.0.4",$/;"	s	object:packages.node_modules/glob.dependencies
+mkdocs documentation	.aider.chat.history.md	/^# mkdocs documentation$/;"	c
 model	src/marvin/engine/language_models/anthropic.py	/^    model: str = "claude-2"$/;"	v	class:AnthropicChatLLM	typeref:typename:str
 model	src/marvin/engine/language_models/azure_openai.py	/^    model: str = "gpt-35-turbo-0613"$/;"	v	class:AzureOpenAIChatLLM	typeref:typename:str
 model	src/marvin/engine/language_models/openai.py	/^    model: str = "gpt-3.5-turbo"$/;"	v	class:OpenAIChatLLM	typeref:typename:str
@@ -1821,6 +1916,7 @@ model	src/marvin/functions/__init__.py	/^    def model(self):$/;"	m	class:Functi
 model	src/marvin/openai/ChatCompletion/__init__.py	/^    model: str = "gpt-3.5-turbo"$/;"	v	class:ChatCompletionConfig	typeref:typename:str
 module.exports	tailwind.config.js	/^module.exports = {$/;"	p
 multi_glob	src/marvin/utilities/collections.py	/^def multi_glob(directory=None, keep_globs=None, drop_globs=None) -> list[Path]:$/;"	f	typeref:typename:list[Path]
+mypy	.aider.chat.history.md	/^# mypy$/;"	c
 mz	docs/package-lock.json	/^        "mz": "^2.7.0",$/;"	s	object:packages.node_modules/sucrase.dependencies
 n	src/marvin/prompts/library.py	/^    n: int = 100$/;"	v	class:MessageHistory	typeref:typename:int
 name	cookbook/apps/chatbot.py	/^    name: str = DEFAULT_NAME$/;"	v	class:Chatbot	typeref:typename:str
@@ -2005,6 +2101,7 @@ openai_api_key	src/marvin/settings.py	/^    def openai_api_key(self):$/;"	m	clas
 openai_fn	src/marvin/openai/Function/__init__.py	/^openai_fn = FunctionDecoratorFactory(name="openai", func_class=OpenAIFunction)$/;"	v
 openai_role_map	src/marvin/engine/language_models/openai.py	/^def openai_role_map(marvin_role: Role) -> str:$/;"	f	typeref:typename:str
 optgroup	docs/static/css/tailwind.css	/^optgroup,$/;"	s
+option (not recommended) you can uncomment the following to ignore the entire idea folder.	.aider.chat.history.md	/^#  option (not recommended) you can uncomment the following to ignore the entire idea folder.$/;"	c
 optional	docs/package-lock.json	/^          "optional": true$/;"	b	object:packages.node_modules/postcss-load-config.peerDependenciesMeta.postcss
 optional	docs/package-lock.json	/^          "optional": true$/;"	b	object:packages.node_modules/postcss-load-config.peerDependenciesMeta.ts-node
 optional	docs/package-lock.json	/^      "optional": true,$/;"	b	object:packages.node_modules/fsevents
@@ -2116,10 +2213,13 @@ picomatch	docs/package-lock.json	/^        "picomatch": "^2.0.4"$/;"	s	object:pa
 picomatch	docs/package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:packages.node_modules/readdirp.dependencies
 picomatch	docs/package-lock.json	/^        "picomatch": "^2.3.1"$/;"	s	object:packages.node_modules/micromatch.dependencies
 pify	docs/package-lock.json	/^        "pify": "^2.3.0"$/;"	s	object:packages.node_modules/read-cache.dependencies
+pip install marvin[generator, dev, tests, framework, openai, lancedb]	.aider.chat.history.md	/^#### pip install marvin[generator, dev, tests, framework, openai, lancedb]  $/;"	t	chapter:Additional ignores
+pipenv	.aider.chat.history.md	/^# pipenv$/;"	c
 pirates	docs/package-lock.json	/^        "pirates": "^4.0.1",$/;"	s	object:packages.node_modules/sucrase.dependencies
 plan	src/marvin/components/ai_application.py	/^    plan: AppPlan = Field(default_factory=AppPlan)$/;"	v	class:AIApplication	typeref:typename:AppPlan
 plan_enabled	cookbook/apps/todo.py	/^    plan_enabled: bool = False$/;"	v	class:ToDoApp	typeref:typename:bool
 plan_enabled	src/marvin/components/ai_application.py	/^    plan_enabled: bool = True$/;"	v	class:AIApplication	typeref:typename:bool
+poetry	.aider.chat.history.md	/^# poetry$/;"	c
 position	src/marvin/prompts/base.py	/^    position: int = Field($/;"	v	class:Prompt	typeref:typename:int
 position	src/marvin/prompts/library.py	/^    position: int = -1$/;"	v	class:ChainOfThought	typeref:typename:int
 position	src/marvin/prompts/library.py	/^    position: int = 0$/;"	v	class:System	typeref:typename:int
@@ -2154,7 +2254,9 @@ prompt_library	src/marvin/components/ai_model.py	/^from marvin.prompts import li
 prompts	src/marvin/components/ai_function.py	/^prompts = [$/;"	v
 properties	src/marvin/components/ai_model_factory.py	/^    properties: Optional[dict] = {}$/;"	v	class:DataSchema	typeref:typename:Optional[dict]
 publish	src/marvin/components/library/ai_models.py	/^    async def publish($/;"	m	class:DiscoursePost	typeref:typename:str
+pyenv	.aider.chat.history.md	/^# pyenv$/;"	c
 pytest_mark_class	tests/utils/mark.py	/^def pytest_mark_class(marker):$/;"	f
+pytype static type analyzer	.aider.chat.history.md	/^# pytype static type analyzer$/;"	c
 query	src/marvin/engine/language_models/base.py	/^    async def query(self, q: str, model: "ChatLLM" = None):$/;"	m	class:OpenAIFunction
 query_chroma	src/marvin/tools/chroma.py	/^async def query_chroma($/;"	f	typeref:typename:str
 question	src/marvin/components/library/ai_models.py	/^    question: Optional[str] = Field($/;"	v	class:DiscoursePost	typeref:typename:Optional[str]
@@ -2282,6 +2384,7 @@ root	src/marvin/_framework/app/main.py	/^async def root(request: Request):$/;"	f
 root_dir	src/marvin/tools/filesystem.py	/^    root_dir: Path = Field($/;"	v	class:FileSystemTool	typeref:typename:Path
 root_dir	src/marvin/tools/filesystem.py	/^    root_dir: Path = Field($/;"	v	class:ListFiles	typeref:typename:Path
 route	src/marvin/components/ai_model.py	/^    def route(cls):$/;"	m	class:AIModel
+ruff	.aider.chat.history.md	/^# ruff$/;"	c
 run	cookbook/slackbot/chatbot.py	/^    async def run(self, channel: str, thread_ts: str) -> DiscoursePost:$/;"	m	class:SlackThreadToDiscoursePost	typeref:typename:DiscoursePost
 run	src/marvin/components/ai_application.py	/^    async def run(self, input_text: str = None, model: ChatLLM = None):$/;"	m	class:AIApplication
 run	src/marvin/components/ai_application.py	/^    def run(self, input_text: str) -> str:$/;"	m	class:AIApplicationTool	typeref:typename:str
@@ -2613,7 +2716,11 @@ wrappy	docs/package-lock.json	/^        "wrappy": "1"$/;"	s	object:packages.node
 write_mode	src/marvin/tools/filesystem.py	/^    write_mode: Literal["overwrite", "append", "insert"] = "append"$/;"	v	class:WriteContent	typeref:typename:Literal["overwrite", "append", "insert"]
 yaml	docs/package-lock.json	/^        "yaml": "^2.1.1"$/;"	s	object:packages.node_modules/postcss-load-config.dependencies
 {{ config.site_description }}	docs/overrides/home.html	/^      <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ config.site_/;"	h
+🏷️ AI Classifiers	.aider.chat.history.md	/^### 🏷️ AI Classifiers$/;"	S	section:Marvin""Core AI Components
 🏷️ AI Classifiers	README.md	/^### 🏷️ AI Classifiers$/;"	S	section:Marvin""Core AI Components
+🤝 AI Applications	.aider.chat.history.md	/^### 🤝 AI Applications$/;"	S	section:Marvin""Core AI Components
 🤝 AI Applications	README.md	/^### 🤝 AI Applications$/;"	S	section:Marvin""Core AI Components
+🧩 AI Models	.aider.chat.history.md	/^### 🧩 AI Models$/;"	S	section:Marvin""Core AI Components
 🧩 AI Models	README.md	/^### 🧩 AI Models$/;"	S	section:Marvin""Core AI Components
+🪄 AI Functions	.aider.chat.history.md	/^### 🪄 AI Functions$/;"	S	section:Marvin""Core AI Components
 🪄 AI Functions	README.md	/^### 🪄 AI Functions$/;"	S	section:Marvin""Core AI Components
