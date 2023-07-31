@@ -151,28 +151,30 @@ class WebSearchAgent:
 
 
     def parse_results(self, results):
-        # If the results are not already a list of dictionaries, convert them to that format
-        if not isinstance(results, list) or not all(isinstance(result, dict) for result in results):
-            results = [result.__dict__ for result in results]
-        return results
+        # Transform or extract data from the results if necessary
+        # This is a placeholder and should be replaced with actual implementation
+        transformed_results = self._transform_results(results)
+        return transformed_results
 
     def evaluate_results(self, parsed_results, query):
-        # Use an AIFunction to evaluate the relevance of each result
-        relevance_scores = AIFunction(fn=lambda result: self._evaluate_relevance(result, query))(parsed_results)
+        # Define an AIFunction that evaluates the relevance of a result
+        evaluate_relevance = AIFunction(fn=self._evaluate_relevance)
         
-        # Add the relevance score to each result
-        for result, score in zip(parsed_results, relevance_scores):
-            result['relevance_score'] = score
+        # Use the AIFunction to evaluate the relevance of each result
+        evaluated_results = [evaluate_relevance(result, query) for result in parsed_results]
 
-        return parsed_results
+        return evaluated_results
 
     def respond_or_search_again(self, evaluated_results):
-        # Sort the results by relevance score
-        sorted_results = sorted(evaluated_results, key=lambda result: result['relevance_score'], reverse=True)
+        # Create an AIApplication that maintains the state of the conversation or task
+        app = AIApplication(name="WebSearchAgent", description="A web search agent")
         
-        # If the highest relevance score is above a certain threshold, respond to the user's query
-        if sorted_results[0]['relevance_score'] > RELEVANCE_THRESHOLD:
-            response = self._format_response(sorted_results[0])
+        # Use the AIApplication to decide whether to respond or search again
+        decision = app.run(evaluated_results)
+        
+        if decision == "respond":
+            # If the decision is to respond, format the response
+            response = self._format_response(evaluated_results)
         else:
             # Otherwise, continue the search
             response = self.search_web(self.query, self.live_context)
