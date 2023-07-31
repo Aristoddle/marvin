@@ -102,7 +102,7 @@ class WebSearchAgent:
         modified_query, parameters = self.modify_search_requirements(query, search_requirements)
 
         # Search the web using the DuckDuckGoSearch tool with the modified query and parameters
-        #TODO
+        search_results = self.search_tool.run(modified_query)
         
         return search_results
 
