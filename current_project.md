@@ -31,6 +31,10 @@ The module is designed to be very portable, able to be plugged into a variety of
 - [x] Task 6: Implement the `parse_results` method in the `WebSearchAgent` class.
 - [x] Task 7: Implement the `evaluate_results` method in the `WebSearchAgent` class.
 - [x] Task 8: Implement the `respond_or_search_again` method in the `WebSearchAgent` class.
+- [x] Task 9: Modify the `determine_search_requirements` and `respond_or_search_again` methods in the `WebSearchAgent` class to use the shared `AIApplication` instance (`self.ai_application`) instead of creating new instances.
+- [x] Task 10: Add a definition for the `evaluate_relevance` method in the `WebSearchAgent` class.
+- [x] Task 11: Enhance the docstrings for the `parse_results`, `evaluate_results`, and `respond_or_search_again` methods in the `WebSearchAgent` class to provide more detailed information.
+- [x] Task 12: Add usage instructions for the `WebSearchAgent` module at the top of the `cookbook/apps/web_search_agent.py` file.
 
 ## API Spec Snippets
 (No changes needed)
@@ -42,6 +46,12 @@ The module is designed to be very portable, able to be plugged into a variety of
 When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform. Always check the `action_based_spec.md` for Marvin commands to ensure we're leveraging them as well as possible.
 
 When proposing code changes, ensure that the "below the line" section of an edit block contains the updated code, not just the new additions. If the existing code is not included, it would be removed. This is particularly important when working with large blocks of code or entire classes.
+
+## Proposed Changes
+1. Modify the `determine_search_requirements` and `respond_or_search_again` methods in the `WebSearchAgent` class to use the shared `AIApplication` instance (`self.ai_application`) instead of creating new instances.
+2. Add a definition for the `evaluate_relevance` method in the `WebSearchAgent` class.
+3. Enhance the docstrings for the `parse_results`, `evaluate_results`, and `respond_or_search_again` methods in the `WebSearchAgent` class to provide more detailed information.
+4. Add usage instructions for the `WebSearchAgent` module at the top of the `cookbook/apps/web_search_agent.py` file.
 
 ## Context
 This `current_project.md` file was created to track the progress of the project and maintain context across multiple sessions with the GPT4-32k agent. The agent sometimes crashes and loses context, so this file will be used to reference and update the project status as work continues.
