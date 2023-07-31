@@ -36,6 +36,36 @@ def classify_query(self, query):
     return query_type
         return query_type
 
+    def determine_search_requirements(self, live_context):
+        """
+        Determine the search requirements based on the live context.
+
+        Args:
+            live_context (dict): The live context containing the chat log/history and the specific question/problem identified by the classifier.
+
+        Returns:
+            dict: The search requirements.
+        """
+        # TODO: Implement the logic to determine the search requirements based on the live_context
+        search_requirements = {}
+        return search_requirements
+
+    def modify_search_requirements(self, query, search_requirements):
+        """
+        Modify the query and parameters based on the search requirements.
+
+        Args:
+            query (str): The user's query.
+            search_requirements (dict): The search requirements.
+
+        Returns:
+            tuple: The modified query and parameters.
+        """
+        # TODO: Implement the logic to modify the query and parameters based on the search_requirements
+        modified_query = query
+        parameters = {}
+        return modified_query, parameters
+
     def search_web(self, query, live_context):
         """
         Search the web based on the user's query and the live context.
