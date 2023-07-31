@@ -50,7 +50,7 @@ class WebSearchAgent(WebSearchAgent):
             ```
         [Note AI Classifier Spec Ends Here]
         """
-        #TODO check against spec to ensure proper use of the Marvin AiClassifier
+        # Use the QueryType classifier to classify the user's query
         query_type = QueryType(query)
 
         return query_type
