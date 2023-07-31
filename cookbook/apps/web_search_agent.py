@@ -35,12 +35,17 @@ class WebSearchAgent:
         """
         Classify the user's query into predefined categories using the QueryType classifier.
         """
+    def classify_query(self, query):
+        """
+        Classify the user's query into predefined categories using the QueryType classifier.
+        The classification of the query influences the subsequent steps of determining search 
+        requirements, modifying search requirements, and searching the web.
+        """
         # Use the QueryType classifier to classify the user's query
         query_type = QueryType(query)
 
         # Return the classified query type
         return query_type
-
     def determine_search_requirements(self, live_context=None):
         """
         Determine the search requirements based on the live context.
@@ -50,6 +55,13 @@ class WebSearchAgent:
 
         Returns:
             dict: The search requirements.
+        """
+    def determine_search_requirements(self, live_context=None):
+        """
+        Determine the search requirements based on the live context. The live context, which 
+        contains the chat log/history and the specific question/problem identified by the classifier, 
+        is used to determine the search requirements. The search requirements are determined using 
+        the AIApplication tool, which maintains the state of the conversation or task.
         """
         if live_context is None:
             live_context = {}
@@ -61,7 +73,6 @@ class WebSearchAgent:
         search_requirements = app.run(live_context)
 
         return search_requirements
-
     def modify_search_requirements(self, query, search_requirements):
         """
         Modify the query and parameters based on the search requirements.
@@ -72,6 +83,13 @@ class WebSearchAgent:
 
         Returns:
             tuple: The modified query and parameters.
+        """
+    def modify_search_requirements(self, query, search_requirements):
+        """
+        Modify the query and parameters based on the search requirements. The query and search 
+        requirements are modified based on the search requirements determined in the previous step. 
+        The modification is done using the AIFunction tool, which predicts the function's output 
+        based on its signature and docstring.
         """
         # Create an instance of AIFunction with the function being this method itself
         ai_function = AIFunction(fn=self.modify_search_requirements)
@@ -98,6 +116,12 @@ class WebSearchAgent:
         Returns:
             str: The search results.
         """
+    def search_web(self, query, live_context):
+        """
+        Search the web based on the user's query and the live context. The web search is conducted 
+        based on the user's query and the live context. The web search is done using the DuckDuckGoSearch 
+        tool, and the search results are then extracted and parsed for relevance to the user's query.
+        """
         # Determine the search requirements based on the live context
         search_requirements = self.determine_search_requirements(live_context)
         
@@ -109,7 +133,6 @@ class WebSearchAgent:
         
         return search_results
 
-
     def extract_results(self, search_results):
         """
         Extract the search results from the raw search results using ScrapeGhost and the DuckDuckGoSearch tool.
@@ -119,6 +142,13 @@ class WebSearchAgent:
 
         Returns:
             str: The extracted search results, getting website URLs from DDG, and using ScrapeGhost to pull their data.
+        """
+    def extract_results(self, search_results):
+        """
+        Extract the search results from the raw search results using the ScrapeGhost API. The search 
+        results are extracted from the raw search results using the ScrapeGhost API. The extracted 
+        results are then parsed and evaluated for relevance to the user's query, and the agent responds 
+        to the user's query or continues the search based on the evaluated results.
         """
         # Use the AIApplication instance to dynamically determine the structure of the data
         schema = self.ai_application.run(search_results)
@@ -133,7 +163,6 @@ class WebSearchAgent:
         extracted_results = AIModelFactory(scraped_data)
 
         return extracted_results
-
     def parse_results(self, results):
         # Parse the search results using a Margin AIFunction to
         # This is a placeholder and should be replaced with actual parsing logic
