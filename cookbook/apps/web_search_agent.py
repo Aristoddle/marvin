@@ -54,10 +54,10 @@ response = web_search_agent.respond_or_search_again(evaluated_results, query, li
 ```
 """
 from marvin.tools.web import DuckDuckGoSearch
-from src.marvin.components.ai_classifier import ai_classifier
-from src.marvin.components.ai_application import AIApplication
-from src.marvin.components.ai_function import AIFunction
-from src.marvin.components.ai_model import AIModel
+from marvin.components.ai_classifier import ai_classifier
+from marvin.components.ai_application import AIApplication
+from marvin.components.ai_function import AIFunction
+from marvin.components.ai_model import AIModel
 
 from enum import Enum
 
