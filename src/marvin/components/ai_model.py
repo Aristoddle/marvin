@@ -15,7 +15,7 @@ from marvin.utilities.messages import Message
 from marvin.utilities.types import LoggerMixin
 
 T = TypeVar("T")
-
+ 
 
 extract_structured_data_prompts = [
     prompt_library.System(content="""
