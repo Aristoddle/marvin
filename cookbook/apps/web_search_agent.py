@@ -17,6 +17,10 @@ class CustomWebSearchAgent(WebSearchAgent):
         super().__init__(**kwargs)
         # We can add any additional initialization here
 
+    def classify_query(self, query):
+        # TODO: Implement the logic to classify the query using the QueryType classifier
+        pass
+
         # TODO: Implement the logic to classify the query using the QueryType classifier
         return query_type
 
