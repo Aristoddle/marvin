@@ -22,9 +22,12 @@ class CustomWebSearchAgent(WebSearchAgent):
         query_type = self.query_classifier(query)
         
         # Add additional classification logic here
-        # For example, if you added a new type to the QueryType enum for weather queries:
-        if "weather" in query:
-            query_type = QueryType.WEATHER_INFORMATION
+        if "github" in query:
+            query_type = QueryType.GITHUB_PROJECT
+        elif "api" in query:
+            query_type = QueryType.API_DOCUMENTATION
+        elif "error" in query or "debug" in query:
+            query_type = QueryType.DEBUGGING_HELP
 
         return query_type
 

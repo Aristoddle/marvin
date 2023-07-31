@@ -16,10 +16,14 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 ## Cross-File Dependencies
 - `cookbook/apps/web_search_agent.py`: This file contains the `WebSearchAgent` class that will be extended to create the custom agent.
 - `cookbook/apps/agent.py`: This file contains the `Agent` class that the `WebSearchAgent` class inherits from. It may need to be referenced for understanding the base functionality.
+- `src/marvin/tools/github.py`: This file contains the `GitHubRepo` tool that can be used to search for up-to-date GitHub projects.
+- `src/marvin/components/ai_model.py`: This file contains the `APIDoc` model that can be used to check API documentation before writing unique API calls.
+- `cookbook/apps/documentation_agent.py`: This file contains the `DocumentationAgent` class that can be used to update documentation.
+- `cookbook/apps/chatbot.py`: This file contains the `Chatbot` class that can be used to interact with the user.
 
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
-- [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements.
+- [x] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements.
 - [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements.
 - [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
 - [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
