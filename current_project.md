@@ -16,11 +16,17 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
     - Modify the search query and parameters based on the determined search requirements.
     - Use the `DuckDuckGoSearch` tool to search the web with the modified query and parameters.
     - Return the search results.
+    - TODO: Implement the `determine_search_requirements` and `modify_search_requirements` methods to process the `live_context` and generate a relevant web query.
 4. Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
+    - TODO: Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
 5. Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
+    - TODO: Implement this method to synthesize the parsed results into a coherent answer.
 6. Add a new method in the custom agent for comparing the synthesized answer with the user query.
+    - TODO: Implement this method to compare the synthesized answer with the user query.
 7. Modify the `respond_or_search_again` method in the custom agent to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
+    - TODO: Implement this method to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
 8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
+    - TODO: Implement this method to respond to the user with the final answer in a user-friendly format.
 
 ## Cross-File Dependencies
 - `cookbook/apps/web_search_agent.py`: This file contains the `WebSearchAgent` class that will be extended to create the custom agent. The `search_web` method in this class uses a context dictionary to maintain the state of the conversation or task. This dictionary could include the chat log/history, the specific question/problem identified by the classifier, or any other relevant information.
