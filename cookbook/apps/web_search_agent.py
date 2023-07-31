@@ -210,7 +210,8 @@ class WebSearchAgent:
         ai_function = AIFunction(fn=self.modify_search_requirements)
 
         # Use the AIFunction instance to predict the function's output based on the query and search requirements
-        modified_query, parameters = ai_function(query, search_requirements)
+        results = ai_function(query, search_requirements)
+        modified_query, parameters = results[:2]
 
         return modified_query
 
