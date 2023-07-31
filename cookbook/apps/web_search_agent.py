@@ -211,9 +211,10 @@ class WebSearchAgent:
 
         # Use the AIFunction instance to predict the function's output based on the query and search requirements
         results = ai_function(query, search_requirements)
-        modified_query, parameters = results[:2]
+        modified_query = results[0] if len(results) > 0 else None
+        parameters = results[1] if len(results) > 1 else None
 
-        return modified_query
+        return modified_query, parameters
 
     def search_web(self, query, live_context):
         """
