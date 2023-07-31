@@ -148,7 +148,23 @@ class WebSearchAgent:
 
 
     def parse_results(self, results):
-        # Use AIModel to parse the search results into structured data
+        """
+        Further refine and personalize the search results using the AIModel tool from Marvin.
+
+        This method takes the search results, which are already in a structured format provided by the ScrapeGhost API, 
+        and further refines and personalizes them. The goal is to extract the most salient data points, structure the data 
+        for easier management, and provide an opportunity for additional post-processing models, scripts, heuristics, and 
+        functions to further refine the data before passing it forward.
+
+        The parsing and refining is done using the AIModel tool from Marvin, which is capable of parsing a wide variety of 
+        data types and structures, and can be customized to provide additional refinement and personalization.
+
+        Args:
+            results (list): The search results in a structured format provided by the ScrapeGhost API.
+
+        Returns:
+            list: The search results parsed and refined into a more personalized and manageable format.
+        """
         parsed_results = AIModel.extract(results)
         return parsed_results
 
