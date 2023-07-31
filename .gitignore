@@ -172,3 +172,11 @@ local_examples/
 # Chroma
 .chroma/
 .aider*
+
+# Additional ignores
+*.pyc
+__pycache__/
+*.log
+.env
+*.json
+*/package_lock.json
