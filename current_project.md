@@ -23,19 +23,15 @@ The module is designed to be very portable, able to be plugged into a variety of
 8. Implement the `respond_or_search_again` method in the `WebSearchAgent` class to respond to the user's query or continue the search based on the evaluated results using the AIApplication tool.
 
 ## Progress Tracking
-- [x] Task 1: Implement the `classify_query` method in the `WebSearchAgent` class.
-- [x] Task 2: Implement the `determine_search_requirements` method in the `WebSearchAgent` class.
-- [x] Task 3: Implement the `modify_search_requirements` method in the `WebSearchAgent` class.
-- [x] Task 4: Modify the `search_web` method in the `WebSearchAgent` class.
-- [x] Task 5: Implement the `extract_results` method in the `WebSearchAgent` class.
-- [x] Task 6: Implement the `parse_results` method in the `WebSearchAgent` class.
-- [x] Task 7: Implement the `evaluate_results` method in the `WebSearchAgent` class.
-- [x] Task 8: Implement the `respond_or_search_again` method in the `WebSearchAgent` class.
-- [x] Task 9: Modify the `determine_search_requirements` and `respond_or_search_again` methods in the `WebSearchAgent` class to use the shared `AIApplication` instance (`self.ai_application`) instead of creating new instances.
-- [x] Task 10: Add a definition for the `evaluate_relevance` method in the `WebSearchAgent` class.
-- [x] Task 11: Enhance the docstrings for the `parse_results`, `evaluate_results`, and `respond_or_search_again` methods in the `WebSearchAgent` class to provide more detailed information.
-- [x] Task 12: Add usage instructions for the `WebSearchAgent` module at the top of the `cookbook/apps/web_search_agent.py` file.
-
+## Task List
+1. Implement the `classify_query` method in the `WebSearchAgent` class to classify the user's query using the `QueryType` classifier.
+2. Implement the `determine_search_requirements` method in the `WebSearchAgent` class to determine the search requirements based on the live context using the `AIApplication` tool.
+3. Implement the `modify_search_requirements` method in the `WebSearchAgent` class to modify the query and parameters based on the search requirements using the `AIFunction` tool.
+4. Implement the `search_web` method in the `WebSearchAgent` class to search the web based on the user's query and the live context using the `DuckDuckGoSearch` tool.
+5. Implement the `extract_results` method in the `WebSearchAgent` class to extract the search results from the raw search results using the `ScrapeGhost` API.
+6. Implement the `parse_results` method in the `WebSearchAgent` class to parse the search results using the `AIModel` tool.
+7. Implement the `evaluate_results` method in the `WebSearchAgent` class to evaluate the relevance of the parsed results in reference to the user query using the `AIFunction` tool.
+8. Implement the `respond_or_search_again` method in the `WebSearchAgent` class to respond to the user's query or continue the search based on the evaluated results using the `AIApplication` tool.
 ## API Spec Snippets
 (No changes needed)
 
