@@ -33,7 +33,7 @@ class TestWebSearchAgent(unittest.TestCase):
         self.assertIsInstance(results, tuple)
         self.assertEqual(len(results), 2)
 
-    def test_determine_search_requirements(self):
+    async def test_determine_search_requirements(self):
         print("\nRunning test: test_determine_search_requirements")
         live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], 
                         "question": "What's the weather like today?"}
@@ -42,7 +42,7 @@ class TestWebSearchAgent(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertIsInstance(result, dict)
 
-    def test_extract_results(self):
+    async def test_extract_results(self):
         print("\nRunning test: test_extract_results")
         search_results = "search results"
         result = await self.agent.extract_results(search_results)
@@ -50,7 +50,7 @@ class TestWebSearchAgent(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertIsInstance(result, AIModel)
 
-    def test_parse_results(self):
+    async def test_parse_results(self):
         print("\nRunning test: test_parse_results")
         extracted_results = AIModel()
         result = await self.agent.parse_results(extracted_results)
