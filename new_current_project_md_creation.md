@@ -29,5 +29,7 @@ Explain the purpose of the `current_project.md` file. This is to maintain contex
 ## Updating `current_project.md`
 The `current_project.md` file should be updated regularly to reflect the current state of the project. This includes marking tasks as completed in the progress tracking section, adding new tasks as they come up, and updating the context as needed. Before starting a new task, a proper audit of the last task and all subtasks should be conducted to ensure they were properly implemented, and that nothing broke due to edits to the files.
 
+When proposing code changes, ensure that the "below the line" section of an edit block contains the updated code, not just the new additions. If the existing code is not included, it would be removed. This is particularly important when working with large blocks of code or entire classes.
+
 ## Conclusion
 The `current_project.md` file is a powerful tool for managing long-form software development collaborations. By following these instructions, you can create a `current_project.md` file that effectively tracks the progress and maintains the context of your project.

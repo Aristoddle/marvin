@@ -42,6 +42,8 @@ The goal of this project is to enhance the existing `WebSearchAgent` in the Marv
 ## Note
 When possible, the logic in the `WebSearchAgent` should be powered by the AI tools as defined in the `action_based_spec.md` file. This will ensure that the agent is leveraging the full capabilities of the Marvin platform. Always check the `action_based_spec.md` for Marvin commands to ensure we're leveraging them as well as possible.
 
+When proposing code changes, ensure that the "below the line" section of an edit block contains the updated code, not just the new additions. If the existing code is not included, it would be removed. This is particularly important when working with large blocks of code or entire classes.
+
 ## Progress Tracking
 - [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
 - [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements. (Incomplete, subtasks pending)
