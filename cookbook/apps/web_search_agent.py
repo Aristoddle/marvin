@@ -216,7 +216,7 @@ class WebSearchAgent:
 
         return modified_query, parameters
 
-    def search_web(self, query, live_context):
+    async def search_web(self, query, live_context):
         """
         Search the web based on the user's query and the live context. The web search is conducted
         based on the user's query and the live context. The web search is done using the DuckDuckGoSearch
@@ -236,7 +236,7 @@ class WebSearchAgent:
             str: The search results.
         """
         # Determine the search requirements based on the live context
-        search_requirements = self.determine_search_requirements(live_context)
+        search_requirements = await self.determine_search_requirements(live_context)
 
         # Modify the query and parameters based on the search requirements
         modified_query, _ = self.modify_search_requirements(
@@ -327,7 +327,7 @@ class WebSearchAgent:
 
         return evaluated_results
 
-    def respond_or_search_again(self, evaluated_results, query, live_context):
+    async def respond_or_search_again(self, evaluated_results, query, live_context):
         """
         Respond to the user's query or continue the search based on the evaluated results using the AIApplication tool.
 
@@ -351,14 +351,14 @@ class WebSearchAgent:
         app = AIApplication(name="WebSearchAgent", description="A web search agent")
 
         # Use the AIApplication to decide whether to respond or search again
-        decision = app.run(evaluated_results)
+        decision = await app.run(evaluated_results)
 
         if decision == "respond":
             # If the decision is to respond, format the response
             response = AIFunction(fn=self._format_response(evaluated_results))
         else:
             # Otherwise, continue the search
-            response = self.search_web(query, live_context)
+            response = await self.search_web(query, live_context)
 
         return response
 
