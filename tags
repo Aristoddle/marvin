@@ -732,6 +732,7 @@
 1	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/postcss.funding
 1	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/queue-microtask.funding
 1	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/run-parallel.funding
+1. text() - text search by duckduckgo.com	action_based_spec.md	/^## 1. text() - text search by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 10	docs/static/css/tailwind.css	/^.bg-indigo-500\\\/10 {$/;"	s
 10	docs/static/css/tailwind.css	/^.ring-white\\\/10 {$/;"	s
 10	docs/static/css/tailwind.css	/^.stroke-white\\\/10 {$/;"	s
@@ -740,16 +741,23 @@
 2	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/queue-microtask.funding
 2	docs/package-lock.json	/^        {$/;"	o	array:packages.node_modules/run-parallel.funding
 2. Modify the `classify_query` method in the custom agent to suit specific classification requirements.	.aider.chat.history.md	/^2. Modify the `classify_query` method in the custom agent to suit specific classification requir/;"	c
+2. answers() - instant answers by duckduckgo.com	action_based_spec.md	/^## 2. answers() - instant answers by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 20	docs/static/css/tailwind.css	/^.fill-gray-800\\\/20 {$/;"	s
 20	docs/static/css/tailwind.css	/^.ring-indigo-500\\\/20 {$/;"	s
 2c 0	docs/static/css/tailwind.css	/^.bg-\\[rgb\\(255\\2c 0\\2c 0\\)\\] {$/;"	s
 2c transparent	docs/static/css/tailwind.css	/^.\\[mask-image\\:radial-gradient\\(100\\%_100\\%_at_top_right\\2c white\\2c transparent\\)\\] {$/;"	s
 2c white	docs/static/css/tailwind.css	/^.\\[mask-image\\:radial-gradient\\(100\\%_100\\%_at_top_right\\2c white\\2c transparent\\)\\] {$/;"	s
+3. images() - image search by duckduckgo.com	action_based_spec.md	/^## 3. images() - image search by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
+4. videos() - video search by duckduckgo.com	action_based_spec.md	/^## 4. videos() - video search by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 5	docs/static/css/tailwind.css	/^.bg-white\\\/5 {$/;"	s
+5. news() - news search by duckduckgo.com	action_based_spec.md	/^## 5. news() - news search by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
+6. maps() - map search by duckduckgo.com	action_based_spec.md	/^## 6. maps() - map search by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 632	docs/static/css/tailwind.css	/^.aspect-\\[1108\\\/632\\] {$/;"	s
 69	docs/static/css/tailwind.css	/^.w-\\[69\\.25rem\\] {$/;"	s
+7. translate() - translation by duckduckgo.com	action_based_spec.md	/^## 7. translate() - translation by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 76rem	docs/static/css/tailwind.css	/^.w-\\[76rem\\] {$/;"	s
 8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.	.aider.chat.history.md	/^8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with t/;"	c
+8. suggestions() - suggestions by duckduckgo.com	action_based_spec.md	/^## 8. suggestions() - suggestions by duckduckgo.com$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 983e3e4c-de6d-4c3f-8d64-b9761d1534cc	docs/overrides/home.html	/^      <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1"/;"	I
 :	docs/static/css/tailwind.css	/^    .dark\\:lg\\:hover\\:\\[paint-order\\:markers\\]:hover {$/;"	s
 :-moz-focusring	docs/static/css/tailwind.css	/^:-moz-focusring {$/;"	s
@@ -908,6 +916,7 @@ Building the bot	docs/src/guides/slackbot.md	/^## Building the bot$/;"	s	chapter
 Byte-compiled / optimized / DLL files	.aider.chat.history.md	/^# Byte-compiled \/ optimized \/ DLL files$/;"	c
 C extensions	.aider.chat.history.md	/^# C extensions$/;"	c
 CACHE	cookbook/slackbot/chatbot.py	/^CACHE = TTLCache(maxsize=1000, ttl=86400)$/;"	v
+CLI version	action_based_spec.md	/^## CLI version$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 COMPLETED	src/marvin/components/ai_application.py	/^    COMPLETED = "COMPLETED"$/;"	v	class:TaskState
 CONTEXT_SIZES	src/marvin/engine/language_models/anthropic.py	/^CONTEXT_SIZES = {$/;"	v
 CONTEXT_SIZES	src/marvin/engine/language_models/azure_openai.py	/^CONTEXT_SIZES = {$/;"	v
@@ -1024,6 +1033,8 @@ Documentation	README.md	/^## Documentation$/;"	s	chapter:Marvin
 DocumentationAgent	cookbook/apps/documentation_agent.py	/^class DocumentationAgent(Agent):$/;"	c
 Does Marvin not leverage these sorts of tools under the hood?	.aider.chat.history.md	/^#### Does Marvin not leverage these sorts of tools under the hood?  $/;"	t	chapter:aider chat started at 2023-07-30 19:53:59
 DuckDuckGoSearch	src/marvin/tools/web.py	/^class DuckDuckGoSearch(Tool):$/;"	c
+Duckduckgo search operators	action_based_spec.md	/^## Duckduckgo search operators$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
+Duckduckgo_search<a name="TOP"></a>	action_based_spec.md	/^# Duckduckgo_search<a name="TOP"><\/a>$/;"	c
 Election	tests/test_components/test_ai_model.py	/^        class Election(BaseModel):$/;"	c	member:TestAIModels.test_history	file:
 Entity extraction	docs/guide/ai_components/ai_models.md	/^### Entity extraction$/;"	S	section:AI Models""Advanced usage
 Environment Variables	docs/src/docs/configuration/settings.md	/^## Environment Variables$/;"	s	chapter:Settings
@@ -1109,6 +1120,7 @@ Implementation	action_based_spec.md	/^### Implementation$/;"	S	section:Marvin Pl
 Implementation	action_based_spec.md	/^### Implementation$/;"	S	section:Marvin Platform - Action Based Specifications""ai_classifier
 Implementation of `generate_ai_response` for the Prefect Community Slackbot	docs/src/guides/slackbot.md	/^#### Implementation of `generate_ai_response` for the Prefect Community Slackbot$/;"	t	subsection:Build a Slack bot with Marvin""Building the bot""Implement the AI response
 Incredible.  Please log these learnings in the `current_project.md` file, in docstrings over relevant functions, and anywhere else that might be valuable when priming/spinning up context for a fresh LLM code-generating tool (e.g. yourself) so that they know exactly what's going on, and what they need to do.	.aider.chat.history.md	/^#### Incredible.  Please log these learnings in the `current_project.md` file, in docstrings ove/;"	t	chapter:def classify_query(self, query):
+Install	action_based_spec.md	/^## Install$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 Installation	docs/src/development_guide.md	/^## Installation$/;"	s	chapter:Development Guide
 Installation	docs/src/getting_started/installation.md	/^# Installation$/;"	c
 Installer logs	.aider.chat.history.md	/^# Installer logs$/;"	c
@@ -1238,6 +1250,7 @@ ROOT_DIR	cookbook/test_writing_application.py	/^ROOT_DIR = Path(marvin.__file__)
 Read the [tutorial](tutorial.md) for a step-by-step guide to building a scraper.	.aider.chat.history.md	/^#### Read the [tutorial](tutorial.md) for a step-by-step guide to building a scraper.  $/;"	t	chapter:<<<<<<< ORIGINAL
 ReadFile	src/marvin/tools/filesystem.py	/^class ReadFile(FileSystemTool):$/;"	c
 ReadFiles	src/marvin/tools/filesystem.py	/^class ReadFiles(FileSystemTool):$/;"	c
+Regions	action_based_spec.md	/^## Regions$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 Rendering Prompts	docs/src/docs/promptss.md	/^## Rendering Prompts$/;"	s	chapter:Prompts as Code
 RentalHistory	tests/test_components/test_ai_model.py	/^        class RentalHistory(BaseModel):$/;"	c	member:TestAIModels.test_depth	file:
 ResultType	src/marvin/tools/mathematics.py	/^ResultType = Literal["DecimalApproximation"]$/;"	v
@@ -1304,6 +1317,7 @@ T	src/marvin/functions/__init__.py	/^T = TypeVar("T")$/;"	v
 T	src/marvin/openai/Function/__init__.py	/^T = TypeVar("T")$/;"	v
 T	src/marvin/utilities/async_utils.py	/^T = TypeVar("T")$/;"	v
 T	src/marvin/utilities/collections.py	/^T = TypeVar("T")$/;"	v
+Table of Contents	action_based_spec.md	/^## Table of Contents$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 Tagged	src/marvin/prompts/library.py	/^class Tagged(MessagePrompt):$/;"	c
 Task	src/marvin/components/ai_application.py	/^class Task(BaseModel):$/;"	c
 Task Description	.aider.chat.history.md	/^## Task Description$/;"	s	chapter:Current Project: Enhancing WebSearchAgent
@@ -1382,6 +1396,7 @@ Using `pydantic` Models	action_based_spec.md	/^##### Using `pydantic` Models$/;"
 Using a model	docs/src/docs/configuration/anthropic.md	/^## Using a model$/;"	s	chapter:Anthropic
 Using a model	docs/src/docs/configuration/azure_openai.md	/^## Using a model$/;"	s	chapter:Azure OpenAI Service
 Using a model	docs/src/docs/configuration/openai.md	/^## Using a model$/;"	s	chapter:OpenAI
+Using proxy	action_based_spec.md	/^## Using proxy$/;"	s	chapter:Duckduckgo_search<a name="TOP"></a>
 Usually these files are written by a python script from a template	.aider.chat.history.md	/^#  Usually these files are written by a python script from a template$/;"	c
 Utilities	docs/src/docs/index.md	/^### Utilities$/;"	S	section:The Marvin Docs""Organization
 VS Code	.aider.chat.history.md	/^# VS Code$/;"	c
