@@ -35,8 +35,8 @@ class WebSearchAgent:
         # Use the QueryType classifier to classify the user's query
         query_type = QueryType(query)
 
-        # Return the name of the classified query type
-        return query_type.name
+        # Return the classified query type
+        return query_type
 
     def determine_search_requirements(self, live_context={}):
         """
