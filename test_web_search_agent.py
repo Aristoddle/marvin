@@ -2,8 +2,9 @@ from cookbook.apps.web_search_agent import QueryType, WebSearchAgent
 import unittest
 
 from marvin.components.ai_model import AIModel
-import asynctest
-class TestWebSearchAgent(asynctest.TestCase):
+import unittest
+import pytest
+class TestWebSearchAgent(unittest.TestCase):
     def setUp(self):
         self.agent = WebSearchAgent()
 
@@ -33,6 +34,7 @@ class TestWebSearchAgent(asynctest.TestCase):
         self.assertIsInstance(results, tuple)
         self.assertEqual(len(results), 2)
 
+    @pytest.mark.asyncio
     async def test_determine_search_requirements(self):
         print("\nRunning test: test_determine_search_requirements")
         live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], 
@@ -77,6 +79,3 @@ class TestWebSearchAgent(asynctest.TestCase):
         print(f"Type of result: {type(result)}, Value: {result}")
         self.assertIsNotNone(result)
         self.assertIsInstance(result, str)
-
-if __name__ == '__main__':
-    unittest.main()
