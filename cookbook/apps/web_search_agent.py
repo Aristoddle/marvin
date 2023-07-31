@@ -38,7 +38,7 @@ class WebSearchAgent:
         # Return the classified query type
         return query_type
 
-    def determine_search_requirements(self, live_context={}):
+    def determine_search_requirements(self, live_context=None):
         """
         Determine the search requirements based on the live context.
 
@@ -48,6 +48,9 @@ class WebSearchAgent:
         Returns:
             dict: The search requirements.
         """
+        if live_context is None:
+            live_context = {}
+
         # Create an instance of the AIApplication tool
         app = AIApplication(name="WebSearchAgent", description="A web search agent")
 
