@@ -67,13 +67,13 @@ class TestWebSearchAgent(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertIsInstance(result, list)
 
-    def test_respond_or_search_again(self):
+    async def test_respond_or_search_again(self):
         print("\nRunning test: test_respond_or_search_again")
         evaluated_results = []
         query = "What's the weather like today?"
         live_context = {"chat_log": ["What's the weather like today?", "It's sunny and warm."], 
                         "question": "What's the weather like today?"}
-        result = self.agent.respond_or_search_again(evaluated_results, query, live_context)
+        result = await self.agent.respond_or_search_again(evaluated_results, query, live_context)
         print(f"Type of result: {type(result)}, Value: {result}")
         self.assertIsNotNone(result)
         self.assertIsInstance(result, str)
