@@ -1,9 +1,11 @@
+
+import pytest
+
 from cookbook.apps.web_search_agent import QueryType, WebSearchAgent
+from marvin.components.ai_model import AIModel
+
 import unittest
 
-from marvin.components.ai_model import AIModel
-import unittest
-import pytest
 class TestWebSearchAgent(unittest.TestCase):
     def setUp(self):
         self.agent = WebSearchAgent()

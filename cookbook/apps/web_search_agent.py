@@ -86,7 +86,6 @@ from scrapeghost import SchemaScraper
 from enum import Enum
 
 import openai
-import asyncio
 
 openai.api_key = "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"
 
