@@ -983,7 +983,6 @@ Cross-File Dependencies	current_project.md	/^## Cross-File Dependencies$/;"	s	ch
 Cross-File Dependencies	new_current_project_md_creation.md	/^### Cross-File Dependencies$/;"	S	section:Instructions for Creating a `current_project.md` File""Structure of `current_project.md`
 Current Project: Enhancing WebSearchAgent	.aider.chat.history.md	/^# Current Project: Enhancing WebSearchAgent$/;"	c
 Current Project: Enhancing WebSearchAgent	current_project.md	/^# Current Project: Enhancing WebSearchAgent$/;"	c
-CustomWebSearchAgent	cookbook/apps/web_search_agent.py	/^class CustomWebSearchAgent(WebSearchAgent):$/;"	c
 Customization	action_based_spec.md	/^#### Customization$/;"	t	subsection:Marvin Platform - Action Based Specifications""ScrapeGhost""Usage
 Customizing the LLM	docs/guide/ai_components/ai_functions.md	/^### Customizing the LLM$/;"	S	section:AI Functions""Advanced usage
 Cython debug symbols	.aider.chat.history.md	/^# Cython debug symbols$/;"	c
@@ -1425,7 +1424,6 @@ __getattr__	tests/__init__.py	/^        def __getattr__(self, name):$/;"	m	class
 __init__	cookbook/apps/agent.py	/^    def __init__(self, **kwargs):$/;"	m	class:Agent
 __init__	cookbook/apps/chatbot.py	/^    def __init__($/;"	m	class:Chatbot
 __init__	cookbook/apps/documentation_agent.py	/^    def __init__(self, **kwargs):$/;"	m	class:DocumentationAgent
-__init__	cookbook/apps/web_search_agent.py	/^    def __init__(self, **kwargs):$/;"	m	class:CustomWebSearchAgent
 __init__	cookbook/apps/web_search_agent.py	/^    def __init__(self, **kwargs):$/;"	m	class:WebSearchAgent
 __init__	cookbook/slackbot/chatbot.py	/^    def __init__($/;"	m	class:Chatbot
 __init__	src/marvin/components/ai_application.py	/^    def __init__(self, **kwargs):$/;"	m	class:AIApplicationTool
@@ -1578,7 +1576,6 @@ chokidar	docs/package-lock.json	/^        "chokidar": "^3.5.3",$/;"	s	object:pac
 chroma_server_host	src/marvin/settings.py	/^    chroma_server_host: str = Field(None)$/;"	v	class:Settings	typeref:typename:str
 chroma_server_http_port	src/marvin/settings.py	/^    chroma_server_http_port: int = Field(None)$/;"	v	class:Settings	typeref:typename:int
 classify anything	docs/src/getting_started/hello_marvin.md	/^### classify anything$/;"	S	chapter:Hello Marvin 👋
-classify_query	cookbook/apps/web_search_agent.py	/^    def classify_query(self, query):$/;"	m	class:CustomWebSearchAgent
 classify_query	cookbook/apps/web_search_agent.py	/^    def classify_query(self, query):$/;"	m	class:WebSearchAgent
 clean_content	src/marvin/utilities/messages.py	/^    def clean_content(cls, v):$/;"	m	class:Message
 clear	src/marvin/utilities/history.py	/^    def clear(self):$/;"	m	class:History
@@ -1694,7 +1691,6 @@ description	cookbook/apps/agent.py	/^    description: str = "A generic AI agent"
 description	cookbook/apps/documentation_agent.py	/^    description: str = "An AI agent for updating documentation"$/;"	v	class:DocumentationAgent	typeref:typename:str
 description	cookbook/apps/todo.py	/^    description: str = """$/;"	v	class:ToDoApp	typeref:typename:str
 description	cookbook/apps/todo.py	/^    description: str = None$/;"	v	class:ToDo	typeref:typename:str
-description	cookbook/apps/web_search_agent.py	/^    description: str = "A custom web search agent"$/;"	v	class:CustomWebSearchAgent	typeref:typename:str
 description	cookbook/apps/web_search_agent.py	/^    description: str = "A custom web search agent"$/;"	v	class:WebSearchAgent	typeref:typename:str
 description	cookbook/slackbot/chatbot.py	/^    description: str = """$/;"	v	class:SlackThreadToDiscoursePost	typeref:typename:str
 description	src/marvin/components/ai_application.py	/^    description = """$/;"	v	class:UpdatePlan
@@ -1718,7 +1714,6 @@ description	src/marvin/tools/shell.py	/^    description: str = """$/;"	v	class:S
 description	src/marvin/tools/web.py	/^    description: str = "Search the web with DuckDuckGo."$/;"	v	class:DuckDuckGoSearch	typeref:typename:str
 description	src/marvin/tools/web.py	/^    description: str = "Visit a valid URL and return its contents."$/;"	v	class:VisitUrl	typeref:typename:str
 determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context = {}):$/;"	m	class:WebSearchAgent
-determine_search_requirements	cookbook/apps/web_search_agent.py	/^    def determine_search_requirements(self, live_context):$/;"	m	class:CustomWebSearchAgent
 detokenize	src/marvin/utilities/strings.py	/^def detokenize(tokens: list[int]) -> str:$/;"	f	typeref:typename:str
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.castarray
 dev	docs/package-lock.json	/^      "dev": true$/;"	b	object:packages.node_modules/lodash.isplainobject
@@ -1892,7 +1887,6 @@ env_prefix	src/marvin/settings.py	/^        env_prefix = "MARVIN_"$/;"	v	class:M
 env_prefix	src/marvin/settings.py	/^        env_prefix = "MARVIN_ANTHROPIC_"$/;"	v	class:AnthropicSettings.Config
 env_prefix	src/marvin/settings.py	/^        env_prefix = "MARVIN_AZURE_OPENAI_"$/;"	v	class:AzureOpenAI.Config
 env_prefix	src/marvin/settings.py	/^        env_prefix = "MARVIN_OPENAI_"$/;"	v	class:OpenAISettings.Config
-evaluate_results	cookbook/apps/web_search_agent.py	/^    def evaluate_results(self, parsed_results):$/;"	m	class:CustomWebSearchAgent
 evaluate_results	cookbook/apps/web_search_agent.py	/^    def evaluate_results(self, parsed_results, query):$/;"	m	class:WebSearchAgent
 event_loop	tests/conftest.py	/^def event_loop(request):$/;"	f
 export OPENAI_API_KEY=sk-...	.aider.chat.history.md	/^#### export OPENAI_API_KEY=sk-...  $/;"	t	chapter:<<<<<<< ORIGINAL
@@ -2196,8 +2190,7 @@ model	src/marvin/engine/language_models/azure_openai.py	/^    model: str = "gpt-
 model	src/marvin/engine/language_models/openai.py	/^    model: str = "gpt-3.5-turbo"$/;"	v	class:OpenAIChatLLM	typeref:typename:str
 model	src/marvin/functions/__init__.py	/^    def model(self):$/;"	m	class:Function
 model	src/marvin/openai/ChatCompletion/__init__.py	/^    model: str = "gpt-3.5-turbo"$/;"	v	class:ChatCompletionConfig	typeref:typename:str
-modify_search_requirements	cookbook/apps/web_search_agent.py	/^    def modify_search_requirements(self, query, search_requirements) = {}:$/;"	m	class:WebSearchAgent
-modify_search_requirements	cookbook/apps/web_search_agent.py	/^    def modify_search_requirements(self, query, search_requirements):$/;"	m	class:CustomWebSearchAgent
+modify_search_requirements	cookbook/apps/web_search_agent.py	/^    def modify_search_requirements(self, query, search_requirements):$/;"	m	class:WebSearchAgent
 module.exports	tailwind.config.js	/^module.exports = {$/;"	p
 multi_glob	src/marvin/utilities/collections.py	/^def multi_glob(directory=None, keep_globs=None, drop_globs=None) -> list[Path]:$/;"	f	typeref:typename:list[Path]
 mypy	.aider.chat.history.md	/^# mypy$/;"	c
@@ -2400,7 +2393,6 @@ packages	docs/package-lock.json	/^  "packages": {$/;"	o
 paint-order	docs/static/css/tailwind.css	/^    .dark\\:lg\\:hover\\:\\[paint-order\\:markers\\]:hover {$/;"	s
 parameters	src/marvin/engine/language_models/base.py	/^    parameters: dict[str, Any] = {"type": "object", "properties": {}}$/;"	v	class:OpenAIFunction	typeref:typename:dict[str, Any]
 parent_task_id	src/marvin/components/ai_application.py	/^    parent_task_id: int = None$/;"	v	class:Task	typeref:typename:int
-parse_results	cookbook/apps/web_search_agent.py	/^    def parse_results(self, results):$/;"	m	class:CustomWebSearchAgent
 parse_results	cookbook/apps/web_search_agent.py	/^    def parse_results(self, results):$/;"	m	class:WebSearchAgent
 path-is-absolute	docs/package-lock.json	/^        "path-is-absolute": "^1.0.0"$/;"	s	object:packages.node_modules/glob.dependencies
 path-parse	docs/package-lock.json	/^        "path-parse": "^1.0.7",$/;"	s	object:packages.node_modules/resolve.dependencies
@@ -2664,7 +2656,6 @@ resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.or
 resolved	docs/package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/yaml\/-\/yaml-2.3.1.tgz",$/;"	s	object:packages.node_modules/yaml
 resp = scrape_legislators("https://www.ilga.gov/house/rep.asp?MemberID=3071")	.aider.chat.history.md	/^#### resp = scrape_legislators("https:\/\/www.ilga.gov\/house\/rep.asp?MemberID=3071")  $/;"	t	chapter:<<<<<<< ORIGINAL
 resp.data	.aider.chat.history.md	/^#### resp.data  $/;"	t	chapter:<<<<<<< ORIGINAL
-respond_or_search_again	cookbook/apps/web_search_agent.py	/^    def respond_or_search_again(self, evaluated_results):$/;"	m	class:CustomWebSearchAgent
 respond_or_search_again	cookbook/apps/web_search_agent.py	/^    def respond_or_search_again(self, evaluated_results):$/;"	m	class:WebSearchAgent
 return_annotation	src/marvin/functions/__init__.py	/^    def return_annotation(self):$/;"	m	class:Function
 reusify	docs/package-lock.json	/^        "reusify": "^1.0.4"$/;"	s	object:packages.node_modules/fastq.dependencies
@@ -2721,8 +2712,7 @@ schema	src/marvin/functions/__init__.py	/^    def schema(self, *args, name: str 
 schema={	.aider.chat.history.md	/^####   schema={  $/;"	t	chapter:<<<<<<< ORIGINAL
 scrape_legislators = SchemaScraper(	.aider.chat.history.md	/^#### scrape_legislators = SchemaScraper(  $/;"	t	chapter:<<<<<<< ORIGINAL
 search_ddg	src/marvin/tools/web.py	/^async def search_ddg(query: str, n: int = 5) -> str:$/;"	f	typeref:typename:str
-search_web	cookbook/apps/web_search_agent.py	/^    def search_web(self, query, live_context = {}):$/;"	m	class:WebSearchAgent
-search_web	cookbook/apps/web_search_agent.py	/^    def search_web(self, query, live_context):$/;"	m	class:CustomWebSearchAgent
+search_web	cookbook/apps/web_search_agent.py	/^    def search_web(self, query, live_context):$/;"	m	class:WebSearchAgent
 select	docs/static/css/tailwind.css	/^select {$/;"	s
 select	docs/static/css/tailwind.css	/^select,$/;"	s
 serve	src/marvin/deployment/__init__.py	/^    def serve(self):$/;"	m	class:Deployment
