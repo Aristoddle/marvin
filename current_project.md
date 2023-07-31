@@ -1,8 +1,6 @@
 # Current Project: Enhancing WebSearchAgent
 ## Task List
-1. Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
-    - Created a new class `CustomWebSearchAgent` that extends `WebSearchAgent`.
-    - Initialized the new class with the same parameters as `WebSearchAgent`.
+1. Enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py`.
     - TODO: Implement the following methods in the `WebSearchAgent` class:
         - `classify_query(self, query)`: Classify the user's query into predefined categories using the QueryType classifier.
         - `determine_search_requirements(self, live_context = {})`: Determine the search requirements based on the live context.
@@ -12,11 +10,11 @@
         - `parse_results(self, results)`: Parse the search results.
         - `evaluate_results(self, parsed_results, query)`: Evaluate the relevance of the parsed results in reference to the user query.
         - `respond_or_search_again(self, evaluated_results)`: Respond to the user's query or continue the search based on the evaluated results.
-2. Modify the `classify_query` method in the custom agent to suit specific classification requirements.
+2. Modify the `classify_query` method in the `WebSearchAgent` to suit specific classification requirements.
     - Partially updated the `classify_query` method to use the `QueryType` classifier.
     - The classifier is expected to categorize queries into types such as FACTUAL_INFORMATION, LATEST_NEWS, GITHUB_PROJECT, API_DOCUMENTATION, DEBUGGING_HELP, etc.
     - TODO: Implement the logic to classify the query using the `QueryType` classifier.
-3. Modify the `search_web` method in the custom agent to suit specific web search requirements.
+3. Modify the `search_web` method in the `WebSearchAgent` to suit specific web search requirements.
     - Modify the `search_web` method to accept additional parameters that represent the live context.
     - Use the live context to determine the search requirements.
     - Modify the search query and parameters based on the determined search requirements.
@@ -24,26 +22,26 @@
     - Return the search results.
     - TODO: Implement the `determine_search_requirements` and `modify_search_requirements` methods to process the `live_context` and generate a relevant web query.
     - TODO: Check and leverage the `action_based_spec.md` for Marvin commands.
-4. Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
+4. Modify the `parse_results` method in the `WebSearchAgent` to scrape and parse the search results as per specific needs.
     - TODO: Implement the `parse_results` method to parse the search results using the `GitHubRepo` and `APIDoc` models.
-5. Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
+5. Add a new method in the `WebSearchAgent` for synthesizing the parsed results into a coherent answer.
     - TODO: Implement this method to synthesize the parsed results into a coherent answer.
-6. Add a new method in the custom agent for comparing the synthesized answer with the user query.
+6. Add a new method in the `WebSearchAgent` for comparing the synthesized answer with the user query.
     - TODO: Implement this method to compare the synthesized answer with the user query.
-7. Modify the `respond_or_search_again` method in the custom agent to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
+7. Modify the `respond_or_search_again` method in the `WebSearchAgent` to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
     - TODO: Implement this method to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
-8. Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
+8. Modify the `respond_or_search_again` method in the `WebSearchAgent` to respond to the user with the final answer in a user-friendly format.
     - TODO: Implement this method to respond to the user with the final answer in a user-friendly format.
 
 ## Progress Tracking
-- [x] Task 1: Extend the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py` to create a custom agent.
-- [ ] Task 2: Modify the `classify_query` method in the custom agent to suit specific classification requirements. (Incomplete, subtasks pending)
-- [ ] Task 3: Modify the `search_web` method in the custom agent to suit specific web search requirements. (Incomplete, subtasks pending)
-- [ ] Task 4: Modify the `parse_results` method in the custom agent to scrape and parse the search results as per specific needs.
-- [ ] Task 5: Add a new method in the custom agent for synthesizing the parsed results into a coherent answer.
-- [ ] Task 6: Add a new method in the custom agent for comparing the synthesized answer with the user query.
-- [ ] Task 7: Modify the `respond_or_search_again` method in the custom agent to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
-- [ ] Task 8: Modify the `respond_or_search_again` method in the custom agent to respond to the user with the final answer in a user-friendly format.
+- [ ] Task 1: Enhance the `WebSearchAgent` class in `cookbook/apps/web_search_agent.py`.
+- [ ] Task 2: Modify the `classify_query` method in the `WebSearchAgent` to suit specific classification requirements. (Incomplete, subtasks pending)
+- [ ] Task 3: Modify the `search_web` method in the `WebSearchAgent` to suit specific web search requirements. (Incomplete, subtasks pending)
+- [ ] Task 4: Modify the `parse_results` method in the `WebSearchAgent` to scrape and parse the search results as per specific needs.
+- [ ] Task 5: Add a new method in the `WebSearchAgent` for synthesizing the parsed results into a coherent answer.
+- [ ] Task 6: Add a new method in the `WebSearchAgent` for comparing the synthesized answer with the user query.
+- [ ] Task 7: Modify the `respond_or_search_again` method in the `WebSearchAgent` to loop the search, scrape, synthesize, and compare process until an answer is found or the user stops the process.
+- [ ] Task 8: Modify the `respond_or_search_again` method in the `WebSearchAgent` to respond to the user with the final answer in a user-friendly format.
 
 ## API Spec Snippets
 
