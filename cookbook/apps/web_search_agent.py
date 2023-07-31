@@ -20,6 +20,12 @@ class CustomWebSearchAgent(WebSearchAgent):
     def classify_query(self, query):
         # Classify the query using the QueryType classifier
         query_type = self.query_classifier(query)
+        
+        # Add additional classification logic here
+        # For example, if you added a new type to the QueryType enum for weather queries:
+        if "weather" in query:
+            query_type = QueryType.WEATHER_INFORMATION
+
         return query_type
 
     def search_web(self, query):
