@@ -23,9 +23,16 @@ def classify_query(self, query):
     return query_type
         return query_type
 
-    def search_web(self, query):
-        # Search the web using the DuckDuckGoSearch tool
-        search_results = self.search_tool.run(query)
+    def search_web(self, query, live_context):
+        # Determine the search requirements based on the live context
+        search_requirements = self.determine_search_requirements(live_context)
+        
+        # Modify the query and parameters based on the search requirements
+        modified_query, parameters = self.modify_search_requirements(query, search_requirements)
+        
+        # Search the web using the DuckDuckGoSearch tool with the modified query and parameters
+        search_results = self.search_tool.run(modified_query, parameters)
+        
         return search_results
 
     def parse_results(self, results):
