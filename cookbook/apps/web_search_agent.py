@@ -24,6 +24,16 @@ class WebSearchAgent(WebSearchAgent):
     def classify_query(self, query):
         """
         Classify the user's query into predefined categories using the QueryType classifier.
+        """
+        # Use the QueryType classifier to classify the user's query
+        query_type = QueryType(query)
+
+        # Return the name of the classified query type
+        return query_type.name
+
+    def classify_query(self, query):
+        """
+        Classify the user's query into predefined categories using the QueryType classifier.
 
         This method takes a user's query as input and uses the QueryType classifier to determine
         the type of the query. The QueryType classifier categorizes queries into types such as
